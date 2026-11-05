@@ -14,7 +14,6 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as CareersRouteImport } from './routes/careers'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as FaqRouteImport } from './routes/faq'
 import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as TeamRouteImport } from './routes/team'
@@ -45,11 +44,6 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LocationsRoute = LocationsRouteImport.update({
   id: '/locations',
   path: '/locations',
@@ -77,7 +71,6 @@ export interface FileRoutesByFullPath {
   '/blog': typeof BlogRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
-  '/faq': typeof FaqRoute
   '/locations': typeof LocationsRoute
   '/programs': typeof ProgramsRoute
   '/team': typeof TeamRoute
@@ -89,7 +82,6 @@ export interface FileRoutesByTo {
   '/blog': typeof BlogRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
-  '/faq': typeof FaqRoute
   '/locations': typeof LocationsRoute
   '/programs': typeof ProgramsRoute
   '/team': typeof TeamRoute
@@ -102,7 +94,6 @@ export interface FileRoutesById {
   '/blog': typeof BlogRoute
   '/careers': typeof CareersRoute
   '/contact': typeof ContactRoute
-  '/faq': typeof FaqRoute
   '/locations': typeof LocationsRoute
   '/programs': typeof ProgramsRoute
   '/team': typeof TeamRoute
@@ -116,7 +107,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/careers'
     | '/contact'
-    | '/faq'
     | '/locations'
     | '/programs'
     | '/team'
@@ -128,7 +118,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/careers'
     | '/contact'
-    | '/faq'
     | '/locations'
     | '/programs'
     | '/team'
@@ -140,7 +129,6 @@ export interface FileRouteTypes {
     | '/blog'
     | '/careers'
     | '/contact'
-    | '/faq'
     | '/locations'
     | '/programs'
     | '/team'
@@ -153,7 +141,6 @@ export interface RootRouteChildren {
   BlogRoute: typeof BlogRoute
   CareersRoute: typeof CareersRoute
   ContactRoute: typeof ContactRoute
-  FaqRoute: typeof FaqRoute
   LocationsRoute: typeof LocationsRoute
   ProgramsRoute: typeof ProgramsRoute
   TeamRoute: typeof TeamRoute
@@ -197,13 +184,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/locations': {
       id: '/locations'
       path: '/locations'
@@ -241,7 +221,6 @@ const rootRouteChildren: RootRouteChildren = {
   BlogRoute: BlogRoute,
   CareersRoute: CareersRoute,
   ContactRoute: ContactRoute,
-  FaqRoute: FaqRoute,
   LocationsRoute: LocationsRoute,
   ProgramsRoute: ProgramsRoute,
   TeamRoute: TeamRoute,
