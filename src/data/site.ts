@@ -15,7 +15,6 @@ export const nav = [
   { to: "/careers", label: "Careers" },
   { to: "/about", label: "About us" },
   { to: "/contact", label: "Contact" },
-  { to: "/faq", label: "FAQ" },
 ] as const;
 
 export const subBrands = ["FORGED by ReFormd", "Shelter", "The Laboratory", "BFT"];
