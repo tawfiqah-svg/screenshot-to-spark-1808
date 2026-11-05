@@ -91,7 +91,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Woodlands", address: "30 Woodlands Avenue 2, #02-12", mrt: "Woodlands", type: "gym", lat: 1.4360, lng: 103.7865 },
   { name: "Sentosa Cove", address: "31 Ocean Way, #01-05", mrt: "HarbourFront", type: "studio", lat: 1.2445, lng: 103.8390 },
 ];
-export const locations: Location[] = raw.map((l, i) => ({ ...l, image: imgs[i % imgs.length] }));
+export const locations: Location[] = raw.map((l, i) => ({ ...l, image: imgs[i % imgs.length] as string }));
 
 /** Approximate centre point for Singapore postal sectors (first 2 digits). */
 const postalSectors: [number, number, number, number][] = [
