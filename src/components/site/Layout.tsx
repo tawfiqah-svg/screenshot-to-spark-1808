@@ -119,7 +119,7 @@ export function Reveal({ children, className }: { children: ReactNode; className
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && setVisible(true), { threshold: 0.12 });
+    const io = new IntersectionObserver(([e]) => e?.isIntersecting && setVisible(true), { threshold: 0.12 });
     io.observe(el);
     return () => io.disconnect();
   }, []);
