@@ -61,10 +61,16 @@ export function SiteHeader() {
                   >
                     {n.label} <ChevronDown className={cn("size-3 transition-transform", openDropdown === n.label && "rotate-180")} />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
+                  <DropdownMenuContent align="start" sideOffset={12} className="w-80 max-w-[calc(100vw-24px)] rounded-none p-2" onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
                     {n.children.map((c) => (
-                      <DropdownMenuItem key={c.to} asChild className="font-display uppercase tracking-[0.06em]">
-                        <Link to={c.to}>{c.label}</Link>
+                      <DropdownMenuItem key={c.to} asChild className="group cursor-pointer gap-4 rounded-none p-2 focus:bg-muted">
+                        <Link to={c.to} onClick={() => setOpenDropdown(null)}>
+                          <img src={c.image} alt="" className="h-16 w-20 shrink-0 object-cover" />
+                          <span className="min-w-0">
+                            <span className="block font-display text-xl uppercase">{c.label}</span>
+                            <span className="mt-1 block font-sans text-sm text-muted-foreground">{c.description}</span>
+                          </span>
+                        </Link>
                       </DropdownMenuItem>
                     ))}
                   </DropdownMenuContent>
