@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shared business facts and page content in src/data/site.ts; routes consume them so repeated counts and program labels stay consistent.
+- Model Academy progression as education, assessment, then applications to available roles; completing the Academy does not guarantee employment.

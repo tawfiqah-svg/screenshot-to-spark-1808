@@ -15,13 +15,14 @@ export const nav = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-export const subBrands = ["FORGED by ReFormd", "Shelter", "The Laboratory", "BFT"];
+export const subBrands = ["FORGED by ReFormd", "Shelter by ReFormd"];
+export const privateStudioCount = 5;
 
 export const programs = [
   {
-    title: "Weight loss & muscle mass",
+    title: "Weight loss & muscle building",
     image: hero,
-    text: "A structured plan to lose fat, build lean muscle and keep the results, with coaching on every session and every meal.",
+    text: "Lose fat and build muscle with a training plan that suits your starting point. Your personal trainer helps you get stronger and build eating habits you can keep up.",
   },
   {
     title: "Peak performance",
@@ -36,20 +37,25 @@ export const programs = [
   {
     title: "Prenatal & postpartum",
     image: prenatal,
-    text: "Safe, specialist coaching through pregnancy and beyond, to help you feel strong and confident in your body again.",
+    text: "Personal training adapted for pregnancy and your return to exercise after birth, with a focus on strength, movement and recovery.",
   },
 ];
 
-export const addOns = [
-  { title: "Shelter by ReFormd", text: "Access to our recovery spaces." },
+export const groupSupport = [
   {
     title: "FORGED by ReFormd",
-    text: "Additional tests: Health baseline bundle, PB bundle.",
+    label: "Performance testing",
+    text: "Performance testing helps your trainer understand your starting point and measure how you're progressing. The findings help shape what you work on in your sessions.",
+  },
+  {
+    title: "Shelter by ReFormd",
+    label: "Recovery facilities",
+    text: "Shelter gives you access to dedicated recovery facilities to support your training. Speak with your trainer about the options that suit your routine and any additional costs.",
   },
 ];
 
 export const reviews = [
-  { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My coach made it feel effortless to stay consistent." },
+  { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My trainer made it feel effortless to stay consistent." },
   { name: "Daniel T.", rating: 5, text: "The private studio is a game changer. No waiting, no crowds, just focused training around my work schedule." },
   { name: "Priya K.", rating: 5, text: "Trained with ReFormd through my pregnancy and after. Supportive, knowledgeable and genuinely caring." },
   { name: "Marcus W.", rating: 5, text: "The testing and tracking keeps me honest. I can see every improvement in numbers, not just the mirror." },
@@ -141,24 +147,60 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
 }
 
 export const team = [
-  { name: "Marcus Tan", title: "Head Coach", senior: true, image: hero, specialisations: ["Strength", "Body recomposition"] },
-  { name: "Aisha Rahman", title: "Coach", senior: true, image: prenatal, specialisations: ["Prenatal & postpartum", "Pilates-based strength"] },
-  { name: "Jonathan Lim", title: "Performance Coach", senior: true, image: performance, specialisations: ["Athletic performance", "Speed & power"] },
-  { name: "Mei Ling Ong", title: "Coach", senior: false, image: studio, specialisations: ["Weight loss", "Nutrition coaching"] },
-  { name: "Ravi Menon", title: "Coach", senior: false, image: performance, specialisations: ["Longevity", "Mobility"] },
-  { name: "Chloe Ng", title: "Coach", senior: true, image: hero, specialisations: ["Muscle gain", "Powerlifting"] },
-  { name: "Daniel Koh", title: "Coach", senior: false, image: studio, specialisations: ["Injury rehab", "Posture"] },
-  { name: "Sophie Wright", title: "Coach", senior: false, image: prenatal, specialisations: ["Postpartum recovery", "Core rehab"] },
+  { name: "Marcus Tan", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
+  { name: "Aisha Rahman", title: "Personal Trainer", image: prenatal, specialisations: ["Prenatal & postpartum", "Pilates-based strength"] },
+  { name: "Jonathan Lim", title: "Personal Trainer", image: performance, specialisations: ["Athletic performance", "Speed & power"] },
+  { name: "Mei Ling Ong", title: "Personal Trainer", image: studio, specialisations: ["Weight loss", "Nutrition guidance"] },
+  { name: "Ravi Menon", title: "Personal Trainer", image: performance, specialisations: ["Longevity", "Mobility"] },
+  { name: "Chloe Ng", title: "Personal Trainer", image: hero, specialisations: ["Muscle gain", "Powerlifting"] },
+  { name: "Daniel Koh", title: "Personal Trainer", image: studio, specialisations: ["Injury rehab", "Posture"] },
+  { name: "Sophie Wright", title: "Personal Trainer", image: prenatal, specialisations: ["Postpartum recovery", "Core rehab"] },
 ];
 
 export const faqs: { q: string; a: string }[] = [
   {
-    q: "Do I need a gym membership to train at your RF operated gyms?",
-    a: "Answer coming soon",
+    q: "Do I need a gym membership to train at an RF-Operated Gym?",
+    a: "Training inside our RF-Operated Gyms is for gym members. Speak with us about membership and access at your preferred gym before booking. You can also ask about training at a private ReFormd studio.",
   },
   {
     q: "Can I train at multiple gyms or only restricted to one?",
-    a: "You can train at any one of our locations. Discuss and liaise with your trainer so you can get your session in during your lunch break or wherever your schedule takes you.",
+    a: "Speak with your trainer about the locations that fit your schedule. Sessions at different gyms depend on your membership access and trainer availability, so confirm the arrangements before you travel.",
+  },
+  {
+    q: "I'm new to the gym. Can I start personal training?",
+    a: "Yes. ReFormd works with beginners as well as experienced gym users. Your trainer looks at your goals and how you move, then helps you learn the exercises at a pace that suits you.",
+  },
+  {
+    q: "What happens during a personal training trial?",
+    a: "ReFormd's trial includes a one-to-one session with a certified personal trainer, a lifestyle and goals discussion, movement screening, form analysis and training recommendations. The website also lists a Visbody 3D body composition scan. Confirm scan availability at your chosen location when booking.",
+  },
+  {
+    q: "Where can I do the Kickstart trial?",
+    a: "Choose a private ReFormd studio or an RF-Operated Gym, whichever is more convenient. Contact us to confirm your preferred location, gym access and available session times.",
+  },
+  {
+    q: "Can you help me lose weight and build muscle?",
+    a: "Yes. ReFormd offers training for weight management, strength and muscle building. Your trainer puts together a plan based on your goals, current fitness and assessment findings.",
+  },
+  {
+    q: "How do you measure my progress?",
+    a: "Your trainer tracks your training and uses assessments to help review your progress. ReFormd uses Visbody 3D scans at selected locations to look at body composition, posture, muscle distribution and body fat percentage.",
+  },
+  {
+    q: "Can I train to stay strong as I get older?",
+    a: "Yes. ReFormd's longevity approach includes strength training, movement screening and mobility work. Sessions are adapted to your ability and goals so you can keep working on everyday strength and movement.",
+  },
+  {
+    q: "Do you help with nutrition, sleep and recovery?",
+    a: "Your trainer can offer practical guidance on eating habits, sleep, stress and recovery alongside your training. Tell them about your routine so the advice fits your day-to-day life.",
+  },
+  {
+    q: "What recovery options are available?",
+    a: "ReFormd's website lists Shelter by ReFormd and a dedicated recovery area at ReFormd Sixth Avenue. Ask your trainer which facilities are available and whether there are additional charges.",
+  },
+  {
+    q: "How do I get started and find out the price?",
+    a: "Book a consultation or contact the team with your goals and preferred location. ReFormd advertises first-time trial pricing on its website; the team can confirm the current offer and suitable training options before you book.",
   },
 ];
 

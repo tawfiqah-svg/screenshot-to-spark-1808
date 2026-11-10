@@ -10,7 +10,7 @@ export const Route = createFileRoute("/blog")({
 function Blog() {
   return (
     <section className="mx-auto max-w-4xl px-5 py-24">
-      <SectionHeader eyebrow="Blog" title="Insights from our coaches" />
+      <SectionHeader eyebrow="Blog" title="Insights from our personal trainers" />
       <ul className="mt-12 divide-y divide-border border-y border-border">
         {blogPosts.map((p) => (
           <li key={p.slug} className="flex flex-col justify-between gap-2 py-6 md:flex-row md:items-center">
