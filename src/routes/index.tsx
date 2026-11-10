@@ -60,9 +60,9 @@ function Home() {
 
       {/* 2. Different */}
       <section className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-24">
-        <Reveal><SectionHeader title="What makes us different?" /></Reveal>
+        <Reveal><SectionHeader title="What makes us different?" center /></Reveal>
         <Reveal>
-          <p className="max-w-3xl text-xl leading-relaxed text-muted-foreground">
+          <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-muted-foreground">
             Your training should fit your life. We build a plan around your goals, track your progress and help you get the exercises right. Train one-to-one with a personal trainer at a private ReFormd studio or choose an RF-Operated Gym closer to home or work.
           </p>
         </Reveal>
@@ -79,7 +79,7 @@ function Home() {
 
       {/* 4. Why */}
       <section className="mx-auto max-w-7xl px-5 py-24">
-        <Reveal><SectionHeader title="Why you'll succeed here" /></Reveal>
+        <Reveal><SectionHeader title="Why you'll succeed here" center /></Reveal>
         <Reveal>
           <Accordion type="single" collapsible className="mt-12 space-y-3">
             {why.map(({ icon: Icon, title, summary, details }, i) => (
