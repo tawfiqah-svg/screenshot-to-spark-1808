@@ -55,17 +55,11 @@ function Testimonials() {
       </section>
       <section className="bg-ink py-24 text-ink-foreground">
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader title="Case studies" />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {caseStudies.map((c) => (
-              <article key={c.title}>
-                <img src={c.image} alt={c.name} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover" />
-                <p className="mt-4 text-sm opacity-60">{c.name}</p>
-                <h3 className="mt-1 text-2xl font-black uppercase leading-tight">{c.title}</h3>
-                <a href="#" className="mt-3 inline-flex items-center gap-2 font-bold text-cta">Learn more <ArrowRight className="size-4" /></a>
-              </article>
-            ))}
-          </div>
+          <SectionHeader title="Ready to write your own?" />
+          <p className="mt-4 max-w-2xl text-base opacity-80">Book a free consultation and we will match you with a personal trainer who fits your goals.</p>
+          <Button asChild size="lg" className="mt-8">
+            <Link to="/contact">Book a consultation</Link>
+          </Button>
         </div>
       </section>
     </>
