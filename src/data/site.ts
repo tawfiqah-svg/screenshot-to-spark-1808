@@ -147,14 +147,14 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
 }
 
 export const team = [
-  { name: "Marcus Tan", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
-  { name: "Aisha Rahman", title: "Personal Trainer", image: prenatal, specialisations: ["Prenatal & postpartum", "Pilates-based strength"] },
-  { name: "Jonathan Lim", title: "Personal Trainer", image: performance, specialisations: ["Athletic performance", "Speed & power"] },
-  { name: "Mei Ling Ong", title: "Personal Trainer", image: studio, specialisations: ["Weight loss", "Nutrition guidance"] },
-  { name: "Ravi Menon", title: "Personal Trainer", image: performance, specialisations: ["Longevity", "Mobility"] },
-  { name: "Chloe Ng", title: "Personal Trainer", image: hero, specialisations: ["Muscle gain", "Powerlifting"] },
-  { name: "Daniel Koh", title: "Personal Trainer", image: studio, specialisations: ["Injury rehab", "Posture"] },
-  { name: "Sophie Wright", title: "Personal Trainer", image: prenatal, specialisations: ["Postpartum recovery", "Core rehab"] },
+  { name: "Name 1", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
+  { name: "Name 2", title: "Personal Trainer", image: prenatal, specialisations: ["Prenatal & postpartum", "Pilates-based strength"] },
+  { name: "Name 3", title: "Personal Trainer", image: performance, specialisations: ["Athletic performance", "Speed & power"] },
+  { name: "Name 4", title: "Personal Trainer", image: studio, specialisations: ["Weight loss", "Nutrition guidance"] },
+  { name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Longevity", "Mobility"] },
+  { name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Muscle gain", "Powerlifting"] },
+  { name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Injury rehab", "Posture"] },
+  { name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Postpartum recovery", "Core rehab"] },
 ];
 
 export const faqs: { q: string; a: string }[] = [
