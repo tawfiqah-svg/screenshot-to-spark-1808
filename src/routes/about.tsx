@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { PageHero, SectionHeader, seo } from "@/components/site/Layout";
 import { aboutContent, rfGroupBrands, images, rfEvents } from "@/data/site";
 
@@ -28,13 +29,21 @@ function About() {
       <section className="bg-ink py-16 text-ink-foreground md:py-24">
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader eyebrow="The RF Group" title={aboutContent.groupHeading} />
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <Accordion type="multiple" className="mt-12 grid items-start gap-x-8 md:grid-cols-3">
             {rfGroupBrands.map((brand) => (
-              <div key={brand} className="border-t border-ink-foreground/20 pt-6">
-                <h3 className="text-3xl">{brand}</h3>
-              </div>
+              <AccordionItem key={brand.title} value={brand.title} className="border-ink-foreground/20">
+                <AccordionTrigger className="min-h-24 gap-4 font-display text-2xl text-ink-foreground hover:text-cta hover:no-underline [&>svg]:text-ink-foreground md:text-3xl">
+                  {brand.title}
+                </AccordionTrigger>
+                <AccordionContent className="pb-8">
+                  <div className="mb-5 aspect-[3/2] overflow-hidden bg-ink">
+                    <img src={brand.image} alt={brand.imageAlt} loading="lazy" className={brand.logo ? "h-full w-full object-contain p-8" : "h-full w-full object-cover object-top"} />
+                  </div>
+                  <p className="text-base leading-relaxed text-ink-foreground/80">{brand.text}</p>
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16 md:py-24">
