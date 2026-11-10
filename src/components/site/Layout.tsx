@@ -11,7 +11,7 @@ export function Logo({ className, inverse }: { className?: string; inverse?: boo
     <img
       src={logoAsset.url}
       alt="ReFormd"
-      className={cn("h-6 w-auto", inverse && "invert", className)}
+      className={cn("h-6 w-auto", inverse && "brightness-0 invert", className)}
     />
   );
 }
