@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Instagram, Facebook, Youtube, Linkedin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { nav, subBrands } from "@/data/site";
