@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Instagram, Facebook, Youtube, Linkedin, Star } from "lucide-react";
+import { Instagram, Facebook, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { nav, subBrands } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -62,8 +62,8 @@ export function SiteFooter() {
           <Logo inverse className="h-8" />
           <p className="mt-3 max-w-xs text-sm opacity-70">High-end personal training in Singapore.</p>
           <div className="mt-6 flex gap-4">
-            {[Instagram, Facebook, Youtube, Linkedin].map((Icon, i) => (
-              <a key={i} href="#" aria-label={["Instagram", "Facebook", "YouTube", "LinkedIn"][i]} className="opacity-70 hover:opacity-100">
+            {[Instagram, Facebook].map((Icon, i) => (
+              <a key={i} href="#" aria-label={["Instagram", "Facebook"][i]} className="opacity-70 hover:opacity-100">
                 <Icon className="size-5" />
               </a>
             ))}

@@ -3,22 +3,22 @@ import { Lock, LineChart, Moon, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel, ReviewsCarousel } from "@/components/site/Carousels";
-import { brandVideoUrl, images, locations, programs } from "@/data/site";
+import { brandVideoUrl, images, locations, privateStudioCount, programs } from "@/data/site";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Feel strong, energised, & confident", "High-end personal training in Singapore for people who want real results. Private studios, expert coaches, data-driven programs."),
+  head: () => seo("Feel strong, energised, & confident", "Personal training in Singapore with five private ReFormd studios, convenient RF-Operated Gyms and experienced personal trainers."),
   component: Home,
 });
 
 const why = [
   {
     icon: Lock,
-    title: "Your private space to train and focus",
-    summary: "No crowds, no waiting for equipment, no distractions.",
+    title: "Five private studios. More places to train.",
+    summary: `${privateStudioCount} private studios, with RF-Operated Gyms for your convenience.`,
     details: [
-      "Train in a private ReFormd studio. The space is yours for the whole session, never shared with walk-in gym traffic.",
-      "Every session is one-on-one with your coach, so your full hour is spent training, not queueing.",
-      "A calm, premium environment designed for focus: the right equipment, the right atmosphere, zero guesswork.",
+      `Choose from our ${privateStudioCount} private ReFormd studios for focused, one-to-one personal training.`,
+      "Prefer somewhere closer to home or work? Train at an RF-Operated Gym for your convenience, subject to gym membership access.",
+      "Your personal trainer helps you choose a location and session time that fit your routine.",
     ],
   },
   {
@@ -28,7 +28,7 @@ const why = [
     details: [
       "We start with a full assessment of your movement, strength, body composition and lifestyle, so we know exactly where you're starting from.",
       "Your program is built around that data and re-tested on a regular cycle, so you can see exactly what's improving.",
-      "Your coach tracks every session and adjusts your plan as you progress, keeping you moving forward without plateaus.",
+      "Your trainer records your sessions and adjusts your plan as your strength and fitness improve.",
     ],
   },
   {
@@ -36,7 +36,7 @@ const why = [
     title: "Conscious training beyond the session",
     summary: "Nutrition, sleep and stress are part of the plan.",
     details: [
-      "Training is only part of the equation. Your coach helps you build nutrition habits that fit your schedule and preferences.",
+      "Your trainer helps you build eating habits that fit your schedule and preferences.",
       "We factor sleep, stress and recovery into your program, so hard weeks at work don't derail your progress.",
       "You get practical guidance between sessions, so the support continues after you leave the studio.",
     ],
@@ -48,7 +48,7 @@ function Home() {
     <>
       {/* 1. Hero */}
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={images.hero} alt="ReFormd coach guiding a client through a barbell squat" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+        <img src={images.hero} alt="ReFormd personal trainer guiding a client through a barbell squat" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-overlay" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
@@ -59,11 +59,11 @@ function Home() {
       </section>
 
       {/* 2. Different */}
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-2 md:items-center">
+      <section className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-24">
         <Reveal><SectionHeader title="What makes us different?" /></Reveal>
         <Reveal>
-          <p className="text-xl leading-relaxed text-muted-foreground">
-            You have high standards, a full agenda, and little time for guesswork. In our private, stylish Singapore studios, you'll build strength, gain energy, and develop confidence that extends well beyond your workout sessions. Our expert coaches help you cut through the noise and focus on what works for you.
+          <p className="max-w-3xl text-xl leading-relaxed text-muted-foreground">
+            Your training should fit your life. We build a plan around your goals, track your progress and help you get the exercises right. Train one-to-one with a personal trainer at a private ReFormd studio or choose an RF-Operated Gym closer to home or work.
           </p>
         </Reveal>
       </section>
@@ -154,9 +154,8 @@ function Home() {
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
           <h2 className="text-5xl font-black uppercase leading-[0.9] md:text-7xl">Try 3 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg opacity-85">
-            The Kickstart trial gives you 3 sessions with an expert coach in a private studio, so you can feel the difference before you commit.
+            Try 3 sessions with a personal trainer at our private studio or an RF-Operated Gym, whichever is more convenient for you.
           </p>
-          <p className="mx-auto mt-3 max-w-xl opacity-70">Book a consultation to find out more about the Kickstart trial.</p>
           <div className="mt-8"><CtaLink>Book an online consultation</CtaLink></div>
         </div>
       </section>
