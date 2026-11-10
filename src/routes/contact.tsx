@@ -62,6 +62,7 @@ function Contact() {
               </AccordionItem>
             ))}
           </Accordion>
+          <p className="mt-8 text-sm text-muted-foreground">Training information based on <a href="https://reformd.co/reformd-personal-training/" target="_blank" rel="noreferrer" className="underline underline-offset-4 hover:text-foreground">ReFormd Personal Training</a>. Confirm current offers and facility access with our team.</p>
         </div>
       </section>
     </>
