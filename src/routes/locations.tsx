@@ -9,7 +9,7 @@ import { distanceKm, images, locations, postalToCoords, type LocationType } from
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/locations")({
-  head: () => seo("Locations", "Find a ReFormd private PT studio or ReFormd operated gym near you. 16+ locations across Singapore, each close to an MRT."),
+  head: () => seo("Locations", "Train with ReFormd at our own studios or inside Anytime Fitness clubs across Singapore — 20 locations, each close to an MRT."),
   component: Locations,
 });
 
@@ -64,13 +64,13 @@ function Locations() {
 
   const tabs: { id: "all" | LocationType; label: string }[] = [
     { id: "all", label: "All" },
-    { id: "studio", label: "Private PT studios" },
-    { id: "gym", label: "ReFormd operated gyms" },
+    { id: "studio", label: "ReFormd studios" },
+    { id: "gym", label: "Anytime Fitness clubs" },
   ];
 
   return (
     <>
-      <PageHero eyebrow="Locations" title="Always a studio near you." text="16+ locations across Singapore, each a short walk from the MRT." image={images.studio} />
+      <PageHero eyebrow="Locations" title="Always a studio near you." text="20 locations across Singapore — our own studios and Anytime Fitness clubs, each a short walk from the MRT." image={images.studio} />
       <section className="mx-auto max-w-7xl px-5 py-16">
         <form onSubmit={search} className="flex flex-col gap-3 md:flex-row">
           <div className="relative flex-1">
@@ -113,8 +113,8 @@ function Locations() {
           })}
           {origin && (() => { const p = project(origin.lat, origin.lng); return <span className="absolute size-3 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-ink-foreground" style={{ left: `${p.x}%`, top: `${p.y}%` }} />; })()}
           <div className="absolute bottom-3 left-3 flex gap-4 rounded-md bg-ink/80 px-3 py-2 text-xs text-ink-foreground">
-            <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-cta" />PT studio</span>
-            <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-star" />RF gym</span>
+            <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-cta" />ReFormd studio</span>
+            <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-star" />Anytime Fitness</span>
           </div>
         </div>
 

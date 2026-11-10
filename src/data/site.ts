@@ -69,24 +69,28 @@ export type Location = {
 
 const imgs = [studio, hero, performance];
 const raw: Omit<Location, "image">[] = [
-  { name: "Tanjong Pagar", address: "10 Anson Road, #02-01", mrt: "Tanjong Pagar", type: "studio", lat: 1.2766, lng: 103.8458 },
-  { name: "Raffles Place", address: "1 Raffles Place, #04-10", mrt: "Raffles Place", type: "studio", lat: 1.2841, lng: 103.8515 },
-  { name: "Marina Bay", address: "8 Marina View, #03-05", mrt: "Downtown", type: "gym", lat: 1.2801, lng: 103.8545 },
-  { name: "Orchard", address: "391 Orchard Road, #05-02", mrt: "Orchard", type: "studio", lat: 1.3036, lng: 103.8318 },
-  { name: "Novena", address: "10 Sinaran Drive, #02-30", mrt: "Novena", type: "studio", lat: 1.3204, lng: 103.8438 },
-  { name: "Robertson Quay", address: "60 Robertson Quay, #01-12", mrt: "Fort Canning", type: "gym", lat: 1.2905, lng: 103.8380 },
-  { name: "Holland Village", address: "20 Lorong Mambong, #02-01", mrt: "Holland Village", type: "studio", lat: 1.3112, lng: 103.7958 },
-  { name: "Bukit Timah", address: "6 Jalan Kuras, #01-03", mrt: "Sixth Avenue", type: "studio", lat: 1.3310, lng: 103.7970 },
-  { name: "Tiong Bahru", address: "55 Tiong Bahru Road, #01-08", mrt: "Tiong Bahru", type: "gym", lat: 1.2860, lng: 103.8270 },
-  { name: "Katong", address: "112 East Coast Road, #02-15", mrt: "Marine Parade", type: "studio", lat: 1.3050, lng: 103.9050 },
-  { name: "Tampines", address: "4 Tampines Central 5, #03-20", mrt: "Tampines", type: "gym", lat: 1.3530, lng: 103.9450 },
-  { name: "Paya Lebar", address: "10 Paya Lebar Road, #04-11", mrt: "Paya Lebar", type: "gym", lat: 1.3180, lng: 103.8930 },
-  { name: "One-North", address: "1 Fusionopolis Way, #02-05", mrt: "one-north", type: "studio", lat: 1.2990, lng: 103.7875 },
-  { name: "Jurong East", address: "50 Jurong Gateway Road, #03-08", mrt: "Jurong East", type: "gym", lat: 1.3333, lng: 103.7422 },
-  { name: "Bishan", address: "9 Bishan Place, #02-10", mrt: "Bishan", type: "studio", lat: 1.3508, lng: 103.8485 },
-  { name: "Serangoon", address: "23 Serangoon Central, #04-02", mrt: "Serangoon", type: "gym", lat: 1.3500, lng: 103.8732 },
-  { name: "Woodlands", address: "30 Woodlands Avenue 2, #02-12", mrt: "Woodlands", type: "gym", lat: 1.4360, lng: 103.7865 },
-  { name: "Sentosa Cove", address: "31 Ocean Way, #01-05", mrt: "HarbourFront", type: "studio", lat: 1.2445, lng: 103.8390 },
+  // Own ReFormd studios
+  { name: "RF615 — Bukit Timah", address: "615 Bukit Timah Road", mrt: "Sixth Avenue", type: "studio", lat: 1.3307, lng: 103.7970 },
+  { name: "RF Sixth Avenue", address: "Sixth Avenue, Bukit Timah", mrt: "Sixth Avenue", type: "studio", lat: 1.3290, lng: 103.7975 },
+  { name: "RF Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
+  { name: "FORGED by ReFormd", address: "Bukit Timah, Singapore", mrt: "Sixth Avenue", type: "studio", lat: 1.3190, lng: 103.8140 },
+  // Anytime Fitness clubs — PT delivered inside AF to AF members
+  { name: "Anytime Fitness Orchard", address: "Orchard Road", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
+  { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Cineleisure", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
+  { name: "Anytime Fitness Suntec City", address: "3 Temasek Boulevard, Suntec City", mrt: "Promenade", type: "gym", lat: 1.2952, lng: 103.8580 },
+  { name: "Anytime Fitness City Square Mall", address: "180 Kitchener Road, City Square Mall", mrt: "Farrer Park", type: "gym", lat: 1.3115, lng: 103.8567 },
+  { name: "Anytime Fitness Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "gym", lat: 1.2995, lng: 103.8545 },
+  { name: "Anytime Fitness Bedok", address: "Bedok, Singapore", mrt: "Bedok", type: "gym", lat: 1.3240, lng: 103.9300 },
+  { name: "Anytime Fitness Ang Mo Kio South", address: "Ang Mo Kio, Singapore", mrt: "Ang Mo Kio", type: "gym", lat: 1.3690, lng: 103.8454 },
+  { name: "Anytime Fitness Buona Vista", address: "Buona Vista, Singapore", mrt: "Buona Vista", type: "gym", lat: 1.3068, lng: 103.7900 },
+  { name: "Anytime Fitness Bukit Timah Central", address: "Bukit Timah Central", mrt: "Beauty World", type: "gym", lat: 1.3390, lng: 103.7760 },
+  { name: "Anytime Fitness Geylang Bahru", address: "Geylang Bahru, Singapore", mrt: "Geylang Bahru", type: "gym", lat: 1.3200, lng: 103.8715 },
+  { name: "Anytime Fitness Havelock Outram", address: "Havelock Road", mrt: "Havelock", type: "gym", lat: 1.2875, lng: 103.8350 },
+  { name: "Anytime Fitness New Upper Thomson", address: "Upper Thomson Road", mrt: "Upper Thomson", type: "gym", lat: 1.3600, lng: 103.8340 },
+  { name: "Anytime Fitness New Queensway", address: "Queensway, Singapore", mrt: "Queenstown", type: "gym", lat: 1.3200, lng: 103.8020 },
+  { name: "Anytime Fitness Rochester", address: "Rochester Drive", mrt: "Buona Vista", type: "gym", lat: 1.3050, lng: 103.7878 },
+  { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
+  { name: "Anytime Fitness Tampines", address: "Tampines Central", mrt: "Tampines", type: "gym", lat: 1.3530, lng: 103.9450 },
 ];
 export const locations: Location[] = raw.map((l, i) => ({ ...l, image: imgs[i % imgs.length] as string }));
 
