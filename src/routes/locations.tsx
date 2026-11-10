@@ -65,7 +65,7 @@ function Locations() {
   const tabs: { id: "all" | LocationType; label: string }[] = [
     { id: "all", label: "All" },
     { id: "studio", label: "ReFormd studios" },
-    { id: "gym", label: "Anytime Fitness clubs" },
+    { id: "gym", label: "RF Operated Gyms" },
   ];
 
   return (
