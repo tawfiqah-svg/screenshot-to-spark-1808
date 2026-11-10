@@ -1,10 +1,11 @@
 // All editable site content lives here. Swap images by replacing the imports below.
 import hero from "@/assets/hero.jpg";
+import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
 import performance from "@/assets/performance.jpg";
 import prenatal from "@/assets/prenatal.jpg";
 
-export const images = { hero, studio, performance, prenatal };
+export const images = { hero, homeHero: homeHeroAsset.url, studio, performance, prenatal };
 
 export const nav = [
   { to: "/", label: "Home" },

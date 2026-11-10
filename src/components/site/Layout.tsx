@@ -27,16 +27,16 @@ export function CtaLink({ to = "/contact", children, inverse }: { to?: string; c
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5">
+      <div className="mx-auto flex min-h-16 max-w-7xl flex-wrap items-center justify-between gap-x-4 gap-y-1 px-5 py-2 lg:h-16 lg:flex-nowrap lg:py-0">
         <Link to="/" aria-label="ReFormd home">
           <Logo className="h-8" />
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-5 overflow-x-auto">
+        <nav aria-label="Main" className="order-3 -mx-1 flex w-full items-center justify-between gap-2 overflow-x-auto pb-1 lg:order-none lg:w-auto lg:justify-start lg:gap-5 lg:pb-0">
           {nav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="whitespace-nowrap font-display text-base tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground"
+              className="shrink-0 whitespace-nowrap font-display text-[13px] tracking-[0.04em] text-muted-foreground transition-colors hover:text-foreground lg:text-base lg:tracking-[0.08em]"
               activeProps={{ className: "text-foreground" }}
               activeOptions={{ exact: true }}
             >
@@ -45,7 +45,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="cta" size="lg" className="h-12 px-7 text-lg">
+          <Button asChild variant="cta" size="lg" className="h-11 px-4 text-base lg:h-12 lg:px-7 lg:text-lg">
             <Link to="/contact">Book a consultation</Link>
           </Button>
         </div>

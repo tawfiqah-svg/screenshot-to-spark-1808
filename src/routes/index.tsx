@@ -47,8 +47,8 @@ function Home() {
   return (
     <>
       {/* 1. Hero */}
-      <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={images.hero} alt="ReFormd personal trainer guiding a client through a barbell squat" width={1920} height={1088} className="absolute inset-0 h-full w-full object-cover" />
+      <section className="relative flex min-h-[calc(100svh-5.6rem)] items-end overflow-hidden bg-ink text-ink-foreground lg:min-h-[calc(100svh-4rem)]">
+        <img src={images.homeHero} alt="Client performing a barbell deadlift at a ReFormd studio" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover object-[50%_15%]" />
         <div className="absolute inset-0 bg-overlay" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
