@@ -1,12 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
+import { CtaLink, PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { ReviewCard } from "@/components/site/Carousels";
-import { brandVideoUrl, caseStudies, images, reviews } from "@/data/site";
+import { brandVideoUrl, images, reviews } from "@/data/site";
 
 export const Route = createFileRoute("/testimonials")({
-  head: () => seo("Testimonials", "Google reviews, before & after transformations, client videos and case studies from ReFormd clients in Singapore."),
+  head: () => seo("Testimonials", "Google reviews, before & after transformations and client videos from ReFormd clients in Singapore."),
   component: Testimonials,
 });
 
@@ -55,16 +54,10 @@ function Testimonials() {
       </section>
       <section className="bg-ink py-24 text-ink-foreground">
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader title="Case studies" />
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {caseStudies.map((c) => (
-              <article key={c.title}>
-                <img src={c.image} alt={c.name} loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover" />
-                <p className="mt-4 text-sm opacity-60">{c.name}</p>
-                <h3 className="mt-1 text-2xl font-black uppercase leading-tight">{c.title}</h3>
-                <a href="#" className="mt-3 inline-flex items-center gap-2 font-bold text-cta">Learn more <ArrowRight className="size-4" /></a>
-              </article>
-            ))}
+          <SectionHeader title="Ready to write your own?" />
+          <p className="mt-4 max-w-2xl text-base opacity-80">Book a free consultation and we will match you with a personal trainer who fits your goals.</p>
+          <div className="mt-8">
+            <CtaLink to="/contact">Book a consultation</CtaLink>
           </div>
         </div>
       </section>
