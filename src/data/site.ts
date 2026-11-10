@@ -70,7 +70,7 @@ export type Location = {
 const imgs = [studio, hero, performance];
 const raw: Omit<Location, "image">[] = [
   // Own ReFormd studios
-  { name: "RF615 — Bukit Timah", address: "615 Bukit Timah Road", mrt: "Sixth Avenue", type: "studio", lat: 1.3307, lng: 103.7970 },
+  { name: "RF615 Bukit Timah", address: "615 Bukit Timah Road", mrt: "Sixth Avenue", type: "studio", lat: 1.3307, lng: 103.7970 },
   { name: "RF Sixth Avenue", address: "Sixth Avenue, Bukit Timah", mrt: "Sixth Avenue", type: "studio", lat: 1.3290, lng: 103.7975 },
   { name: "RF Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
   { name: "FORGED by ReFormd", address: "Bukit Timah, Singapore", mrt: "Sixth Avenue", type: "studio", lat: 1.3190, lng: 103.8140 },
@@ -90,7 +90,6 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness New Queensway", address: "Queensway, Singapore", mrt: "Queenstown", type: "gym", lat: 1.3200, lng: 103.8020 },
   { name: "Anytime Fitness Rochester", address: "Rochester Drive", mrt: "Buona Vista", type: "gym", lat: 1.3050, lng: 103.7878 },
   { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
-  { name: "Anytime Fitness Tampines", address: "Tampines Central", mrt: "Tampines", type: "gym", lat: 1.3530, lng: 103.9450 },
 ];
 export const locations: Location[] = raw.map((l, i) => ({ ...l, image: imgs[i % imgs.length] as string }));
 
