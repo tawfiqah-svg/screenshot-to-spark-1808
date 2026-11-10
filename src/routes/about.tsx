@@ -4,7 +4,7 @@ import { PageHero, seo } from "@/components/site/Layout";
 import { images } from "@/data/site";
 
 export const Route = createFileRoute("/about")({
-  head: () => seo("About us", "The ReFormd Group is Asia's leading fitness brand, home to FORGED by ReFormd, Shelter, The Laboratory and BFT gyms."),
+  head: () => seo("About us", "Meet the ReFormd Group: personal training supported by FORGED by ReFormd performance testing and Shelter recovery facilities."),
   component: About,
 });
 
