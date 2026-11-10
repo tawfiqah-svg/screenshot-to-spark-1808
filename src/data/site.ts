@@ -14,9 +14,10 @@ export const nav = [
   {
     label: "About us",
     children: [
-      { to: "/testimonials", label: "Testimonials" },
-      { to: "/team", label: "Team" },
-      { to: "/careers", label: "Careers" },
+      { to: "/about", label: "About us", image: studio, description: "The RF Group & our events" },
+      { to: "/testimonials", label: "Testimonials", image: homeHeroAsset.url, description: "Our clients' success stories" },
+      { to: "/team", label: "Team", image: hero, description: "Meet our personal trainers" },
+      { to: "/careers", label: "Careers", image: performance, description: "RF Academy & opportunities" },
     ],
   },
   { to: "/contact", label: "Contact" },
@@ -24,6 +25,25 @@ export const nav = [
 
 export const subBrands = ["FORGED by ReFormd", "Shelter by ReFormd"];
 export const privateStudioCount = 5;
+
+export const aboutContent = {
+  title: "The ReFormd Group",
+  intro: "Born in Singapore, ReFormd brings personal training, performance testing, recovery and fitness education together. Whether you're starting out or training for competition, we want you to have access to the people and facilities that help you progress.",
+  story: "Good training should fit into your life. We focus on convenient locations, well-equipped facilities and personal service, with a team that listens to what you need. Across the RF Group, our aim is simple: help you keep moving forward.",
+  mission: "Progress all ways, always.",
+  values: [
+    { title: "Easy to get to", text: "Our private studios and RF-Operated Gyms give you more choice about where to train, close to home, work or your daily commute." },
+    { title: "Quality and value", text: "We invest in equipment and facilities that support your training, while keeping quality service and value at the centre of what we do." },
+    { title: "People come first", text: "We listen to our clients and support our team. Respect, fairness and trust guide how we work with one another." },
+  ],
+  eventsIntro: "Our commitment to progress extends beyond the studio. ReFormd brings people together through competitions, workshops and events that give participants a chance to challenge themselves and connect with the wider fitness community.",
+};
+
+export const rfEvents = [
+  { title: "ReFormd Powerlifting Classic III", venue: "Cineleisure Orchard", text: "A powerlifting competition with an LED backdrop and a livestream following the action from the warm-up room to the platform.", link: "https://www.youtube.com/playlist?list=PLFd5M_Dhvpextv6YF2WkdktJmwCvwr3we", cta: "Watch the competition" },
+  { title: "ReFormd Combined Nationals 2024", venue: "Marina Bay Sands", text: "ReFormd brought national-level powerlifting to Marina Bay Sands, bringing athletes and supporters together for a major competition on Singapore's sporting calendar.", link: "https://www.youtube.com/playlist?list=PLZRTLo40GU-13EejkCPF-QBg5XMjRRKxG", cta: "Relive the Nationals" },
+  { title: "ReFormd Powerlifting 2.0", venue: "City Square Mall", text: "A centrally located meet with competition racks for every platform, giving participants the opportunity to test their strength in front of the community.", link: "https://reformd.co/rf-events/", cta: "Explore RF events" },
+];
 
 export const programs = [
   {
