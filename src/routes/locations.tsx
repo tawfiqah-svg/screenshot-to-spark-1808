@@ -70,7 +70,7 @@ function Locations() {
 
   return (
     <>
-      <PageHero eyebrow="Locations" title="Always a studio near you." text="19 locations across Singapore: our own studios and Anytime Fitness clubs, each a short walk from the MRT." image={images.studio} />
+      <PageHero eyebrow="Locations" title="Always a studio near you." text="15+ locations across Singapore: our dedicated studios and Anytime Fitness clubs, each a short walk from the MRT." image={images.studio} />
       <section className="mx-auto max-w-7xl px-5 py-16">
         <form onSubmit={search} className="flex flex-col gap-3 md:flex-row">
           <div className="relative flex-1">
