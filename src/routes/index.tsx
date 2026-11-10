@@ -89,7 +89,7 @@ function Home() {
                     <Icon className="size-7 shrink-0 text-cta" />
                     <span>
                       <span className="block font-display text-2xl font-bold uppercase leading-tight tracking-wide md:text-3xl">{title}</span>
-                      <span className="mt-1 block text-sm font-normal text-muted-foreground md:text-base">{summary}</span>
+                      <span className="mt-1 block font-sans text-sm font-normal normal-case tracking-normal text-muted-foreground md:text-base">{summary}</span>
                     </span>
                   </span>
                 </AccordionTrigger>
