@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { CtaLink, PageHero, Reveal, seo } from "@/components/site/Layout";
 import { images, team } from "@/data/site";
 
