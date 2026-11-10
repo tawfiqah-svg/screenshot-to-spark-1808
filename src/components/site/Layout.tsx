@@ -29,12 +29,12 @@ export function SiteHeader() {
         <Link to="/" aria-label="ReFormd home">
           <Logo />
         </Link>
-        <nav aria-label="Main" className="hidden items-center gap-5 xl:flex">
+        <nav aria-label="Main" className="flex items-center gap-5 overflow-x-auto">
           {nav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
+              className="whitespace-nowrap font-display text-base tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground"
               activeProps={{ className: "text-foreground" }}
               activeOptions={{ exact: true }}
             >
@@ -46,30 +46,8 @@ export function SiteHeader() {
           <Button asChild variant="cta" size="sm" className="h-10 px-5">
             <Link to="/contact">Book a consultation</Link>
           </Button>
-          <button
-            className="rounded-md p-2 xl:hidden"
-            aria-label={open ? "Close menu" : "Open menu"}
-            aria-expanded={open}
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X /> : <Menu />}
-          </button>
         </div>
       </div>
-      {open && (
-        <nav aria-label="Mobile" className="border-t border-border bg-background px-5 py-4 xl:hidden">
-          {nav.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              onClick={() => setOpen(false)}
-              className="block py-3 font-display text-lg font-bold uppercase"
-            >
-              {n.label}
-            </Link>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }
