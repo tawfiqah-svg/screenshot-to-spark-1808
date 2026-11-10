@@ -29,7 +29,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5">
         <Link to="/" aria-label="ReFormd home">
-          <Logo />
+          <Logo className="h-8" />
         </Link>
         <nav aria-label="Main" className="flex items-center gap-5 overflow-x-auto">
           {nav.map((n) => (
