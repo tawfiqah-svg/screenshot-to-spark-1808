@@ -29,7 +29,12 @@ function Team() {
             </Reveal>
           ))}
         </div>
-        <div className="mt-16 text-center"><CtaLink>Book a consultation</CtaLink></div>
+        <div className="mt-16 flex flex-col items-center gap-4">
+          <CtaLink>Book a consultation</CtaLink>
+          <Link to="/careers" className="text-sm font-semibold text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">
+            Want to coach with us? See careers
+          </Link>
+        </div>
       </section>
     </>
   );

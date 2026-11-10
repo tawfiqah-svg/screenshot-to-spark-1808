@@ -9,10 +9,8 @@ export const images = { hero, studio, performance, prenatal };
 export const nav = [
   { to: "/", label: "Home" },
   { to: "/programs", label: "Programs" },
-  { to: "/testimonials", label: "Testimonials" },
-  { to: "/team", label: "Team" },
   { to: "/locations", label: "Locations" },
-  { to: "/careers", label: "Careers" },
+  { to: "/team", label: "Team" },
   { to: "/about", label: "About us" },
   { to: "/contact", label: "Contact" },
 ] as const;
