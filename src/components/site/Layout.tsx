@@ -4,12 +4,15 @@ import { Instagram, Facebook, Youtube, Linkedin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { nav, subBrands } from "@/data/site";
 import { cn } from "@/lib/utils";
+import logoAsset from "@/assets/reformd-logo.png.asset.json";
 
-export function Logo({ className }: { className?: string }) {
+export function Logo({ className, inverse }: { className?: string; inverse?: boolean }) {
   return (
-    <span className={cn("font-display text-xl font-black uppercase tracking-tight", className)}>
-      Re<span className="text-cta">F</span>ormd
-    </span>
+    <img
+      src={logoAsset.url}
+      alt="ReFormd"
+      className={cn("h-6 w-auto", inverse && "invert", className)}
+    />
   );
 }
 
@@ -56,7 +59,7 @@ export function SiteFooter() {
     <footer className="bg-ink text-ink-foreground">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-3">
         <div>
-          <Logo className="text-3xl" />
+          <Logo inverse className="h-8" />
           <p className="mt-3 max-w-xs text-sm opacity-70">High-end personal training in Singapore.</p>
           <div className="mt-6 flex gap-4">
             {[Instagram, Facebook, Youtube, Linkedin].map((Icon, i) => (
