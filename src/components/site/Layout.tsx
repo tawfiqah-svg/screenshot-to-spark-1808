@@ -1,7 +1,13 @@
-import { Link } from "@tanstack/react-router";
+import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Instagram, Facebook, Star } from "lucide-react";
+import { Instagram, Facebook, Star, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { nav, subBrands } from "@/data/site";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/reformd-logo.png.asset.json";
@@ -25,6 +31,7 @@ export function CtaLink({ to = "/contact", children, inverse }: { to?: string; c
 }
 
 export function SiteHeader() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-5">
@@ -32,17 +39,37 @@ export function SiteHeader() {
           <Logo className="h-5 sm:h-8" />
         </Link>
         <nav aria-label="Main" className="flex items-center gap-2 overflow-x-auto sm:gap-5">
-          {nav.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              className="shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.06em] text-muted-foreground transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]"
-              activeProps={{ className: "text-foreground" }}
-              activeOptions={{ exact: true }}
-            >
-              {n.label}
-            </Link>
-          ))}
+          {nav.map((n) =>
+            "children" in n ? (
+              <DropdownMenu key={n.label}>
+                <DropdownMenuTrigger
+                  className={cn(
+                    "flex shrink-0 items-center gap-1 whitespace-nowrap font-display text-[11px] tracking-[0.06em] transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]",
+                    n.children.some((c) => c.to === pathname) ? "text-foreground" : "text-muted-foreground",
+                  )}
+                >
+                  {n.label} <ChevronDown className="size-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  {n.children.map((c) => (
+                    <DropdownMenuItem key={c.to} asChild className="font-display uppercase tracking-[0.06em]">
+                      <Link to={c.to}>{c.label}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={n.to}
+                to={n.to}
+                className="shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.06em] text-muted-foreground transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]"
+                activeProps={{ className: "text-foreground" }}
+                activeOptions={{ exact: true }}
+              >
+                {n.label}
+              </Link>
+            ),
+          )}
         </nav>
         <div className="flex items-center gap-2">
           <Button asChild variant="cta" size="lg" className="h-9 px-2.5 text-[11px] sm:h-12 sm:px-7 sm:text-lg">
@@ -70,11 +97,19 @@ export function SiteFooter() {
           </div>
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-2 text-sm">
-          {nav.map((n) => (
-            <Link key={n.to} to={n.to} className="opacity-70 hover:opacity-100">
-              {n.label}
-            </Link>
-          ))}
+          {nav.map((n) =>
+            "children" in n ? (
+              n.children.map((c) => (
+                <Link key={c.to} to={c.to} className="opacity-70 hover:opacity-100">
+                  {c.label}
+                </Link>
+              ))
+            ) : (
+              <Link key={n.to} to={n.to} className="opacity-70 hover:opacity-100">
+                {n.label}
+              </Link>
+            ),
+          )}
           <Link to="/blog" className="opacity-70 hover:opacity-100">Blog</Link>
         </nav>
         <div>
