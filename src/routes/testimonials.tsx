@@ -1,12 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
-import { PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
+import { CtaLink, PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { ReviewCard } from "@/components/site/Carousels";
-import { brandVideoUrl, caseStudies, images, reviews } from "@/data/site";
+import { brandVideoUrl, images, reviews } from "@/data/site";
 
 export const Route = createFileRoute("/testimonials")({
-  head: () => seo("Testimonials", "Google reviews, before & after transformations, client videos and case studies from ReFormd clients in Singapore."),
+  head: () => seo("Testimonials", "Google reviews, before & after transformations and client videos from ReFormd clients in Singapore."),
   component: Testimonials,
 });
 
@@ -57,9 +56,9 @@ function Testimonials() {
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader title="Ready to write your own?" />
           <p className="mt-4 max-w-2xl text-base opacity-80">Book a free consultation and we will match you with a personal trainer who fits your goals.</p>
-          <Button asChild size="lg" className="mt-8">
-            <Link to="/contact">Book a consultation</Link>
-          </Button>
+          <div className="mt-8">
+            <CtaLink to="/contact">Book a consultation</CtaLink>
+          </div>
         </div>
       </section>
     </>
