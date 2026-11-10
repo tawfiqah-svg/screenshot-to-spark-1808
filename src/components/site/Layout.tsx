@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Menu, X, Instagram, Facebook, Youtube, Linkedin, Star } from "lucide-react";
+import { useEffect, useRef, type ReactNode } from "react";
+import { Instagram, Facebook, Youtube, Linkedin, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { nav, subBrands } from "@/data/site";
 import { cn } from "@/lib/utils";
@@ -22,7 +22,6 @@ export function CtaLink({ to = "/contact", children, inverse }: { to?: string; c
 }
 
 export function SiteHeader() {
-  const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5">
