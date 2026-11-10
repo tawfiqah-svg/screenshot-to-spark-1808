@@ -27,16 +27,16 @@ export function CtaLink({ to = "/contact", children, inverse }: { to?: string; c
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5">
-        <Link to="/" aria-label="ReFormd home">
-          <Logo className="h-8" />
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-5">
+        <Link to="/" aria-label="ReFormd home" className="shrink-0">
+          <Logo className="h-6 sm:h-8" />
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-5 overflow-x-auto">
+        <nav aria-label="Main" className="flex items-center gap-3 overflow-x-auto sm:gap-5">
           {nav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="shrink-0 whitespace-nowrap font-display text-base tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground"
+              className="shrink-0 whitespace-nowrap font-display text-xs tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground sm:text-base"
               activeProps={{ className: "text-foreground" }}
               activeOptions={{ exact: true }}
             >
@@ -45,7 +45,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="cta" size="lg" className="h-12 px-7 text-lg">
+          <Button asChild variant="cta" size="lg" className="h-9 px-3 text-xs sm:h-12 sm:px-7 sm:text-lg">
             <Link to="/contact">Book a consultation</Link>
           </Button>
         </div>
@@ -114,8 +114,8 @@ export function SectionHeader({ eyebrow, title, text, center }: { eyebrow?: stri
   return (
     <div className={cn("max-w-3xl", center && "mx-auto text-center")}>
       {eyebrow && <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{eyebrow}</p>}
-      <h2 className="text-4xl font-black uppercase leading-[0.95] md:text-6xl">{title}</h2>
-      {text && <p className="mt-5 text-lg text-muted-foreground">{text}</p>}
+      <h2 className="text-3xl font-black uppercase leading-[0.95] sm:text-4xl md:text-6xl">{title}</h2>
+      {text && <p className="mt-5 text-base text-muted-foreground sm:text-lg">{text}</p>}
     </div>
   );
 }
@@ -127,8 +127,8 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
       <div className="absolute inset-0 bg-overlay" />
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-14 pt-32">
         <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{eyebrow}</p>
-        <h1 className="max-w-4xl text-5xl font-black uppercase leading-[0.9] md:text-7xl">{title}</h1>
-        {text && <p className="mt-5 max-w-2xl text-lg opacity-85">{text}</p>}
+        <h1 className="max-w-4xl text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">{title}</h1>
+        {text && <p className="mt-5 max-w-2xl text-base opacity-85 sm:text-lg">{text}</p>}
       </div>
     </section>
   );

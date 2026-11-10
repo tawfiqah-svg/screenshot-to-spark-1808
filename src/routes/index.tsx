@@ -52,8 +52,8 @@ function Home() {
         <div className="absolute inset-0 bg-overlay" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
-          <h1 className="max-w-5xl text-5xl font-black uppercase leading-[0.88] sm:text-7xl lg:text-8xl">Feel strong, energised, & confident.</h1>
-          <p className="mt-6 max-w-xl text-lg opacity-85 md:text-xl">High-end personal training in Singapore for people who want real results.</p>
+          <h1 className="max-w-5xl text-4xl font-black uppercase leading-[0.88] sm:text-7xl lg:text-8xl">Feel strong, energised, & confident.</h1>
+          <p className="mt-6 max-w-xl text-base opacity-85 sm:text-lg md:text-xl">High-end personal training in Singapore for people who want real results.</p>
           <div className="mt-8"><CtaLink>Book your free consultation</CtaLink></div>
         </div>
       </section>
@@ -88,7 +88,7 @@ function Home() {
                   <span className="flex flex-1 items-center gap-5 text-left">
                     <Icon className="size-7 shrink-0 text-cta" />
                     <span>
-                      <span className="block font-display text-2xl font-bold uppercase leading-tight tracking-wide md:text-3xl">{title}</span>
+                      <span className="block font-display text-xl font-bold uppercase leading-tight tracking-wide sm:text-2xl md:text-3xl">{title}</span>
                       <span className="mt-1 block font-sans text-sm font-normal normal-case tracking-normal text-muted-foreground md:text-base">{summary}</span>
                     </span>
                   </span>
@@ -152,8 +152,8 @@ function Home() {
         <img src={images.studio} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="relative mx-auto max-w-4xl px-5 py-28 text-center">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
-          <h2 className="text-5xl font-black uppercase leading-[0.9] md:text-7xl">Try 3 sessions to be sure.</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg opacity-85">
+          <h2 className="text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">Try 3 sessions to be sure.</h2>
+          <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">
             Try our 3-Session Kickstarter Trial with a personal trainer at our private studio or an RF-Operated Gym, whichever is more convenient for you.
           </p>
           <div className="mt-8"><CtaLink>Book an online consultation</CtaLink></div>
