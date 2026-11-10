@@ -45,7 +45,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="cta" size="sm" className="h-10 px-5">
+          <Button asChild variant="cta" size="lg" className="h-12 px-7 text-lg">
             <Link to="/contact">Book a consultation</Link>
           </Button>
         </div>

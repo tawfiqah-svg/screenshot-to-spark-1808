@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lock, LineChart, Moon, ArrowRight } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel, ReviewsCarousel } from "@/components/site/Carousels";
 import { brandVideoUrl, images, locations, programs } from "@/data/site";
@@ -10,9 +11,36 @@ export const Route = createFileRoute("/")({
 });
 
 const why = [
-  { icon: Lock, text: "Your private space to train and focus." },
-  { icon: LineChart, text: "Data-driven. Testing & constant tracking." },
-  { icon: Moon, text: "Conscious training, helping with nutrition, sleep, and stress." },
+  {
+    icon: Lock,
+    title: "Your private space to train and focus",
+    summary: "No crowds, no waiting for equipment, no distractions.",
+    details: [
+      "Train in a private ReFormd studio where the space is yours for the session — never shared with walk-in gym traffic.",
+      "Every session is one-on-one with your coach, so your full hour is spent training, not queueing.",
+      "A calm, premium environment designed for focus: the right equipment, the right atmosphere, zero guesswork.",
+    ],
+  },
+  {
+    icon: LineChart,
+    title: "Data-driven, with testing & constant tracking",
+    summary: "Your progress is measured, not guessed.",
+    details: [
+      "We start with a full assessment — movement, strength, body composition and lifestyle — to set your baseline.",
+      "Your program is built around that data and re-tested on a regular cycle, so you can see exactly what's improving.",
+      "Your coach tracks every session and adjusts your plan as you progress, keeping you moving forward without plateaus.",
+    ],
+  },
+  {
+    icon: Moon,
+    title: "Conscious training beyond the session",
+    summary: "Nutrition, sleep and stress — coached, not ignored.",
+    details: [
+      "Training is only part of the equation. Your coach helps you build nutrition habits that fit your schedule and preferences.",
+      "We factor sleep, stress and recovery into your program, so hard weeks at work don't derail your progress.",
+      "You get practical guidance between sessions — the support continues long after you leave the studio.",
+    ],
+  },
 ];
 
 function Home() {
@@ -52,19 +80,33 @@ function Home() {
       {/* 4. Why */}
       <section className="mx-auto max-w-7xl px-5 py-24">
         <Reveal><SectionHeader title="Why you'll succeed here" /></Reveal>
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {why.map(({ icon: Icon, text }, i) => (
-            <Reveal key={text}>
-              <div className="h-full rounded-lg border border-border bg-card p-8">
-                <div className="flex items-center justify-between">
-                  <Icon className="size-8 text-cta" />
-                  <span className="font-display text-5xl font-black text-border">0{i + 1}</span>
-                </div>
-                <p className="mt-10 font-display text-2xl font-bold leading-tight">{text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal>
+          <Accordion type="single" collapsible className="mt-12 space-y-3">
+            {why.map(({ icon: Icon, title, summary, details }, i) => (
+              <AccordionItem key={title} value={`why-${i}`} className="rounded-lg border border-border bg-card px-6 py-2 data-[state=open]:border-cta/40 md:px-8">
+                <AccordionTrigger className="gap-4 py-6 hover:no-underline">
+                  <span className="flex flex-1 items-center gap-5 text-left">
+                    <Icon className="size-7 shrink-0 text-cta" />
+                    <span>
+                      <span className="block font-display text-2xl font-bold uppercase leading-tight tracking-wide md:text-3xl">{title}</span>
+                      <span className="mt-1 block font-sans text-sm font-normal normal-case tracking-normal text-muted-foreground md:text-base">{summary}</span>
+                    </span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-6 pl-12 pr-2 md:pl-14">
+                  <ul className="space-y-3 text-base leading-relaxed text-muted-foreground">
+                    {details.map((d) => (
+                      <li key={d} className="flex gap-3">
+                        <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-cta" />
+                        <span>{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </Reveal>
       </section>
 
       {/* 5. Programs */}
