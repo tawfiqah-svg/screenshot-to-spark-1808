@@ -75,10 +75,10 @@ function Locations() {
         <form onSubmit={search} className="flex flex-col gap-3 md:flex-row">
           <div className="relative flex-1">
             <Search className="absolute left-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
-            <Input value={query} onChange={(e) => { setQuery(e.target.value); setOrigin(null); }} placeholder="Enter a postal code or workplace" aria-label="Postal code or workplace" className="h-14 rounded-full pl-12 text-base" />
+            <Input value={query} onChange={(e) => { setQuery(e.target.value); setOrigin(null); }} placeholder="Enter a postal code or workplace" aria-label="Postal code or workplace" className="h-14 pl-12 text-base" />
           </div>
           <Button type="submit" variant="cta" size="xl">Search</Button>
-          <Button type="button" variant="outline" size="xl" className="rounded-full" onClick={nearMe}><LocateFixed /> Find a location near me</Button>
+          <Button type="button" variant="outline" size="xl" onClick={nearMe}><LocateFixed /> Find a location near me</Button>
         </form>
         {message && <p className="mt-3 text-sm text-muted-foreground" role="status">{message}</p>}
 

@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none text-sm font-medium cursor-pointer transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -16,14 +16,14 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        cta: "rounded-full bg-cta text-cta-foreground font-display uppercase tracking-wider shadow-cta hover:bg-cta-hover hover:-translate-y-0.5 transition-all",
-        ctaInverse: "rounded-full bg-background text-foreground font-display uppercase tracking-wider hover:bg-cta hover:text-cta-foreground transition-all",
+        cta: "bg-cta text-cta-foreground font-display uppercase tracking-wider shadow-cta hover:bg-cta-hover hover:shadow-cta-hover hover:-translate-y-0.5 transition-all",
+        ctaInverse: "bg-background text-foreground font-display uppercase tracking-wider hover:bg-cta hover:text-cta-foreground hover:shadow-cta-hover transition-all",
       },
       size: {
         default: "h-9 px-4 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        xl: "h-14 px-8 text-sm",
+        sm: "h-8 px-3 text-xs",
+        lg: "h-10 px-8",
+        xl: "h-16 px-10 text-lg",
         icon: "h-9 w-9",
       },
     },
