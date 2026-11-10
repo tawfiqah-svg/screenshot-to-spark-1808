@@ -154,7 +154,7 @@ function Home() {
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
           <h2 className="text-5xl font-black uppercase leading-[0.9] md:text-7xl">Try 3 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg opacity-85">
-            Try 3 sessions with a personal trainer at our private studio or an RF-Operated Gym, whichever is more convenient for you.
+            Try our 3-Session Kickstarter Trial with a personal trainer at our private studio or an RF-Operated Gym, whichever is more convenient for you.
           </p>
           <div className="mt-8"><CtaLink>Book an online consultation</CtaLink></div>
         </div>
