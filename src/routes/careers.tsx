@@ -11,7 +11,7 @@ export const Route = createFileRoute("/careers")({
 function Careers() {
   return (
     <>
-      <PageHero eyebrow="Careers" title="RF Academy" text="Earn your personal training certification and take the next step towards a fitness career." image={images.performance} />
+      <PageHero eyebrow="Careers" title="RF Academy" text="Become ReFormd Certified and take the next step towards a fitness career." image={images.performance} />
       <section className="mx-auto max-w-7xl px-5 py-24">
         <Reveal>
           <SectionHeader eyebrow="Learn. Practise. Progress." title="Start your career in personal training" text="RF Academy combines personal training certification with practical experience. Learn the fundamentals, shadow experienced trainers during real client sessions and see how personal training is delivered in Singapore." />
