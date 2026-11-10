@@ -7,4 +7,6 @@
 - [x] Remove trainer hierarchy and use trainer terminology throughout.
 - [x] Add the RF Academy assessment and career pathway.
 - [x] Add nine FAQ answers based on ReFormd's website.
-- [x] Verify page interactions and layouts.
+- [x] Add Testimonials to the top menu and remove the case studies section.
+- [x] Group related pages under a dropdown in the top navigation (About us: Testimonials, Team, Careers).
+- [ ] Verify dropdown menus on desktop and phone.
