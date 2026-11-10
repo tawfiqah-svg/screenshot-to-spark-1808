@@ -10,9 +10,36 @@ export const Route = createFileRoute("/")({
 });
 
 const why = [
-  { icon: Lock, text: "Your private space to train and focus." },
-  { icon: LineChart, text: "Data-driven. Testing & constant tracking." },
-  { icon: Moon, text: "Conscious training, helping with nutrition, sleep, and stress." },
+  {
+    icon: Lock,
+    title: "Your private space to train and focus",
+    summary: "No crowds, no waiting for equipment, no distractions.",
+    details: [
+      "Train in a private ReFormd studio where the space is yours for the session — never shared with walk-in gym traffic.",
+      "Every session is one-on-one with your coach, so your full hour is spent training, not queueing.",
+      "A calm, premium environment designed for focus: the right equipment, the right atmosphere, zero guesswork.",
+    ],
+  },
+  {
+    icon: LineChart,
+    title: "Data-driven, with testing & constant tracking",
+    summary: "Your progress is measured, not guessed.",
+    details: [
+      "We start with a full assessment — movement, strength, body composition and lifestyle — to set your baseline.",
+      "Your program is built around that data and re-tested on a regular cycle, so you can see exactly what's improving.",
+      "Your coach tracks every session and adjusts your plan as you progress, keeping you moving forward without plateaus.",
+    ],
+  },
+  {
+    icon: Moon,
+    title: "Conscious training beyond the session",
+    summary: "Nutrition, sleep and stress — coached, not ignored.",
+    details: [
+      "Training is only part of the equation. Your coach helps you build nutrition habits that fit your schedule and preferences.",
+      "We factor sleep, stress and recovery into your program, so hard weeks at work don't derail your progress.",
+      "You get practical guidance between sessions — the support continues long after you leave the studio.",
+    ],
+  },
 ];
 
 function Home() {
