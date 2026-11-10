@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lock, LineChart, Moon, ArrowRight } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel, ReviewsCarousel } from "@/components/site/Carousels";
 import { brandVideoUrl, images, locations, programs } from "@/data/site";
