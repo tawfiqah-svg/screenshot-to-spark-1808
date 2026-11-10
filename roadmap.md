@@ -13,4 +13,4 @@
 - [x] Open the About us dropdown on hover instead of click.
 - [x] Add "Our team of experts" section with "Meet them all" CTA on the home page.
 - [x] Add "Read other success stories" CTA to the home reviews section.
-- [ ] Verify hover dropdown and new home sections.
+- [x] Verify hover dropdown and new home sections.
