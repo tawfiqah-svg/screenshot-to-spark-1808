@@ -29,14 +29,14 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-5">
         <Link to="/" aria-label="ReFormd home" className="shrink-0">
-          <Logo className="h-6 sm:h-8" />
+          <Logo className="h-5 sm:h-8" />
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-3 overflow-x-auto sm:gap-5">
+        <nav aria-label="Main" className="flex items-center gap-2 overflow-x-auto sm:gap-5">
           {nav.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="shrink-0 whitespace-nowrap font-display text-xs tracking-[0.08em] text-muted-foreground transition-colors hover:text-foreground sm:text-base"
+              className="shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.06em] text-muted-foreground transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]"
               activeProps={{ className: "text-foreground" }}
               activeOptions={{ exact: true }}
             >
@@ -45,8 +45,8 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="cta" size="lg" className="h-9 px-3 text-xs sm:h-12 sm:px-7 sm:text-lg">
-            <Link to="/contact">Book a consultation</Link>
+          <Button asChild variant="cta" size="lg" className="h-9 px-2.5 text-[11px] sm:h-12 sm:px-7 sm:text-lg">
+            <Link to="/contact"><span className="sm:hidden">Book now</span><span className="hidden sm:inline">Book a consultation</span></Link>
           </Button>
         </div>
       </div>
