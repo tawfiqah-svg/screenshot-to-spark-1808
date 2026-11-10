@@ -227,4 +227,4 @@ export const blogPosts = [
 ];
 
 /** Placeholder YouTube embed — replace with the real video ID. */
-export const brandVideoUrl = "https://www.youtube.com/embed/ScMzIvxBSi4";
+export const brandVideoUrl = "https://www.youtube.com/embed/YxXtNk3yuz8";
