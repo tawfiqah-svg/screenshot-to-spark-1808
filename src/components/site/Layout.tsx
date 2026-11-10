@@ -60,7 +60,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-3">
         <div>
           <Logo inverse className="h-8" />
-          <p className="mt-3 max-w-xs text-sm opacity-70">High-end personal training in Singapore.</p>
+          <p className="mt-3 max-w-xs text-sm opacity-70">Progress all ways, always.</p>
           <div className="mt-6 flex gap-4">
             {[Instagram, Facebook].map((Icon, i) => (
               <a key={i} href="#" aria-label={["Instagram", "Facebook"][i]} className="opacity-70 hover:opacity-100">
