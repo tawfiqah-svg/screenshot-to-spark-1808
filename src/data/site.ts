@@ -73,7 +73,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "RF615 Bukit Timah", address: "615 Bukit Timah Road", mrt: "Sixth Avenue", type: "studio", lat: 1.3307, lng: 103.7970 },
   { name: "RF Sixth Avenue", address: "Sixth Avenue, Bukit Timah", mrt: "Sixth Avenue", type: "studio", lat: 1.3290, lng: 103.7975 },
   { name: "RF Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
-  { name: "FORGED by ReFormd", address: "Bukit Timah, Singapore", mrt: "Sixth Avenue", type: "studio", lat: 1.3190, lng: 103.8140 },
+  { name: "FORGED by ReFormd", address: "1 Raffles Link", mrt: "City Hall / Esplanade", type: "studio", lat: 1.2918, lng: 103.8547 },
   // Anytime Fitness clubs — PT delivered inside AF to AF members
   { name: "Anytime Fitness Orchard", address: "Orchard Road", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
   { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Cineleisure", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
