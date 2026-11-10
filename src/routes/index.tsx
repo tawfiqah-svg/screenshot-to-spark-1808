@@ -16,7 +16,7 @@ const why = [
     title: "Your private space to train and focus",
     summary: "No crowds, no waiting for equipment, no distractions.",
     details: [
-      "Train in a private ReFormd studio where the space is yours for the session — never shared with walk-in gym traffic.",
+      "Train in a private ReFormd studio. The space is yours for the whole session, never shared with walk-in gym traffic.",
       "Every session is one-on-one with your coach, so your full hour is spent training, not queueing.",
       "A calm, premium environment designed for focus: the right equipment, the right atmosphere, zero guesswork.",
     ],
@@ -26,7 +26,7 @@ const why = [
     title: "Data-driven, with testing & constant tracking",
     summary: "Your progress is measured, not guessed.",
     details: [
-      "We start with a full assessment — movement, strength, body composition and lifestyle — to set your baseline.",
+      "We start with a full assessment of your movement, strength, body composition and lifestyle, so we know exactly where you're starting from.",
       "Your program is built around that data and re-tested on a regular cycle, so you can see exactly what's improving.",
       "Your coach tracks every session and adjusts your plan as you progress, keeping you moving forward without plateaus.",
     ],
@@ -34,11 +34,11 @@ const why = [
   {
     icon: Moon,
     title: "Conscious training beyond the session",
-    summary: "Nutrition, sleep and stress — coached, not ignored.",
+    summary: "Nutrition, sleep and stress are part of the plan.",
     details: [
       "Training is only part of the equation. Your coach helps you build nutrition habits that fit your schedule and preferences.",
       "We factor sleep, stress and recovery into your program, so hard weeks at work don't derail your progress.",
-      "You get practical guidance between sessions — the support continues long after you leave the studio.",
+      "You get practical guidance between sessions, so the support continues after you leave the studio.",
     ],
   },
 ];
