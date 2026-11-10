@@ -14,3 +14,6 @@
 - [x] Add "Our team of experts" section with "Meet them all" CTA on the home page.
 - [x] Add "Read other success stories" CTA to the home reviews section.
 - [x] Verify hover dropdown and new home sections.
+- [ ] Expand About us with the RF Group story and verified events.
+- [ ] Add an About us link and photo thumbnails to the hover dropdown.
+- [ ] Verify the About page and dropdown on desktop and phone.
