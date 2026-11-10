@@ -32,6 +32,16 @@ export function CtaLink({ to = "/contact", children, inverse }: { to?: string; c
 
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const openMenu = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenDropdown(label);
+  };
+  const scheduleClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 150);
+  };
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-5">
@@ -41,23 +51,25 @@ export function SiteHeader() {
         <nav aria-label="Main" className="flex items-center gap-2 overflow-x-auto sm:gap-5">
           {nav.map((n) =>
             "children" in n ? (
-              <DropdownMenu key={n.label}>
-                <DropdownMenuTrigger
-                  className={cn(
-                    "flex shrink-0 items-center gap-1 whitespace-nowrap font-display text-[11px] tracking-[0.06em] transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]",
-                    n.children.some((c) => c.to === pathname) ? "text-foreground" : "text-muted-foreground",
-                  )}
-                >
-                  {n.label} <ChevronDown className="size-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start">
-                  {n.children.map((c) => (
-                    <DropdownMenuItem key={c.to} asChild className="font-display uppercase tracking-[0.06em]">
-                      <Link to={c.to}>{c.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              <div key={n.label} onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
+                <DropdownMenu open={openDropdown === n.label} onOpenChange={(o) => setOpenDropdown(o ? n.label : null)} modal={false}>
+                  <DropdownMenuTrigger
+                    className={cn(
+                      "flex shrink-0 items-center gap-1 whitespace-nowrap font-display text-[11px] tracking-[0.06em] transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]",
+                      n.children.some((c) => c.to === pathname) ? "text-foreground" : "text-muted-foreground",
+                    )}
+                  >
+                    {n.label} <ChevronDown className={cn("size-3 transition-transform", openDropdown === n.label && "rotate-180")} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
+                    {n.children.map((c) => (
+                      <DropdownMenuItem key={c.to} asChild className="font-display uppercase tracking-[0.06em]">
+                        <Link to={c.to}>{c.label}</Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
             ) : (
               <Link
                 key={n.to}

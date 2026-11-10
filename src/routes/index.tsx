@@ -3,7 +3,7 @@ import { Lock, LineChart, Moon, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel, ReviewsCarousel } from "@/components/site/Carousels";
-import { brandVideoUrl, images, locations, privateStudioCount, programs } from "@/data/site";
+import { brandVideoUrl, images, locations, privateStudioCount, programs, team } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => seo("Feel strong, energised, & confident", "Personal training in Singapore with five private ReFormd studios, convenient RF-Operated Gyms and experienced personal trainers."),
@@ -132,7 +132,10 @@ function Home() {
 
       {/* 6. Reviews */}
       <section className="mx-auto max-w-7xl px-5 py-24">
-        <Reveal><SectionHeader title="Real transformations from people like you" /></Reveal>
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <Reveal><SectionHeader title="Real transformations from people like you" /></Reveal>
+          <CtaLink to="/testimonials">Read other success stories</CtaLink>
+        </div>
         <div className="mt-12"><ReviewsCarousel /></div>
       </section>
 
@@ -147,7 +150,30 @@ function Home() {
         </div>
       </section>
 
-      {/* 8. Trial */}
+      {/* 8. Team */}
+      <section className="mx-auto max-w-7xl px-5 py-24">
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <Reveal><SectionHeader title="Our team of experts" /></Reveal>
+          <CtaLink to="/team">Meet them all</CtaLink>
+        </div>
+        <div className="mt-12 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+          {team.slice(0, 4).map((t) => (
+            <Reveal key={t.name}>
+              <Link to="/team" className="group block">
+                <article>
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
+                    <img src={t.image} alt={t.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  </div>
+                  <h3 className="mt-4 text-2xl font-black uppercase">{t.name}</h3>
+                  <p className="text-sm text-muted-foreground">{t.title}</p>
+                </article>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* 9. Trial */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
         <img src={images.studio} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-40" />
         <div className="relative mx-auto max-w-4xl px-5 py-28 text-center">

@@ -10,3 +10,7 @@
 - [x] Add Testimonials to the top menu and remove the case studies section.
 - [x] Group related pages under a dropdown in the top navigation (About us: Testimonials, Team, Careers).
 - [x] Verify dropdown menus on desktop and phone.
+- [x] Open the About us dropdown on hover instead of click.
+- [x] Add "Our team of experts" section with "Meet them all" CTA on the home page.
+- [x] Add "Read other success stories" CTA to the home reviews section.
+- [x] Verify hover dropdown and new home sections.
