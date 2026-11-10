@@ -42,8 +42,7 @@ export function LocationCard({ loc }: { loc: Location }) {
         <img src={loc.image} alt={`ReFormd ${loc.name}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
       </div>
       <div className="p-5">
-        <p className="text-xs font-bold uppercase tracking-widest text-cta">{loc.type === "studio" ? "ReFormd studio" : "Inside Anytime Fitness"}</p>
-        <h3 className="mt-1 text-xl font-black uppercase">{loc.name}</h3>
+        <h3 className="text-xl font-black uppercase">{loc.name}</h3>
         <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="size-4" />{loc.address}</p>
         <p className="mt-1 flex items-center gap-2 text-sm text-muted-foreground"><TrainFront className="size-4" />{loc.mrt} MRT</p>
       </div>
