@@ -80,7 +80,7 @@ function Home() {
       <section className="mx-auto max-w-7xl px-5 py-24">
         <Reveal><SectionHeader title="Why you'll succeed here" /></Reveal>
         <Reveal>
-          <Accordion type="single" collapsible className="mt-12">
+          <Accordion type="single" collapsible className="mt-12 space-y-3">
             {why.map(({ icon: Icon, title, summary, details }, i) => (
               <AccordionItem key={title} value={`why-${i}`} className="rounded-lg border border-border bg-card px-6 py-2 data-[state=open]:border-cta/40 md:px-8">
                 <AccordionTrigger className="gap-4 py-6 hover:no-underline">
