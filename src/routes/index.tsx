@@ -16,8 +16,8 @@ const why = [
     title: "Five private studios. More places to train.",
     summary: `${privateStudioCount} private studios, with RF-Operated Gyms for your convenience.`,
     details: [
-      `Choose from our ${privateStudioCount} private ReFormd studios for focused, one-to-one personal training.`,
-      "Prefer somewhere closer to home or work? Train at an RF-Operated Gym for your convenience, subject to gym membership access.",
+      `Choose from our ${privateStudioCount} private ReFormd studios for focused, one-to-one personal training with no distractions.`,
+      "Prefer somewhere closer to home or work? Your personal training session can also be conducted at our RF-Operated Gyms for your convenience with no additional gym membership access required.",
       "Your personal trainer helps you choose a location and session time that fit your routine.",
     ],
   },
