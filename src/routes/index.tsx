@@ -141,7 +141,7 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <Reveal><SectionHeader title="Always a studio near you." /></Reveal>
-            <CtaLink to="/locations">Browse our 20 locations</CtaLink>
+            <CtaLink to="/locations">Browse our 19 locations</CtaLink>
           </div>
           <div className="mt-12"><LocationsCarousel items={locations} /></div>
         </div>
