@@ -21,10 +21,16 @@ function About() {
             </div>
           ))}
         </div>
-        <Link to="/blog" className="mt-16 flex items-center justify-between rounded-lg bg-ink p-8 text-ink-foreground">
-          <span className="font-display text-3xl font-black uppercase">Read our blog</span>
-          <ArrowRight className="size-6" />
-        </Link>
+        <div className="mt-16 grid gap-5 sm:grid-cols-2">
+          <Link to="/testimonials" className="flex items-center justify-between rounded-lg bg-ink p-8 text-ink-foreground">
+            <span className="font-display text-3xl font-black uppercase">Client results</span>
+            <ArrowRight className="size-6" />
+          </Link>
+          <Link to="/blog" className="flex items-center justify-between rounded-lg bg-ink p-8 text-ink-foreground">
+            <span className="font-display text-3xl font-black uppercase">Read our blog</span>
+            <ArrowRight className="size-6" />
+          </Link>
+        </div>
       </section>
     </>
   );
