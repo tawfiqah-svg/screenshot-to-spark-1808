@@ -14,7 +14,10 @@ function Careers() {
       <PageHero eyebrow="Careers" title="Coach with ReFormd" image={images.performance} />
       <section className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:grid-cols-2 md:items-center">
         <Reveal>
-          <SectionHeader eyebrow="RF Academy" title="Learn from the best" text="RF Academy is our education program for coaches. Build your skills, earn certifications and grow into a senior trainer with ongoing mentorship." />
+          <SectionHeader eyebrow="RF Academy" title="Earn your personal training certification" text="Build a new income stream and open the door to a fitness career within ReFormd Group. RF Academy provides a direct pathway towards becoming a Personal Trainer with ReFormd Personal Training. Beyond earning your certification, you will gain practical experience by shadowing experienced trainers during real client sessions and learning how personal training is delivered in Singapore." />
+          <p className="mt-5 text-lg text-muted-foreground">
+            Develop the technical knowledge, coaching skills and client-management experience needed to begin your career with confidence. Graduates who meet ReFormd's coaching and professional standards will have the opportunity to apply for available Personal Trainer or Coach roles within ReFormd Personal Training and Body Fit Training studios owned by the ReFormd Group.
+          </p>
           <div className="mt-8"><CtaLink>Get in touch</CtaLink></div>
         </Reveal>
         <img src={images.studio} alt="ReFormd studio" loading="lazy" className="aspect-[4/3] w-full rounded-lg object-cover" />

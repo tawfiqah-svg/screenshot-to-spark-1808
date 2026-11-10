@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
-import { addOns, images, programs } from "@/data/site";
+import { addOns, images, programs, subBrands } from "@/data/site";
 
 export const Route = createFileRoute("/programs")({
   head: () => seo("Programs", "Personal training programs for weight loss & muscle mass, peak performance, vitality & longevity, and prenatal & postpartum."),
@@ -37,6 +37,16 @@ function Programs() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+      <section className="mx-auto max-w-7xl px-5 py-24">
+        <SectionHeader eyebrow="About us" title="The ReFormd Group" text="Asia's leading fitness brand, home to private PT studios and gyms across Singapore." />
+        <div className="mt-10 grid gap-px overflow-hidden rounded-lg bg-border sm:grid-cols-2 lg:grid-cols-4">
+          {subBrands.map((b) => (
+            <div key={b} className="flex aspect-square items-center justify-center bg-card p-6 text-center">
+              <span className="font-display text-2xl font-black uppercase">{b === "BFT" ? "BFT gyms" : b}</span>
+            </div>
+          ))}
         </div>
       </section>
     </>
