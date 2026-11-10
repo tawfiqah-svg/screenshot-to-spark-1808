@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { CtaLink, PageHero, SectionHeader, seo } from "@/components/site/Layout";
-import { aboutContent, groupSupport, images, rfEvents } from "@/data/site";
+import { PageHero, SectionHeader, seo } from "@/components/site/Layout";
+import { aboutContent, rfGroupBrands, images, rfEvents } from "@/data/site";
 
 export const Route = createFileRoute("/about")({
   head: () => seo("About the RF Group & Events", "Discover the Singapore-born ReFormd Group, our personal training, FORGED performance testing, Shelter recovery and community powerlifting events."),
@@ -27,22 +27,14 @@ function About() {
       </section>
       <section className="bg-ink py-16 text-ink-foreground md:py-24">
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader eyebrow="The RF Group" title="Training, testing and recovery" />
+          <SectionHeader eyebrow="The RF Group" title={aboutContent.groupHeading} />
           <div className="mt-12 grid gap-8 md:grid-cols-3">
-            <div className="border-t border-ink-foreground/20 pt-6">
-              <p className="text-sm font-semibold uppercase text-cta">Personal training</p>
-              <h3 className="mt-3 text-3xl">ReFormd Personal Training</h3>
-              <p className="mt-4 opacity-80">One-to-one sessions with a personal trainer, built around your goals and your starting point. Train at our private studios or RF-Operated Gyms at your convenience.</p>
-            </div>
-            {groupSupport.map((brand) => (
-              <div key={brand.title} className="border-t border-ink-foreground/20 pt-6">
-                <p className="text-sm font-semibold uppercase text-cta">{brand.label}</p>
-                <h3 className="mt-3 text-3xl">{brand.title}</h3>
-                <p className="mt-4 opacity-80">{brand.text}</p>
+            {rfGroupBrands.map((brand) => (
+              <div key={brand} className="border-t border-ink-foreground/20 pt-6">
+                <h3 className="text-3xl">{brand}</h3>
               </div>
             ))}
           </div>
-          <div className="mt-10"><CtaLink to="/programs">Explore our programs</CtaLink></div>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16 md:py-24">

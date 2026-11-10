@@ -31,6 +31,7 @@ export const aboutContent = {
   intro: "Born in Singapore, ReFormd brings personal training, performance testing, recovery and fitness education together. Whether you're starting out or training for competition, we want you to have access to the people and facilities that help you progress.",
   story: "Good training should fit into your life. We focus on convenient locations, well-equipped facilities and personal service, with a team that listens to what you need. Across the RF Group, our aim is simple: help you keep moving forward.",
   mission: "Progress all ways, always.",
+  groupHeading: "A full ecosystem for training, testing, recovery and lifestyle",
   values: [
     { title: "Easy to get to", text: "Our private studios and RF-Operated Gyms give you more choice about where to train, close to home, work or your daily commute." },
     { title: "Quality and value", text: "We invest in equipment and facilities that support your training, while keeping quality service and value at the centre of what we do." },
@@ -38,6 +39,15 @@ export const aboutContent = {
   ],
   eventsIntro: "Our commitment to progress extends beyond the studio. ReFormd brings people together through competitions, workshops and events that give participants a chance to challenge themselves and connect with the wider fitness community.",
 };
+
+export const rfGroupBrands = [
+  "ReFormd Personal Training",
+  "FORGED by ReFormd",
+  "Shelter by ReFormd",
+  "BFT",
+  "The Laboratory",
+  "RF-Operated Anytime Fitness",
+];
 
 export const rfEvents = [
   { title: "ReFormd Powerlifting Classic III", venue: "Cineleisure Orchard", text: "A powerlifting competition with an LED backdrop and a livestream following the action from the warm-up room to the platform.", link: "https://www.youtube.com/playlist?list=PLFd5M_Dhvpextv6YF2WkdktJmwCvwr3we", cta: "Watch the competition" },
