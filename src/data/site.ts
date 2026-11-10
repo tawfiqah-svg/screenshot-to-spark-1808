@@ -4,6 +4,9 @@ import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
 import performance from "@/assets/performance.jpg";
 import prenatal from "@/assets/prenatal.jpg";
+import bftAsset from "@/assets/rf-group-bft.svg.asset.json";
+import laboratoryAsset from "@/assets/rf-group-laboratory.png.asset.json";
+import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
 
 export const images = { hero, homeHero: homeHeroAsset.url, studio, performance, prenatal };
 
@@ -41,12 +44,48 @@ export const aboutContent = {
 };
 
 export const rfGroupBrands = [
-  "ReFormd Personal Training",
-  "FORGED by ReFormd",
-  "Shelter by ReFormd",
-  "BFT",
-  "The Laboratory",
-  "RF-Operated Anytime Fitness",
+  {
+    title: "ReFormd Personal Training",
+    image: homeHeroAsset.url,
+    imageAlt: "Personal training at ReFormd",
+    logo: false,
+    text: "One-to-one personal training built around your goals, experience and routine. Train with a dedicated personal trainer at our private studios or RF-Operated Gyms, wherever is convenient for you.",
+  },
+  {
+    title: "FORGED by ReFormd",
+    image: performance,
+    imageAlt: "Strength and performance training",
+    logo: false,
+    text: "Sports performance testing and training for people who want to understand and improve how they move. Testing helps establish your starting point, guide your training and measure your progress.",
+  },
+  {
+    title: "Shelter by ReFormd",
+    image: studio,
+    imageAlt: "Training and wellbeing space",
+    logo: false,
+    text: "Dedicated recovery facilities to complement your training and give recovery its own place in your routine. Speak with your trainer about the options that suit you and any additional costs.",
+  },
+  {
+    title: "BFT",
+    image: bftAsset.url,
+    imageAlt: "BFT logo",
+    logo: true,
+    text: "Structured group strength and conditioning sessions combining science-based training with a supportive group environment. Build strength, improve fitness and train alongside others at BFT studios within the RF Group.",
+  },
+  {
+    title: "The Laboratory",
+    image: laboratoryAsset.url,
+    imageAlt: "The Laboratory by RF logo",
+    logo: true,
+    text: "The RF Group's tech and lifestyle brand, specialising in mechanical keyboards, keycaps, switches and accessories. Explore products that make your desk setup feel more personal.",
+  },
+  {
+    title: "RF-Operated Anytime Fitness",
+    image: anytimeAsset.url,
+    imageAlt: "Anytime Fitness logo",
+    logo: true,
+    text: "Anytime Fitness gyms operated by the RF Group bring training closer to home or work. These locations also offer a convenient setting for your ReFormd personal training sessions.",
+  },
 ];
 
 export const rfEvents = [
