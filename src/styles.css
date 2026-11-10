@@ -112,7 +112,7 @@
   --color-ink: var(--ink);
   --color-ink-foreground: var(--ink-foreground);
   --color-star: var(--star);
-  --font-display: "Archivo", "Arial Black", sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
   --font-sans: "Hind", sans-serif;
   --shadow-cta: var(--shadow-cta);
 }
@@ -144,6 +144,7 @@
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 400;
-    letter-spacing: -0.01em;
+    font-synthesis-weight: none;
+    letter-spacing: 0.02em;
   }
 }
