@@ -3,7 +3,6 @@ import { ArrowRight, Sparkle, Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel } from "@/components/site/Carousels";
-import { GoogleReviews } from "@/components/site/GoogleReviews";
 import { brandVideoUrl, homeBenefits, images, locations, privateStudioCount, programs, team } from "@/data/site";
 
 export const Route = createFileRoute("/")({
@@ -153,7 +152,6 @@ function Home() {
           <Reveal><SectionHeader title="Real transformations from people like you" /></Reveal>
           <CtaLink to="/testimonials">Read other success stories</CtaLink>
         </div>
-        <div className="mt-12"><GoogleReviews /></div>
       </section>
 
       {/* 7. Locations */}

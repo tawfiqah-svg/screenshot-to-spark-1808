@@ -26,4 +26,5 @@
 - [x] Remove the icons above the success accordion titles.
 - [x] Remove the round arrow button under the hero heading.
 - [x] Replace home sample reviews with the provided live Google review widget and verify loading and navigation.
-- [ ] Enable carousel layout in SociableKIT (waiting for the user to change the widget’s current grid setting).
+- [x] Remove the SociableKIT widget at the user's request.
+- [ ] Replace it with a real review carousel (uploaded code has placeholder credentials; waiting for a supported review source).
