@@ -150,7 +150,7 @@ export const reviewWidget = {
 };
 
 export const mapEmbedUrl =
-  "https://www.google.com/maps/d/u/0/embed?mid=1wdC0gQdKjXEXaLZrUz7pc_LPALg84sw&ehbc=2E312F";
+  "https://www.google.com/maps/d/u/1/embed?mid=1ou2cpxrJ7bdcXS0m4Wh1PcG6ZPY6hos&ehbc=2E312F";
 
 export const reviews = [
   { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My trainer made it feel effortless to stay consistent." },
