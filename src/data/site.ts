@@ -1,6 +1,7 @@
 // All editable site content lives here. Swap images by replacing the imports below.
 import hero from "@/assets/hero.jpg";
 import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
+import trialBackgroundAsset from "@/assets/reformd-studio-reception.jpg.asset.json";
 import studio from "@/assets/studio.jpg";
 import performance from "@/assets/performance.jpg";
 import prenatal from "@/assets/prenatal.jpg";
@@ -8,7 +9,7 @@ import bftAsset from "@/assets/rf-group-bft.svg.asset.json";
 import laboratoryAsset from "@/assets/rf-group-laboratory.png.asset.json";
 import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
 
-export const images = { hero, homeHero: homeHeroAsset.url, studio, performance, prenatal };
+export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal };
 
 export const nav = [
   { to: "/", label: "Home" },
