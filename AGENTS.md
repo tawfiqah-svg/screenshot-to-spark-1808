@@ -15,4 +15,4 @@
 - Mount third-party review embeds after hydration in an isolated DOM container and destroy their controls on unmount to keep React and provider markup separate.
 - Run the Trustindex review script in an auto-height iframe mounted after hydration; accept height messages only from that frame, and unmount it to dispose of provider controls on navigation.
 - Keep page heading scales in the shared layout components and CTA sizing in the Button variants; allow long labels to wrap so narrow screens and enlarged text do not clip.
-- Mount the social rail once in the shared root and reserve its width below wide desktop sizes so it cannot cover page content; footer and rail use the same social links from site data.
+- Mount the social rail once in the shared root as a floating overlay that must not reserve layout width (no body/wrapper padding); footer and rail use the same social links from site data.
