@@ -36,3 +36,4 @@
 - [x] Replace Starwall reviews with the supplied Trustindex embed and verify loading, navigation and mobile sizing.
 - [x] Switch the Google reviews embed to the newer Trustindex widget.
 - [x] Add a mobile hamburger menu opening a slide-in drawer, keeping the desktop header unchanged.
+- [x] Make the Instagram and Facebook rail float over the page with no reserved side gap.
