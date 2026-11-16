@@ -1,6 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Instagram, Facebook, Star, ChevronDown } from "lucide-react";
+import { Instagram, Facebook, Star, ChevronDown, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,6 +8,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { nav, socialLinks, subBrands } from "@/data/site";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
@@ -34,6 +42,7 @@ export function CtaLink({ to = "/contact", children, inverse }: { to?: string; c
 export function SiteHeader() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [menuOpen, setMenuOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const openMenu = (label: string) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);
@@ -49,7 +58,7 @@ export function SiteHeader() {
         <Link to="/" aria-label="ReFormd home" className="shrink-0">
           <Logo className="h-5 sm:h-8" />
         </Link>
-        <nav aria-label="Main" className="flex items-center gap-2 overflow-x-auto sm:gap-5">
+        <nav aria-label="Main" className="hidden items-center gap-2 overflow-x-auto sm:gap-5 md:flex">
           {nav.map((n) =>
             "children" in n ? (
               <div key={n.label} onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
@@ -94,6 +103,77 @@ export function SiteHeader() {
           <Button asChild variant="cta" size="lg" className="h-9 px-2.5 text-xs sm:h-12 sm:px-7 sm:text-lg">
             <Link to="/contact"><span className="sm:hidden">Book now</span><span className="hidden sm:inline">Book a consultation</span></Link>
           </Button>
+          <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
+            <SheetTrigger asChild>
+              <Button
+                variant="outline"
+                size="icon"
+                aria-label="Open menu"
+                className="size-9 border-border md:hidden sm:size-11"
+              >
+                <Menu className="size-5" aria-hidden="true" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="flex w-[86%] max-w-xs flex-col gap-0 overflow-x-hidden p-0">
+              <SheetHeader className="border-b border-border px-5 py-4 text-left">
+                <SheetTitle className="font-display text-lg uppercase tracking-normal">Menu</SheetTitle>
+              </SheetHeader>
+              <nav aria-label="Mobile" className="flex-1 overflow-y-auto px-5 py-3">
+                <ul className="space-y-1">
+                  {nav.map((n) =>
+                    "children" in n ? (
+                      <li key={n.label}>
+                        <p className="px-1 pt-4 pb-1 font-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
+                          {n.label}
+                        </p>
+                        <ul>
+                          {n.children.map((c) => (
+                            <li key={c.to}>
+                              <SheetClose asChild>
+                                <Link
+                                  to={c.to}
+                                  className={cn(
+                                    "block border-l-2 py-2 pl-3 font-display text-2xl uppercase leading-tight transition-colors",
+                                    pathname === c.to ? "border-cta text-foreground" : "border-transparent text-muted-foreground hover:text-foreground",
+                                  )}
+                                >
+                                  {c.label}
+                                  <span className="mt-0.5 block font-sans text-xs normal-case tracking-normal text-muted-foreground">
+                                    {c.description}
+                                  </span>
+                                </Link>
+                              </SheetClose>
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    ) : (
+                      <li key={n.to}>
+                        <SheetClose asChild>
+                          <Link
+                            to={n.to}
+                            className={cn(
+                              "block border-l-2 py-2 pl-3 font-display text-2xl uppercase leading-tight transition-colors",
+                              pathname === n.to ? "border-cta text-foreground" : "border-transparent text-muted-foreground hover:text-foreground",
+                            )}
+                          >
+                            {n.label}
+                          </Link>
+                        </SheetClose>
+                      </li>
+                    ),
+                  )}
+                </ul>
+              </nav>
+              <div className="border-t border-border p-4">
+                <SheetClose asChild>
+                  <Button asChild variant="cta" size="lg" className="w-full">
+                    <Link to="/contact">Book a consultation</Link>
+                  </Button>
+                </SheetClose>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>

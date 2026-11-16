@@ -34,3 +34,5 @@
 - [x] Replace benefit-strip stars with plus signs and leave video sound on; autoplay remains subject to browser restrictions.
 - [x] Add a compact fixed red social sidebar across the website and update Instagram and Facebook footer links.
 - [x] Replace Starwall reviews with the supplied Trustindex embed and verify loading, navigation and mobile sizing.
+- [x] Switch the Google reviews embed to the newer Trustindex widget.
+- [x] Add a mobile hamburger menu opening a slide-in drawer, keeping the desktop header unchanged.
