@@ -138,6 +138,11 @@ export const groupSupport = [
   },
 ];
 
+export const reviewWidget = {
+  containerId: "reviews-widget-417",
+  scriptUrl: "https://starwall.io/embed/Ts6HZ31t5bHIsi3tCeTPiqDryl4YmHdq/widget.js",
+};
+
 export const reviews = [
   { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My trainer made it feel effortless to stay consistent." },
   { name: "Daniel T.", rating: 5, text: "The private studio is a game changer. No waiting, no crowds, just focused training around my work schedule." },

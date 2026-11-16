@@ -27,4 +27,4 @@
 - [x] Remove the round arrow button under the hero heading.
 - [x] Replace home sample reviews with the provided live Google review widget and verify loading and navigation.
 - [x] Remove the SociableKIT widget at the user's request.
-- [ ] Replace it with a real review carousel (uploaded code has placeholder credentials; waiting for a supported review source).
+- [x] Add the provided Starwall widget below the home review heading and verify loading, navigation and phone display.
