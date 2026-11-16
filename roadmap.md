@@ -23,3 +23,5 @@
 - [x] Verify the visual changes on desktop, mobile and with reduced motion.
 - [x] Simplify the moving strip with star separators and remove repeated heading underlines.
 - [x] Refine the success accordion with numbered rows and subtle opening motion.
+- [x] Remove the icons above the success accordion titles.
+- [x] Remove the round arrow button under the hero heading.

@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Lock, LineChart, Moon, ArrowRight, ArrowDown, Sparkle, Plus } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkle, Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel, ReviewsCarousel } from "@/components/site/Carousels";
@@ -13,7 +12,6 @@ export const Route = createFileRoute("/")({
 
 const why = [
   {
-    icon: Lock,
     title: "Five private studios. More places to train.",
     summary: `${privateStudioCount} private studios, with RF-Operated Gyms for your convenience.`,
     details: [
@@ -23,7 +21,6 @@ const why = [
     ],
   },
   {
-    icon: LineChart,
     title: "Data-driven, with testing & constant tracking",
     summary: "Your progress is measured, not guessed.",
     details: [
@@ -33,7 +30,6 @@ const why = [
     ],
   },
   {
-    icon: Moon,
     title: "Conscious training beyond the session",
     summary: "Nutrition, sleep and stress are part of the plan.",
     details: [
@@ -57,9 +53,6 @@ function Home() {
           <p className="mt-6 max-w-xl text-base opacity-85 sm:text-lg md:text-xl">High-end personal training in Singapore for people who want real results.</p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <CtaLink>Book your free consultation</CtaLink>
-            <Button asChild variant="ghost" size="icon" className="border border-ink-foreground/40 text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground">
-              <a href="#difference" aria-label="Scroll to what makes us different" title="What makes us different"><ArrowDown className="size-5" /></a>
-            </Button>
           </div>
         </div>
       </section>
@@ -103,13 +96,13 @@ function Home() {
         <Reveal><SectionHeader title="Why you'll succeed here" center /></Reveal>
         <Reveal>
           <Accordion type="single" collapsible className="success-accordion mx-auto mt-12 max-w-5xl space-y-4">
-            {why.map(({ icon: Icon, title, summary, details }, i) => (
+            {why.map(({ title, summary, details }, i) => (
               <AccordionItem key={title} value={`why-${i}`} className="success-item group relative overflow-hidden border border-border bg-card px-5 sm:px-8">
                 <AccordionTrigger className="success-trigger gap-3 py-7 hover:no-underline sm:gap-5 sm:py-8">
                   <span className="flex min-w-0 flex-1 items-start gap-4 text-left sm:gap-6">
                     <span className="success-number hidden w-10 shrink-0 font-display text-4xl leading-none text-muted-foreground/40 sm:block" aria-hidden="true">0{i + 1}</span>
                     <span className="min-w-0">
-                      <span className="mb-3 flex items-center gap-2 text-cta"><Icon className="size-4" aria-hidden="true" /><span className="font-display text-xs sm:hidden" aria-hidden="true">0{i + 1}</span></span>
+                      <span className="mb-3 font-display text-xs text-cta sm:hidden" aria-hidden="true">0{i + 1}</span>
                       <span className="block font-display text-xl uppercase leading-tight sm:text-2xl md:text-3xl">{title}</span>
                       <span className="mt-1 block font-sans text-sm font-normal normal-case tracking-normal text-muted-foreground md:text-base">{summary}</span>
                     </span>
