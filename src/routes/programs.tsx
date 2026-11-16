@@ -15,7 +15,7 @@ function Programs() {
         {programs.map((p, i) => (
           <Reveal key={p.title}>
             <article className="grid items-center gap-10 md:grid-cols-2">
-              <img src={p.image} alt={p.title} loading="lazy" className={`aspect-[4/3] w-full rounded-lg object-cover ${i % 2 ? "md:order-2" : ""}`} />
+              <img src={p.image} alt={p.title} loading="lazy" className={`aspect-[4/3] w-full rounded-lg object-cover ${i === 0 ? "object-[50%_38%]" : ""} ${i % 2 ? "md:order-2" : ""}`} />
               <div>
                 <span className="font-display text-6xl font-black text-border">0{i + 1}</span>
                 <h2 className="mt-2 text-4xl font-black uppercase leading-none md:text-5xl">{p.title}</h2>

@@ -2,6 +2,7 @@
 import hero from "@/assets/hero.jpg";
 import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
 import trialBackgroundAsset from "@/assets/reformd-studio-reception.jpg.asset.json";
+import weightLossAsset from "@/assets/sherrine-luther-training.png.asset.json";
 import studio from "@/assets/studio.jpg";
 import performance from "@/assets/performance.jpg";
 import prenatal from "@/assets/prenatal.jpg";
@@ -111,7 +112,7 @@ export const rfEvents = [
 export const programs = [
   {
     title: "Weight loss & muscle building",
-    image: hero,
+    image: weightLossAsset.url,
     text: "Lose fat and build muscle with a training plan that suits your starting point. Your personal trainer helps you get stronger and build eating habits you can keep up.",
   },
   {
