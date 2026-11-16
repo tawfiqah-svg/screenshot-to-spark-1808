@@ -103,7 +103,7 @@ export function LocationsMap({ locations, origin, closest }: { locations: Locati
   );
 }
 
-function Pin({ className, label }: { className?: string; label?: string }) {
+function Pin({ className, label }: { className?: string | undefined; label?: string | undefined }) {
   return (
     <svg viewBox="0 0 24 32" className={cn("block", className)} aria-hidden="true">
       <path d="M12 31s10-11.2 10-19A10 10 0 0 0 2 12c0 7.8 10 19 10 19Z" fill="currentColor" stroke="var(--card)" strokeWidth={1.75} />
