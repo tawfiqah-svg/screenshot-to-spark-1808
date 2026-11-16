@@ -4,7 +4,7 @@ import { ArrowRight, Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel } from "@/components/site/Carousels";
-import { StarwallReviews } from "@/components/site/StarwallReviews";
+import { TrustindexReviews } from "@/components/site/TrustindexReviews";
 import { brandVideoUrl, homeBenefits, images, locations, privateStudioCount, programs, team } from "@/data/site";
 
 export const Route = createFileRoute("/")({
@@ -165,7 +165,7 @@ function Home() {
           <Reveal><SectionHeader title="Real transformations from people like you" /></Reveal>
           <CtaLink to="/testimonials">Read other success stories</CtaLink>
         </div>
-        <div className="mt-12"><StarwallReviews /></div>
+        <div className="mt-12"><TrustindexReviews /></div>
       </section>
 
       {/* 7. Locations */}
