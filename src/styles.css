@@ -156,19 +156,6 @@
   }
 }
 
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 3rem;
-  height: 2px;
-  margin-top: 1.25rem;
-  background: var(--cta);
-}
-
-.section-heading-centered::after {
-  margin-inline: auto;
-}
-
 .benefit-strip {
   position: relative;
   overflow: hidden;
@@ -183,34 +170,64 @@
 .benefit-group {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding-right: 1rem;
+  gap: 2rem;
+  padding-right: 2rem;
 }
 
-.benefit-box {
-  position: relative;
-  overflow: hidden;
+.success-item {
+  transition: border-color 300ms ease, background-color 300ms ease;
 }
 
-.benefit-box::after {
+.success-item::before {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 30%;
-  height: 1px;
+  inset: 0 auto 0 0;
+  width: 3px;
   background: var(--cta);
-  animation: benefit-line 7s ease-in-out infinite alternate;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 350ms ease;
 }
 
-.benefit-box:nth-child(even)::after {
-  animation-delay: -3s;
+.success-item:hover,
+.success-item[data-state="open"] {
+  border-color: color-mix(in oklab, var(--cta) 35%, var(--border));
+}
+
+.success-item[data-state="open"]::before { transform: scaleY(1); }
+.success-trigger > svg { display: none; }
+.success-toggle, .success-number { transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease; }
+.success-toggle svg { transition: transform 350ms ease; }
+.success-trigger[data-state="open"] .success-toggle {
+  color: var(--cta-foreground);
+  background: var(--cta);
+  border-color: var(--cta);
+}
+.success-trigger[data-state="open"] .success-toggle svg { transform: rotate(45deg); }
+.success-trigger[data-state="open"] .success-number { color: var(--cta); }
+.success-content[data-state="open"] { animation: success-expand 400ms ease; }
+.success-content[data-state="closed"] { animation: success-collapse 300ms ease; }
+.success-content[data-state="open"] li { animation: success-detail 450ms ease both; }
+.success-content[data-state="open"] li:nth-child(2) { animation-delay: 70ms; }
+.success-content[data-state="open"] li:nth-child(3) { animation-delay: 140ms; }
+.success-item:hover .success-content li,
+.success-item:focus-within .success-content li { animation-play-state: paused; }
+
+@keyframes success-expand {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes success-collapse {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+@keyframes success-detail {
+  from { opacity: 0.4; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .benefit-strip:hover .benefit-track,
-.benefit-strip:focus-within .benefit-track,
-.benefit-strip:hover .benefit-box::after,
-.benefit-strip:focus-within .benefit-box::after {
+.benefit-strip:focus-within .benefit-track {
   animation-play-state: paused;
 }
 
@@ -218,14 +235,14 @@
   to { transform: translateX(-50%); }
 }
 
-@keyframes benefit-line {
-  to { transform: translateX(235%); }
-}
-
+/* Retain access to every benefit when motion is disabled. */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .benefit-track, .benefit-box::after { animation: none; }
+  .benefit-track { animation: none; }
   .benefit-strip { overflow-x: auto; }
   .benefit-group[aria-hidden="true"] { display: none; }
   .reveal { opacity: 1; transform: none; transition: none; }
+  .success-item, .success-item::before, .success-toggle,
+  .success-toggle svg, .success-number { transition: none; }
+  .success-content[data-state], .success-content[data-state="open"] li { animation: none; }
 }

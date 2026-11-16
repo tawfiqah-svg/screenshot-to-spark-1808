@@ -167,7 +167,7 @@ export function SectionHeader({ eyebrow, title, text, center }: { eyebrow?: stri
   return (
     <div className={cn("max-w-3xl", center && "mx-auto text-center")}>
       {eyebrow && <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{eyebrow}</p>}
-      <h2 className={cn("section-heading text-3xl font-black uppercase leading-[0.95] sm:text-4xl md:text-6xl", center && "section-heading-centered")}>{title}</h2>
+      <h2 className="text-3xl font-black uppercase leading-[0.95] sm:text-4xl md:text-6xl">{title}</h2>
       {text && <p className="mt-5 text-base text-muted-foreground sm:text-lg">{text}</p>}
     </div>
   );

@@ -21,3 +21,5 @@
 - [x] Add a subtle moving home-page benefit strip with animated line accents.
 - [x] Add red section-heading accents and smooth in-page scrolling, retaining the layout.
 - [x] Verify the visual changes on desktop, mobile and with reduced motion.
+- [x] Simplify the moving strip with star separators and remove repeated heading underlines.
+- [x] Refine the success accordion with numbered rows and subtle opening motion.
