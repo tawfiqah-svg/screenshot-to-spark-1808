@@ -29,6 +29,14 @@ export const nav = [
 export const subBrands = ["FORGED by ReFormd", "Shelter by ReFormd"];
 export const privateStudioCount = 5;
 
+export const homeBenefits = [
+  `${privateStudioCount} private studios`,
+  "One-to-one personal training",
+  "RF-Operated Gyms for your convenience",
+  "Performance testing & tracking",
+  "Nutrition, sleep & recovery",
+];
+
 export const aboutContent = {
   title: "The ReFormd Group",
   intro: "Born in Singapore, ReFormd brings personal training, performance testing, recovery and fitness education together. Whether you're starting out or training for competition, we want you to have access to the people and facilities that help you progress.",

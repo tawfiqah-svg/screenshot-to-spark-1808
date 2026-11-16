@@ -134,6 +134,11 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
   * {
     border-color: var(--color-border);
   }
@@ -149,4 +154,78 @@
     font-synthesis-weight: none;
     letter-spacing: 0.02em;
   }
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin-top: 1.25rem;
+  background: var(--cta);
+}
+
+.section-heading-centered::after {
+  margin-inline: auto;
+}
+
+.benefit-strip {
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-track {
+  display: flex;
+  width: max-content;
+  animation: benefits-drift 55s linear infinite;
+}
+
+.benefit-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.benefit-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.benefit-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30%;
+  height: 1px;
+  background: var(--cta);
+  animation: benefit-line 7s ease-in-out infinite alternate;
+}
+
+.benefit-box:nth-child(even)::after {
+  animation-delay: -3s;
+}
+
+.benefit-strip:hover .benefit-track,
+.benefit-strip:focus-within .benefit-track,
+.benefit-strip:hover .benefit-box::after,
+.benefit-strip:focus-within .benefit-box::after {
+  animation-play-state: paused;
+}
+
+@keyframes benefits-drift {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes benefit-line {
+  to { transform: translateX(235%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .benefit-track, .benefit-box::after { animation: none; }
+  .benefit-strip { overflow-x: auto; }
+  .benefit-group[aria-hidden="true"] { display: none; }
+  .reveal { opacity: 1; transform: none; transition: none; }
 }

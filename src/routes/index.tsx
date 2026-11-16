@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Lock, LineChart, Moon, ArrowRight } from "lucide-react";
+import { Lock, LineChart, Moon, ArrowRight, ArrowDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel, ReviewsCarousel } from "@/components/site/Carousels";
-import { brandVideoUrl, images, locations, privateStudioCount, programs, team } from "@/data/site";
+import { brandVideoUrl, homeBenefits, images, locations, privateStudioCount, programs, team } from "@/data/site";
 
 export const Route = createFileRoute("/")({
   head: () => seo("Feel strong, energised, & confident", "Personal training in Singapore with five private ReFormd studios, convenient RF-Operated Gyms and experienced personal trainers."),
@@ -54,12 +55,32 @@ function Home() {
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
           <h1 className="max-w-5xl text-4xl font-black uppercase leading-[0.88] sm:text-7xl lg:text-8xl">Feel strong, energised, & confident.</h1>
           <p className="mt-6 max-w-xl text-base opacity-85 sm:text-lg md:text-xl">High-end personal training in Singapore for people who want real results.</p>
-          <div className="mt-8"><CtaLink>Book your free consultation</CtaLink></div>
+          <div className="mt-8 flex flex-wrap items-center gap-5">
+            <CtaLink>Book your free consultation</CtaLink>
+            <Button asChild variant="ghost" size="icon" className="border border-ink-foreground/40 text-ink-foreground hover:bg-ink-foreground/10 hover:text-ink-foreground">
+              <a href="#difference" aria-label="Scroll to what makes us different" title="What makes us different"><ArrowDown className="size-5" /></a>
+            </Button>
+          </div>
         </div>
       </section>
 
+      <div className="benefit-strip border-y border-border bg-background py-5" role="region" aria-label="ReFormd training benefits" tabIndex={0}>
+        <div className="benefit-track">
+          {[0, 1].map((copy) => (
+            <ul key={copy} className="benefit-group" aria-hidden={copy === 1 ? true : undefined}>
+              {homeBenefits.map((benefit) => (
+                <li key={benefit} className="benefit-box flex h-14 shrink-0 items-center gap-3 border border-border bg-card px-6 font-display text-lg uppercase text-foreground">
+                  <span className="h-4 w-0.5 shrink-0 bg-cta" aria-hidden="true" />
+                  {benefit}
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+
       {/* 2. Different */}
-      <section className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-24">
+      <section id="difference" className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-24">
         <Reveal><SectionHeader title="What makes us different?" center /></Reveal>
         <Reveal>
           <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-muted-foreground">

@@ -11,3 +11,4 @@
 
 - Keep shared business facts and page content in src/data/site.ts; routes consume them so repeated counts and program labels stay consistent.
 - Model Academy progression as education, assessment, then applications to available roles; completing the Academy does not guarantee employment.
+- Keep decorative home-page motion CSS-only, pausable on hover/focus and disabled for reduced motion so content remains accessible without extra runtime dependencies.
