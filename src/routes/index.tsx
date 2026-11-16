@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Sparkle, Plus } from "lucide-react";
+import { ArrowRight, Star, Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel } from "@/components/site/Carousels";
@@ -50,7 +50,7 @@ function Home() {
         <div className="absolute inset-0 bg-overlay" />
         <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
-          <h1 className="max-w-5xl text-4xl font-black uppercase leading-[0.88] sm:text-7xl lg:text-8xl">Feel strong, energised, & confident.</h1>
+          <h1 className="max-w-5xl text-4xl font-black uppercase leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl">Feel strong, energised, & confident.</h1>
           <p className="mt-6 max-w-xl text-base opacity-85 sm:text-lg md:text-xl">High-end personal training in Singapore for people who want real results.</p>
           <div className="mt-8 flex flex-wrap items-center gap-5">
             <CtaLink>Book your free consultation</CtaLink>
@@ -63,9 +63,9 @@ function Home() {
           {[0, 1].map((copy) => (
             <ul key={copy} className="benefit-group" aria-hidden={copy === 1 ? true : undefined}>
               {homeBenefits.map((benefit) => (
-                <li key={benefit} className="flex h-8 shrink-0 items-center gap-8 font-display text-xl uppercase text-foreground sm:text-2xl">
-                  <Sparkle className="size-5 shrink-0 fill-cta text-cta" aria-hidden="true" />
-                  {benefit}
+                <li key={benefit} className="flex h-8 shrink-0 items-center gap-10 whitespace-nowrap font-display text-lg uppercase text-foreground sm:gap-14 sm:text-xl">
+                  <Star className="size-3.5 shrink-0 fill-cta text-cta" strokeWidth={1} aria-hidden="true" />
+                  <span className="benefit-label">{benefit}</span>
                 </li>
               ))}
             </ul>
@@ -77,7 +77,7 @@ function Home() {
       <section id="difference" className="mx-auto flex max-w-7xl flex-col gap-8 px-5 py-24">
         <Reveal><SectionHeader title="What makes us different?" center /></Reveal>
         <Reveal>
-          <p className="mx-auto max-w-3xl text-center text-xl leading-relaxed text-muted-foreground">
+          <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
             Your training should fit your life. We build a plan around your goals, track your progress and help you get the exercises right. Train one-to-one with a personal trainer at a private ReFormd studio or choose an RF-Operated Gym closer to home or work.
           </p>
         </Reveal>
@@ -195,7 +195,7 @@ function Home() {
         <img src={images.trialBackground} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[70%_40%] opacity-40 sm:object-[50%_40%]" />
         <div className="relative mx-auto max-w-4xl px-5 py-28 text-center">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
-          <h2 className="text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">Try 3 sessions to be sure.</h2>
+          <h2 className="text-4xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 3 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">
             Try our 3-Session Kickstarter Trial with a personal trainer at our private studio or an RF-Operated Gym, whichever is more convenient for you.
           </p>

@@ -55,7 +55,7 @@ export function SiteHeader() {
                 <DropdownMenu open={openDropdown === n.label} onOpenChange={(o) => setOpenDropdown(o ? n.label : null)} modal={false}>
                   <DropdownMenuTrigger
                     className={cn(
-                      "flex shrink-0 items-center gap-1 whitespace-nowrap font-display text-[11px] tracking-[0.06em] transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]",
+                      "flex shrink-0 items-center gap-1 whitespace-nowrap font-display text-xs tracking-normal transition-colors hover:text-foreground sm:text-base",
                       n.children.some((c) => c.to === pathname) ? "text-foreground" : "text-muted-foreground",
                     )}
                   >
@@ -80,7 +80,7 @@ export function SiteHeader() {
               <Link
                 key={n.to}
                 to={n.to}
-                className="shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.06em] text-muted-foreground transition-colors hover:text-foreground sm:text-base sm:tracking-[0.08em]"
+                className="shrink-0 whitespace-nowrap font-display text-xs tracking-normal text-muted-foreground transition-colors hover:text-foreground sm:text-base"
                 activeProps={{ className: "text-foreground" }}
                 activeOptions={{ exact: true }}
               >
@@ -90,7 +90,7 @@ export function SiteHeader() {
           )}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="cta" size="lg" className="h-9 px-2.5 text-[11px] sm:h-12 sm:px-7 sm:text-lg">
+          <Button asChild variant="cta" size="lg" className="h-9 px-2.5 text-xs sm:h-12 sm:px-7 sm:text-lg">
             <Link to="/contact"><span className="sm:hidden">Book now</span><span className="hidden sm:inline">Book a consultation</span></Link>
           </Button>
         </div>
@@ -167,7 +167,7 @@ export function SectionHeader({ eyebrow, title, text, center }: { eyebrow?: stri
   return (
     <div className={cn("max-w-3xl", center && "mx-auto text-center")}>
       {eyebrow && <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{eyebrow}</p>}
-      <h2 className="text-3xl font-black uppercase leading-[0.95] sm:text-4xl md:text-6xl">{title}</h2>
+      <h2 className="text-3xl font-black uppercase leading-[1.1] sm:text-4xl md:text-5xl lg:text-6xl">{title}</h2>
       {text && <p className="mt-5 text-base text-muted-foreground sm:text-lg">{text}</p>}
     </div>
   );
@@ -180,7 +180,7 @@ export function PageHero({ eyebrow, title, text, image }: { eyebrow: string; tit
       <div className="absolute inset-0 bg-overlay" />
       <div className="relative mx-auto w-full max-w-7xl px-5 pb-14 pt-32">
         <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{eyebrow}</p>
-        <h1 className="max-w-4xl text-4xl font-black uppercase leading-[0.9] sm:text-5xl md:text-7xl">{title}</h1>
+        <h1 className="max-w-4xl text-4xl font-black uppercase leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-base opacity-85 sm:text-lg">{text}</p>}
       </div>
     </section>

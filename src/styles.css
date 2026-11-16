@@ -147,13 +147,17 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    line-height: 1.6;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 400;
     font-synthesis-weight: none;
-    letter-spacing: 0.02em;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
   }
+  p, li { overflow-wrap: break-word; }
 }
 
 .benefit-strip {
@@ -164,14 +168,23 @@
 .benefit-track {
   display: flex;
   width: max-content;
-  animation: benefits-drift 55s linear infinite;
+  animation: benefits-drift 70s linear infinite;
 }
 
 .benefit-group {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding-right: 2rem;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.benefit-label {
+  letter-spacing: 0;
+  word-spacing: 0.16em;
+}
+
+@media (min-width: 640px) {
+  .benefit-group { gap: 4rem; padding-right: 4rem; }
 }
 
 .success-item {
