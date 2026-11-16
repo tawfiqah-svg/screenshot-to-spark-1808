@@ -64,6 +64,9 @@ export function LocationsMap({ locations, origin, closest }: { locations: Locati
               className="fill-foreground" opacity={0.7} stroke="var(--card)" strokeWidth={2.5} style={{ paintOrder: "stroke" }}>{st.name}</text>
           );
         })}
+        {origin && closest.map((n) => { const o = project(origin.lat, origin.lng); const q = pins.find((x) => x.name === n); return q ? (
+          <line key={n} x1={o.x} y1={o.y} x2={q.x} y2={q.y} stroke="var(--cta)" strokeWidth={2} strokeDasharray="5 4" opacity={0.75} />
+        ) : null; })}
         {origin && (() => { const p = project(origin.lat, origin.lng); return (
           <g><circle cx={p.x} cy={p.y} r={14} className="fill-foreground opacity-15 animate-pulse" /><circle cx={p.x} cy={p.y} r={6} className="fill-foreground stroke-card" strokeWidth={2} /></g>
         ); })()}
@@ -73,30 +76,38 @@ export function LocationsMap({ locations, origin, closest }: { locations: Locati
         const p = pins.find((q) => q.name === l.name)!;
         const rank = closest.indexOf(l.name);
         return (
-          <button key={l.name} type="button" onClick={() => setActive(active === l.name ? null : l.name)} aria-label={`${l.name}, near ${l.mrt} MRT${rank >= 0 ? `, ${rankLabel(rank)} to your search` : ""}`}
-            className={cn("absolute -translate-x-1/2 -translate-y-1/2", rank >= 0 && "z-10")} style={{ left: `${(p.x / MAP_W) * 100}%`, top: `${(p.y / MAP_H) * 100}%` }}>
-            {rank >= 0 ? (
-              <span className="flex size-7 items-center justify-center rounded-full border-2 border-card bg-cta font-display text-sm text-cta-foreground shadow-cta ring-2 ring-cta/30">{rank + 1}</span>
-            ) : (
-              <span className={cn("block size-4 rounded-full border-2 border-card shadow", l.type === "studio" ? "bg-cta" : "bg-charcoal", closest.length && "opacity-50")} />
-            )}
+          <button key={l.name} type="button" onClick={() => setActive(active === l.name ? null : l.name)}
+            onMouseEnter={() => setActive(l.name)} onMouseLeave={() => setActive(null)} onFocus={() => setActive(l.name)} onBlur={() => setActive(null)}
+            aria-label={`${l.name}, near ${l.mrt} MRT${rank >= 0 ? `, ${rankLabel(rank)} to your search` : ""}`}
+            className={cn("absolute -translate-x-1/2 -translate-y-full transition-transform hover:scale-110 focus-visible:scale-110", rank >= 0 ? "z-10" : "", active === l.name && "z-20", closest.length && rank < 0 && "opacity-40")}
+            style={{ left: `${(p.x / MAP_W) * 100}%`, top: `${(p.y / MAP_H) * 100}%`, transformOrigin: "bottom center" }}>
+            <Pin className={cn(rank >= 0 ? "h-11 w-8 sm:h-12 sm:w-9 drop-shadow-lg" : "h-7 w-5 sm:h-8 sm:w-6 drop-shadow", rank >= 0 || l.type === "studio" ? "text-cta" : "text-gym")} label={rank >= 0 ? String(rank + 1) : undefined} />
           </button>
         );
       })}
 
       {activeLoc && ap && (
         <div className="pointer-events-none absolute z-20 w-52 -translate-x-1/2 -translate-y-full overflow-hidden rounded-md bg-card text-card-foreground shadow-xl"
-          style={{ left: `${(ap.x / MAP_W) * 100}%`, top: `calc(${(ap.y / MAP_H) * 100}% - 18px)` }}>
+          style={{ left: `${(ap.x / MAP_W) * 100}%`, top: `calc(${(ap.y / MAP_H) * 100}% - 52px)` }}>
           <img src={activeLoc.image} alt="" className="h-20 w-full object-cover" />
           <span className="block p-2 text-xs"><b className="block font-display text-sm uppercase">{activeLoc.name}</b>{activeLoc.address} · {activeLoc.mrt} MRT</span>
         </div>
       )}
 
       <div className="absolute bottom-2 left-2 flex max-w-[calc(100%-1rem)] flex-wrap gap-x-3 gap-y-1 rounded-md bg-card/90 px-3 py-2 text-[11px] text-card-foreground shadow sm:text-xs">
-        <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-cta" />Private studio</span>
-        <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-charcoal" />RF-Operated Gym</span>
-        {closest.length > 0 && <span className="flex items-center gap-1"><span className="flex size-3.5 items-center justify-center rounded-full bg-cta text-[8px] text-cta-foreground">1</span>Nearest to your search</span>}
+        <span className="flex items-center gap-1"><Pin className="h-4 w-3 text-cta" />Private studio</span>
+        <span className="flex items-center gap-1"><Pin className="h-4 w-3 text-gym" />RF-Operated Gym</span>
+        {closest.length > 0 && <span className="flex items-center gap-1"><span className="w-4 border-t-2 border-dashed border-cta" />4 nearest to your search</span>}
       </div>
     </div>
+  );
+}
+
+function Pin({ className, label }: { className?: string; label?: string }) {
+  return (
+    <svg viewBox="0 0 24 32" className={cn("block", className)} aria-hidden="true">
+      <path d="M12 31s10-11.2 10-19A10 10 0 0 0 2 12c0 7.8 10 19 10 19Z" fill="currentColor" stroke="var(--card)" strokeWidth={1.75} />
+      {label ? <text x={12} y={16} textAnchor="middle" fontSize={12} fill="var(--cta-foreground)" className="font-display">{label}</text> : <circle cx={12} cy={12} r={3.6} fill="var(--card)" />}
+    </svg>
   );
 }

@@ -91,6 +91,7 @@
   --charcoal-border: oklch(0.4 0.006 60);
   --charcoal-muted: oklch(0.79 0.005 60);
   --ember: oklch(0.68 0.18 30);
+  --gym: oklch(0.5 0.2 300);
   --ink-foreground: oklch(0.96 0.006 80);
   --star: oklch(0.8 0.16 80);
   --overlay: linear-gradient(180deg, oklch(0.12 0.01 60 / 0.25) 0%, oklch(0.12 0.01 60 / 0.85) 100%);
@@ -118,6 +119,7 @@
   --color-ink: var(--ink);
   --color-charcoal: var(--charcoal);
   --color-ember: var(--ember);
+  --color-gym: var(--gym);
   --color-ink-foreground: var(--ink-foreground);
   --color-star: var(--star);
   --font-display: "Bebas Neue", sans-serif;
