@@ -5,19 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PageHero, seo } from "@/components/site/Layout";
 import { LocationCard } from "@/components/site/Carousels";
-import { distanceKm, images, locations, postalToCoords, type LocationType } from "@/data/site";
+import { distanceKm, images, locations, mapEmbedUrl, postalToCoords, type LocationType } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/locations")({
-  head: () => seo("Locations", "Train with ReFormd at our own studios or inside Anytime Fitness clubs across Singapore. 19 locations, each close to an MRT."),
+  head: () => seo("Locations", "Train with ReFormd at our own studios or inside RF-Operated Gyms across Singapore. 15+ locations, each close to an MRT."),
   component: Locations,
-});
-
-// Map bounds for Singapore
-const B = { minLat: 1.23, maxLat: 1.47, minLng: 103.6, maxLng: 104.03 };
-const project = (lat: number, lng: number) => ({
-  x: ((lng - B.minLng) / (B.maxLng - B.minLng)) * 100,
-  y: ((B.maxLat - lat) / (B.maxLat - B.minLat)) * 100,
 });
 
 function Locations() {
@@ -25,7 +18,6 @@ function Locations() {
   const [query, setQuery] = useState("");
   const [origin, setOrigin] = useState<{ lat: number; lng: number } | null>(null);
   const [message, setMessage] = useState("");
-  const [active, setActive] = useState<string | null>(null);
 
   const list = useMemo(() => {
     let l = locations.filter((x) => filter === "all" || x.type === filter);
@@ -91,31 +83,15 @@ function Locations() {
           ))}
         </div>
 
-        <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-lg bg-ink" aria-label="Map of ReFormd locations">
-          <svg viewBox="0 0 100 56" preserveAspectRatio="none" className="absolute inset-0 h-full w-full opacity-30" aria-hidden>
-            <path d="M8 22 C14 12 30 8 45 10 C60 6 78 10 92 20 C96 28 90 34 80 36 C70 44 55 48 42 44 C30 46 18 40 10 34 C6 30 5 26 8 22Z" className="fill-ink-foreground/20 stroke-ink-foreground" strokeWidth="0.2" />
-          </svg>
-          {locations.filter((x) => filter === "all" || x.type === filter).map((l) => {
-            const p = project(l.lat, l.lng);
-            const on = active === l.name;
-            return (
-              <button key={l.name} onClick={() => setActive(on ? null : l.name)} aria-label={`${l.name}, near ${l.mrt} MRT`}
-                className="absolute -translate-x-1/2 -translate-y-full" style={{ left: `${p.x}%`, top: `${p.y}%` }}>
-                <span className={cn("block size-4 rounded-full border-2 border-ink-foreground shadow-cta", l.type === "studio" ? "bg-cta" : "bg-star")} />
-                {on && (
-                  <span className="absolute bottom-6 left-1/2 w-48 -translate-x-1/2 overflow-hidden rounded-md bg-card text-left text-card-foreground shadow-xl">
-                    <img src={l.image} alt="" className="h-20 w-full object-cover" />
-                    <span className="block p-2 text-xs"><b className="block font-display uppercase">{l.name}</b>{l.mrt} MRT</span>
-                  </span>
-                )}
-              </button>
-            );
-          })}
-          {origin && (() => { const p = project(origin.lat, origin.lng); return <span className="absolute size-3 -translate-x-1/2 -translate-y-1/2 animate-ping rounded-full bg-ink-foreground" style={{ left: `${p.x}%`, top: `${p.y}%` }} />; })()}
-          <div className="absolute bottom-3 left-3 flex gap-4 rounded-md bg-ink/80 px-3 py-2 text-xs text-ink-foreground">
-            <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-cta" />ReFormd studio</span>
-            <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-star" />Anytime Fitness</span>
-          </div>
+        <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-lg border border-border bg-ink">
+          <iframe
+            src={mapEmbedUrl}
+            title="Map of ReFormd locations"
+            className="absolute inset-0 h-full w-full border-0"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

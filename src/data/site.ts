@@ -149,6 +149,9 @@ export const reviewWidget = {
   scriptUrl: "https://cdn.trustindex.io/loader.js?043773c8599d84678e662f3939a",
 };
 
+export const mapEmbedUrl =
+  "https://www.google.com/maps/d/u/0/embed?mid=1wdC0gQdKjXEXaLZrUz7pc_LPALg84sw&ehbc=2E312F";
+
 export const reviews = [
   { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My trainer made it feel effortless to stay consistent." },
   { name: "Daniel T.", rating: 5, text: "The private studio is a game changer. No waiting, no crowds, just focused training around my work schedule." },
