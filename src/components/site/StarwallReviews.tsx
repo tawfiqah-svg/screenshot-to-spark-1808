@@ -3,7 +3,7 @@ import { reviewWidget } from "@/data/site";
 
 declare global {
   interface Window {
-    ReviewsWidget_417?: { destroy: () => void };
+    ReviewsWidget_419?: { init: () => void; destroy: () => void };
   }
 }
 
@@ -19,14 +19,20 @@ export function StarwallReviews() {
     widget.id = reviewWidget.containerId;
     host.appendChild(widget);
 
-    const script = document.createElement("script");
-    script.src = reviewWidget.scriptUrl;
-    script.async = true;
-    host.appendChild(script);
+    let script: HTMLScriptElement | undefined;
+    const existing = window.ReviewsWidget_419;
+    if (existing) {
+      existing.init();
+    } else {
+      script = document.createElement("script");
+      script.src = reviewWidget.scriptUrl;
+      script.async = true;
+      host.appendChild(script);
+    }
 
     return () => {
-      window.ReviewsWidget_417?.destroy();
-      script.remove();
+      window.ReviewsWidget_419?.destroy();
+      script?.remove();
       widget.remove();
     };
   }, []);

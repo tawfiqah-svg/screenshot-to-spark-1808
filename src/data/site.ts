@@ -139,8 +139,8 @@ export const groupSupport = [
 ];
 
 export const reviewWidget = {
-  containerId: "reviews-widget-417",
-  scriptUrl: "https://starwall.io/embed/Ts6HZ31t5bHIsi3tCeTPiqDryl4YmHdq/widget.js",
+  containerId: "reviews-widget-419",
+  scriptUrl: "https://starwall.io/embed/hP9YhiEqd0KKpkfU5W5oWszPEadcEi7X/widget.js",
 };
 
 export const reviews = [

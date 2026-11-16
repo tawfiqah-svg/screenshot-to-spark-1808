@@ -28,3 +28,4 @@
 - [x] Replace home sample reviews with the provided live Google review widget and verify loading and navigation.
 - [x] Remove the SociableKIT widget at the user's request.
 - [x] Add the provided Starwall widget below the home review heading and verify loading, navigation and phone display.
+- [x] Replace Starwall widget 417 with the supplied widget 419 and verify it displays.
