@@ -54,9 +54,9 @@ export function SiteHeader() {
   };
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-5">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-5 md:h-16">
         <Link to="/" aria-label="ReFormd home" className="shrink-0">
-          <Logo className="h-5 sm:h-8" />
+          <Logo className="h-7 sm:h-8" />
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-2 overflow-x-auto sm:gap-5 md:flex">
           {nav.map((n) =>
@@ -100,7 +100,7 @@ export function SiteHeader() {
           )}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild variant="cta" size="lg" className="h-9 px-2.5 text-xs sm:h-12 sm:px-7 sm:text-lg">
+          <Button asChild variant="cta" size="lg" className="h-12 px-4 text-base sm:px-7 sm:text-lg">
             <Link to="/contact"><span className="sm:hidden">Book now</span><span className="hidden sm:inline">Book a consultation</span></Link>
           </Button>
           <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
@@ -109,9 +109,9 @@ export function SiteHeader() {
                 variant="outline"
                 size="icon"
                 aria-label="Open menu"
-                className="size-9 border-border md:hidden sm:size-11"
+                className="size-12 border-border md:hidden"
               >
-                <Menu className="size-5" aria-hidden="true" />
+                <Menu className="size-6" aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="flex w-[86%] max-w-xs flex-col gap-0 overflow-x-hidden p-0">

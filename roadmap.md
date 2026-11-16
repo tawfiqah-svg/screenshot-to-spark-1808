@@ -37,3 +37,4 @@
 - [x] Switch the Google reviews embed to the newer Trustindex widget.
 - [x] Add a mobile hamburger menu opening a slide-in drawer, keeping the desktop header unchanged.
 - [x] Make the Instagram and Facebook rail float over the page with no reserved side gap.
+- [x] Enlarge the phone header: taller bar, bigger logo, bigger "Book now" and menu button.
