@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PageHero, seo } from "@/components/site/Layout";
 import { LocationCard } from "@/components/site/Carousels";
-import { distanceKm, images, locations, mapEmbedUrl, postalToCoords, type LocationType } from "@/data/site";
+import { LocationsMap } from "@/components/site/LocationsMap";
+import { distanceKm, images, locations, nearestLocations, postalToCoords, type LocationType } from "@/data/site";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/locations")({
@@ -29,6 +30,10 @@ function Locations() {
     }
     return l;
   }, [filter, origin, query]);
+  const closest = useMemo(
+    () => (origin ? nearestLocations(origin, locations.filter((x) => filter === "all" || x.type === filter)).map((l) => l.name) : []),
+    [filter, origin],
+  );
 
   function search(e: React.FormEvent) {
     e.preventDefault();
@@ -83,21 +88,13 @@ function Locations() {
           ))}
         </div>
 
-        <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-lg border border-border bg-ink">
-          <iframe
-            src={mapEmbedUrl}
-            title="Map of ReFormd locations"
-            className="absolute inset-0 h-full w-full border-0"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+        <LocationsMap locations={locations.filter((x) => filter === "all" || x.type === filter)} origin={origin} closest={closest} />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((l) => (
-            <div key={l.name} className="relative">
+            <div key={l.name} className={cn("relative", closest.includes(l.name) && "ring-2 ring-cta ring-offset-2 ring-offset-background")}>
               <LocationCard loc={l} />
+              {closest.includes(l.name) && <span className="absolute left-3 top-3 bg-cta px-3 py-1 font-display text-sm uppercase tracking-wider text-cta-foreground">Closest #{closest.indexOf(l.name) + 1}</span>}
               {origin && <span className="absolute right-3 top-3 rounded-full bg-background px-3 py-1 text-xs font-bold">{distanceKm(origin, l).toFixed(1)} km</span>}
             </div>
           ))}

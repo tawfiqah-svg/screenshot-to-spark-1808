@@ -149,9 +149,6 @@ export const reviewWidget = {
   scriptUrl: "https://cdn.trustindex.io/loader.js?043773c8599d84678e662f3939a",
 };
 
-export const mapEmbedUrl =
-  "https://www.google.com/maps/d/u/1/embed?mid=1ou2cpxrJ7bdcXS0m4Wh1PcG6ZPY6hos&ehbc=2E312F";
-
 export const reviews = [
   { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My trainer made it feel effortless to stay consistent." },
   { name: "Daniel T.", rating: 5, text: "The private studio is a game changer. No waiting, no crowds, just focused training around my work schedule." },
@@ -232,6 +229,11 @@ export function postalToCoords(postal: string): { lat: number; lng: number } | n
   const sector = Number(digits.slice(0, 2));
   const hit = postalSectors.find(([a, b]) => sector >= a && sector <= b);
   return hit ? { lat: hit[2], lng: hit[3] } : null;
+}
+
+/** The `count` locations nearest to `origin`, closest first. */
+export function nearestLocations<T extends { lat: number; lng: number }>(origin: { lat: number; lng: number }, list: T[], count = 4): T[] {
+  return [...list].sort((a, b) => distanceKm(origin, a) - distanceKm(origin, b)).slice(0, count);
 }
 
 export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: number }) {
