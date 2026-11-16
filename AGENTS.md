@@ -14,3 +14,4 @@
 - Keep decorative home-page motion CSS-only, pausable on hover/focus and disabled for reduced motion so content remains accessible without extra runtime dependencies.
 - Mount third-party review embeds after hydration in an isolated DOM container and destroy their controls on unmount to keep React and provider markup separate.
 - Keep page heading scales in the shared layout components and CTA sizing in the Button variants; allow long labels to wrap so narrow screens and enlarged text do not clip.
+- Mount the social rail once in the shared root and reserve its width below wide desktop sizes so it cannot cover page content; footer and rail use the same social links from site data.

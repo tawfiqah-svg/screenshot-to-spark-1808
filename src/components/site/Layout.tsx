@@ -8,7 +8,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { nav, subBrands } from "@/data/site";
+import { nav, socialLinks, subBrands } from "@/data/site";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import logoAsset from "@/assets/reformd-logo.png.asset.json";
 
@@ -99,6 +100,30 @@ export function SiteHeader() {
   );
 }
 
+export function SocialSidebar() {
+  return (
+    <TooltipProvider delayDuration={200}>
+      <nav aria-label="Social media" className="fixed right-0 top-1/2 z-40 flex w-11 -translate-y-1/2 flex-col bg-cta text-cta-foreground">
+        {socialLinks.map(({ label, href }) => {
+          const Icon = label === "Instagram" ? Instagram : Facebook;
+          return (
+            <Tooltip key={label}>
+              <TooltipTrigger asChild>
+                <Button asChild variant="ghost" size="icon" className="size-11 text-cta-foreground hover:bg-cta-hover hover:text-cta-foreground focus-visible:ring-inset [&_svg]:size-5">
+                  <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+                    <Icon aria-hidden="true" />
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent side="left">{label}</TooltipContent>
+            </Tooltip>
+          );
+        })}
+      </nav>
+    </TooltipProvider>
+  );
+}
+
 export function SiteFooter() {
   return (
     <footer className="bg-ink text-ink-foreground">
@@ -107,11 +132,14 @@ export function SiteFooter() {
           <Logo inverse className="h-8" />
           <p className="mt-3 max-w-xs text-sm opacity-70">Progress all ways, always.</p>
           <div className="mt-6 flex gap-4">
-            {[Instagram, Facebook].map((Icon, i) => (
-              <a key={i} href="#" aria-label={["Instagram", "Facebook"][i]} className="opacity-70 hover:opacity-100">
-                <Icon className="size-5" />
-              </a>
-            ))}
+            {socialLinks.map(({ label, href }) => {
+              const Icon = label === "Instagram" ? Instagram : Facebook;
+              return (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="opacity-70 hover:opacity-100">
+                  <Icon className="size-5" aria-hidden="true" />
+                </a>
+              );
+            })}
           </div>
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-2 text-sm">

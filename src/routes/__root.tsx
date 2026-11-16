@@ -10,7 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import { SiteHeader, SiteFooter } from "@/components/site/Layout";
+import { SiteHeader, SiteFooter, SocialSidebar } from "@/components/site/Layout";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -122,11 +122,14 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <div className="pr-11 2xl:pr-0">
       <SiteHeader />
       <main>
         <Outlet />
       </main>
       <SiteFooter />
+      </div>
+      <SocialSidebar />
     </QueryClientProvider>
   );
 }

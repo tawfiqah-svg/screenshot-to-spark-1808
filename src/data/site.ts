@@ -11,6 +11,11 @@ import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
 
 export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal };
 
+export const socialLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/reformd_training/?hl=en" },
+  { label: "Facebook", href: "https://www.facebook.com/reformdtraining/" },
+] as const;
+
 export const nav = [
   { to: "/", label: "Home" },
   { to: "/programs", label: "Programs" },
