@@ -31,11 +31,11 @@ export const areaLabels: { name: string; lat: number; lng: number }[] = [
   { name: "WOODLANDS", lat: 1.444, lng: 103.775 }, { name: "JURONG", lat: 1.325, lng: 103.72 },
   { name: "BUKIT TIMAH", lat: 1.342, lng: 103.775 }, { name: "ANG MO KIO", lat: 1.385, lng: 103.855 },
   { name: "PUNGGOL", lat: 1.412, lng: 103.905 }, { name: "TAMPINES", lat: 1.365, lng: 103.93 },
-  { name: "CBD", lat: 1.271, lng: 103.85 }, { name: "SENTOSA", lat: 1.238, lng: 103.83 },
+  { name: "CBD", lat: 1.268, lng: 103.842 }, { name: "SENTOSA", lat: 1.238, lng: 103.83 },
   { name: "CHANGI", lat: 1.365, lng: 104.005 }, { name: "EAST COAST", lat: 1.297, lng: 103.935 },
 ];
 
-type Station = { name: string; lat: number; lng: number };
+export type Station = { name: string; lat: number; lng: number };
 const s = (name: string, lat: number, lng: number): Station => ({ name, lat, lng });
 export type MrtLine = { code: string; name: string; color: string; stations: Station[] };
 
@@ -95,7 +95,14 @@ export const mrtLines: MrtLine[] = [
 
 /** Stations whose names are printed on the map (interchanges and key stops). */
 export const labelledStations = new Set([
-  "Jurong East","Woodlands","Ang Mo Kio","Bishan","Orchard","Dhoby Ghaut","City Hall","Raffles Place","Outram Park",
+  "Jurong East","Woodlands","Ang Mo Kio","Bishan","Orchard","City Hall","Raffles Place","Outram Park",
   "HarbourFront","Buona Vista","Bugis","Paya Lebar","Tampines","Pasir Ris","Changi Airport","Punggol","Serangoon",
   "Sixth Avenue","Newton","Boon Lay","Choa Chu Kang","Yishun","Bedok","Bukit Panjang","Marina Bay","Caldecott","Clementi",
 ]);
+
+/** Printed station names with coordinates, deduped across lines. */
+export const stationLabels: Station[] = (() => {
+  const seen = new Map<string, Station>();
+  for (const l of mrtLines) for (const s of l.stations) if (labelledStations.has(s.name) && !seen.has(s.name)) seen.set(s.name, s);
+  return [...seen.values()];
+})();
