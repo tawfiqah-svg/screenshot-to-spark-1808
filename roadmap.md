@@ -30,3 +30,5 @@
 - [x] Add the provided Starwall widget below the home review heading and verify loading, navigation and phone display.
 - [x] Replace Starwall widget 417 with the supplied widget 419 and verify it displays.
 - [x] Refine typography across pages and clean up the benefit strip with formal stars and word spacing.
+- [x] Add charcoal and ember home-page accents, subtle entrance animations and YouTube autoplay with reduced-motion support.
+- [x] Replace benefit-strip stars with plus signs and leave video sound on; autoplay remains subject to browser restrictions.

@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Star, Plus } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel } from "@/components/site/Carousels";
@@ -42,13 +43,22 @@ const why = [
 ];
 
 function Home() {
+  const [autoplay, setAutoplay] = useState(false);
+  useEffect(() => {
+    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const sync = () => setAutoplay(!preference.matches);
+    sync();
+    preference.addEventListener("change", sync);
+    return () => preference.removeEventListener("change", sync);
+  }, []);
+  const videoSrc = `${brandVideoUrl}?autoplay=${autoplay ? 1 : 0}&mute=0&playsinline=1&controls=1&rel=0`;
   return (
     <>
       {/* 1. Hero */}
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden bg-ink text-ink-foreground">
         <img src={images.homeHero} alt="Client performing a barbell deadlift at a ReFormd studio" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover object-[50%_15%]" />
         <div className="absolute inset-0 bg-overlay" />
-        <div className="relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
+        <div className="home-intro relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
           <h1 className="max-w-5xl text-4xl font-black uppercase leading-[1.05] sm:text-6xl md:text-7xl lg:text-8xl">Feel strong, energised, & confident.</h1>
           <p className="mt-6 max-w-xl text-base opacity-85 sm:text-lg md:text-xl">High-end personal training in Singapore for people who want real results.</p>
@@ -58,13 +68,13 @@ function Home() {
         </div>
       </section>
 
-      <div className="benefit-strip border-b border-border bg-background py-7" role="region" aria-label="ReFormd training benefits" tabIndex={0}>
+      <div className="benefit-strip border-b border-ember/40 bg-charcoal py-7" role="region" aria-label="ReFormd training benefits" tabIndex={0}>
         <div className="benefit-track">
           {[0, 1].map((copy) => (
             <ul key={copy} className="benefit-group" aria-hidden={copy === 1 ? true : undefined}>
               {homeBenefits.map((benefit) => (
-                <li key={benefit} className="flex h-8 shrink-0 items-center gap-10 whitespace-nowrap font-display text-lg uppercase text-foreground sm:gap-14 sm:text-xl">
-                  <Star className="size-3.5 shrink-0 fill-cta text-cta" strokeWidth={1} aria-hidden="true" />
+                <li key={benefit} className="flex h-8 shrink-0 items-center gap-10 whitespace-nowrap font-display text-lg uppercase text-ink-foreground sm:gap-14 sm:text-xl">
+                  <Plus className="size-4 shrink-0 text-ember" strokeWidth={1.5} aria-hidden="true" />
                   <span className="benefit-label">{benefit}</span>
                 </li>
               ))}
@@ -84,16 +94,17 @@ function Home() {
       </section>
 
       {/* 3. Video */}
-      <section className="mx-auto max-w-7xl px-5">
+      <section className="mx-auto max-w-7xl px-5 pb-24">
         <Reveal>
-          <div className="aspect-video overflow-hidden rounded-lg bg-ink">
-            <iframe className="h-full w-full" src={brandVideoUrl} title="ReFormd brand video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy" />
+          <div className="home-video aspect-video overflow-hidden rounded-lg border border-ember/30 bg-charcoal">
+            <iframe className="h-full w-full" src={videoSrc} title="ReFormd brand video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy" />
           </div>
         </Reveal>
       </section>
 
       {/* 4. Why */}
-      <section className="mx-auto max-w-7xl px-5 py-24">
+      <section className="home-charcoal bg-charcoal text-foreground">
+        <div className="mx-auto max-w-7xl px-5 py-24">
         <Reveal><SectionHeader title="Why you'll succeed here" center /></Reveal>
         <Reveal>
           <Accordion type="single" collapsible className="success-accordion mx-auto mt-12 max-w-5xl space-y-4">
@@ -124,6 +135,7 @@ function Home() {
             ))}
           </Accordion>
         </Reveal>
+        </div>
       </section>
 
       {/* 5. Programs */}
@@ -133,7 +145,7 @@ function Home() {
             <Reveal><SectionHeader title="Programs to support you at every age and stage" /></Reveal>
             <CtaLink to="/programs">Explore our programs</CtaLink>
           </div>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <Reveal className="home-stagger mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {programs.map((p) => (
               <Link key={p.title} to="/programs" className="group relative aspect-[3/4] overflow-hidden rounded-lg">
                 <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -143,7 +155,7 @@ function Home() {
                 </h3>
               </Link>
             ))}
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -173,7 +185,7 @@ function Home() {
           <Reveal><SectionHeader title="Our team of experts" /></Reveal>
           <CtaLink to="/team">Meet them all</CtaLink>
         </div>
-        <div className="mt-12 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="home-team mt-12 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {team.slice(0, 4).map((t) => (
             <Reveal key={t.name}>
               <Link to="/team" className="group block">

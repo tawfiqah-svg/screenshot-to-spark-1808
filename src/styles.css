@@ -86,6 +86,11 @@
   --cta-hover: oklch(0.47 0.2 22);
   --cta-foreground: oklch(0.99 0 0);
   --ink: oklch(0.15 0.008 60);
+  --charcoal: oklch(0.22 0.004 60);
+  --charcoal-raised: oklch(0.27 0.005 60);
+  --charcoal-border: oklch(0.4 0.006 60);
+  --charcoal-muted: oklch(0.79 0.005 60);
+  --ember: oklch(0.68 0.18 30);
   --ink-foreground: oklch(0.96 0.006 80);
   --star: oklch(0.8 0.16 80);
   --overlay: linear-gradient(180deg, oklch(0.12 0.01 60 / 0.25) 0%, oklch(0.12 0.01 60 / 0.85) 100%);
@@ -111,6 +116,8 @@
   --color-cta-hover: var(--cta-hover);
   --color-cta-foreground: var(--cta-foreground);
   --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-ember: var(--ember);
   --color-ink-foreground: var(--ink-foreground);
   --color-star: var(--star);
   --font-display: "Bebas Neue", sans-serif;
@@ -181,6 +188,35 @@
 .benefit-label {
   letter-spacing: 0;
   word-spacing: 0.16em;
+}
+
+.home-charcoal {
+  --foreground: var(--ink-foreground);
+  --muted-foreground: var(--charcoal-muted);
+  --card: var(--charcoal-raised);
+  --border: var(--charcoal-border);
+}
+
+.home-intro > * { animation: home-arrive 900ms ease both; }
+.home-intro > :nth-child(2) { animation-delay: 100ms; }
+.home-intro > :nth-child(3) { animation-delay: 200ms; }
+.home-intro > :nth-child(4) { animation-delay: 300ms; }
+.home-intro:hover > *, .home-intro:focus-within > * { animation-play-state: paused; }
+
+.home-video { transition: border-color 400ms ease; }
+.home-video:hover, .home-video:focus-within { border-color: var(--ember); }
+.home-stagger.is-visible > a { animation: home-arrive 700ms ease both; }
+.home-stagger.is-visible > a:nth-child(2) { animation-delay: 100ms; }
+.home-stagger.is-visible > a:nth-child(3) { animation-delay: 200ms; }
+.home-stagger.is-visible > a:nth-child(4) { animation-delay: 300ms; }
+.home-stagger:hover > a, .home-stagger:focus-within > a { animation-play-state: paused; }
+.home-team > :nth-child(2) { transition-delay: 80ms; }
+.home-team > :nth-child(3) { transition-delay: 160ms; }
+.home-team > :nth-child(4) { transition-delay: 240ms; }
+
+@keyframes home-arrive {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (min-width: 640px) {
@@ -258,4 +294,6 @@
   .success-item, .success-item::before, .success-toggle,
   .success-toggle svg, .success-number { transition: none; }
   .success-content[data-state], .success-content[data-state="open"] li { animation: none; }
+  .home-intro > *, .home-stagger.is-visible > a { animation: none; }
+  .home-video, .home-team > .reveal { transition: none; }
 }
