@@ -204,8 +204,8 @@ function Home() {
 
       {/* 9. Trial */}
       <section className="relative overflow-hidden bg-ink text-ink-foreground">
-        <img src={images.trialBackground} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-[85%_0%] opacity-40 sm:object-top" />
-        <div className="relative mx-auto max-w-4xl px-5 pb-16 pt-96 text-center">
+        <img src={images.trialBackground} alt="" loading="lazy" className="absolute inset-x-0 top-0 h-auto w-full object-cover object-top opacity-40 sm:h-full" />
+        <div className="relative mx-auto max-w-4xl px-5 pb-16 pt-64 text-center sm:pt-96">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
           <h2 className="text-4xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 3 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">
