@@ -7,6 +7,7 @@ import studio from "@/assets/studio.jpg";
 import performance from "@/assets/performance.jpg";
 import peakPerformanceAsset from "@/assets/peak-performance-training.png.asset.json";
 import prenatal from "@/assets/prenatal.jpg";
+import prenatalPostpartumAsset from "@/assets/prenatal-postpartum-training.jpg.asset.json";
 import bftAsset from "@/assets/rf-group-bft.svg.asset.json";
 import laboratoryAsset from "@/assets/rf-group-laboratory.png.asset.json";
 import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
@@ -131,7 +132,7 @@ export const programs = [
   },
   {
     title: "Prenatal & postpartum",
-    image: prenatal,
+    image: prenatalPostpartumAsset.url,
     crop: "",
     text: "Personal training adapted for pregnancy and your return to exercise after birth, with a focus on strength, movement and recovery.",
   },
