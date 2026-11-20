@@ -5,6 +5,7 @@ import trialBackgroundAsset from "@/assets/reformd-studio-reception.jpg.asset.js
 import weightLossAsset from "@/assets/sherrine-luther-training.png.asset.json";
 import studio from "@/assets/studio.jpg";
 import performance from "@/assets/performance.jpg";
+import peakPerformanceAsset from "@/assets/peak-performance-training.png.asset.json";
 import prenatal from "@/assets/prenatal.jpg";
 import bftAsset from "@/assets/rf-group-bft.svg.asset.json";
 import laboratoryAsset from "@/assets/rf-group-laboratory.png.asset.json";
@@ -113,21 +114,25 @@ export const programs = [
   {
     title: "Weight loss & muscle building",
     image: weightLossAsset.url,
+    crop: "object-[50%_38%]",
     text: "Lose fat and build muscle with a training plan that suits your starting point. Your personal trainer helps you get stronger and build eating habits you can keep up.",
   },
   {
     title: "Peak performance",
-    image: performance,
+    image: peakPerformanceAsset.url,
+    crop: "object-[50%_45%]",
     text: "Test, train and track like an athlete. Get stronger, faster and more resilient for your sport or your next challenge.",
   },
   {
     title: "Vitality & longevity",
     image: studio,
+    crop: "",
     text: "Strength, mobility and energy that last. Training designed to keep you moving well for decades.",
   },
   {
     title: "Prenatal & postpartum",
     image: prenatal,
+    crop: "",
     text: "Personal training adapted for pregnancy and your return to exercise after birth, with a focus on strength, movement and recovery.",
   },
 ];
