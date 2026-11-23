@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { ArrowRight, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel } from "@/components/site/Carousels";
@@ -143,16 +143,14 @@ function Home() {
         <div className="mx-auto max-w-7xl px-5">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <Reveal><SectionHeader title="Programs to support you at every age and stage" /></Reveal>
-            <CtaLink to="/programs">Explore our programs</CtaLink>
+            <CtaLink to="/programs" className="min-h-[4.5rem] px-8 py-5 text-lg sm:px-12 sm:text-xl">Explore our programs</CtaLink>
           </div>
           <Reveal className="home-stagger mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {programs.map((p) => (
               <Link key={p.title} to="/programs" className="group relative aspect-[3/4] overflow-hidden rounded-lg">
                 <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-overlay" />
-                <h3 className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-2 text-2xl font-black uppercase leading-none">
-                  {p.title} <ArrowRight className="size-5 shrink-0" />
-                </h3>
+                <h3 className="absolute bottom-5 left-5 right-5 text-2xl font-black uppercase leading-none">{p.title}</h3>
               </Link>
             ))}
           </Reveal>

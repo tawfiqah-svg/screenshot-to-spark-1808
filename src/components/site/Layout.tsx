@@ -31,9 +31,9 @@ export function Logo({ className, inverse }: { className?: string; inverse?: boo
   );
 }
 
-export function CtaLink({ to = "/contact", children, inverse }: { to?: string; children: ReactNode; inverse?: boolean }) {
+export function CtaLink({ to = "/contact", children, inverse, className }: { to?: string; children: ReactNode; inverse?: boolean; className?: string }) {
   return (
-    <Button asChild variant={inverse ? "ctaInverse" : "cta"} size="xl">
+    <Button asChild variant={inverse ? "ctaInverse" : "cta"} size="xl" className={className}>
       <Link to={to}>{children}</Link>
     </Button>
   );
