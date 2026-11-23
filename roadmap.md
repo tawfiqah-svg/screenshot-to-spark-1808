@@ -1,4 +1,5 @@
 # Requested site updates
+- [x] Redesign Programs support as FORGED testing and Shelter recovery with photos, expandable details and website links.
 - [x] Remove LinkedIn and YouTube footer links.
 - [x] Simplify trial copy and clarify five private studios versus convenient RF-Operated Gyms.
 - [x] Stack the difference heading above its text.

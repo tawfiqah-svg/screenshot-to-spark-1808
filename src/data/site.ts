@@ -11,6 +11,8 @@ import prenatalPostpartumAsset from "@/assets/prenatal-postpartum-training.jpg.a
 import bftAsset from "@/assets/rf-group-bft.svg.asset.json";
 import laboratoryAsset from "@/assets/rf-group-laboratory.png.asset.json";
 import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
+import forgedTestingAsset from "@/assets/forged-testing.webp.asset.json";
+import shelterRecoveryAsset from "@/assets/shelter-recovery.jpg.asset.json";
 
 export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal };
 
@@ -141,13 +143,23 @@ export const programs = [
 export const groupSupport = [
   {
     title: "FORGED by ReFormd",
-    label: "Performance testing",
+    label: "Testing",
+    image: forgedTestingAsset.url,
+    imageAlt: "Performance testing results on a tablet at FORGED by ReFormd",
+    website: "https://forgedbyrf.co/",
+    cta: "Learn more about FORGED",
     text: "Performance testing helps your trainer understand your starting point and measure how you're progressing. The findings help shape what you work on in your sessions.",
+    services: ["3D running gait analysis and shoe recommendations", "VO₂ and lactate threshold testing", "Results to guide training intensity and track progress"],
   },
   {
     title: "Shelter by ReFormd",
-    label: "Recovery facilities",
+    label: "Recovery",
+    image: shelterRecoveryAsset.url,
+    imageAlt: "A guest resting in the warm wooden sauna at Shelter",
+    website: "https://www.seekshelter.co/",
+    cta: "Learn more about Shelter",
     text: "Shelter gives you access to dedicated recovery facilities to support your training. Speak with your trainer about the options that suit your routine and any additional costs.",
+    services: ["Hot saunas and cold plunges", "Warm magnesium pools", "Compression therapy and spaces to rest between sessions"],
   },
 ];
 
