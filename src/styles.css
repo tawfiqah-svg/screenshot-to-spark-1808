@@ -199,6 +199,15 @@
   --border: var(--charcoal-border);
 }
 
+.locations-map {
+  --secondary: var(--ink);
+  --card: var(--charcoal-raised);
+  --card-foreground: var(--ink-foreground);
+  --foreground: var(--ink-foreground);
+  --muted-foreground: var(--charcoal-muted);
+  --border: var(--charcoal-border);
+}
+
 .home-intro > * { animation: home-arrive 900ms ease both; }
 .home-intro > :nth-child(2) { animation-delay: 100ms; }
 .home-intro > :nth-child(3) { animation-delay: 200ms; }

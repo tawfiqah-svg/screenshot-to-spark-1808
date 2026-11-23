@@ -48,7 +48,7 @@ export function LocationsMap({ locations, origin, closest }: { locations: Locati
   const ap = activeLoc && pins.find((p) => p.name === activeLoc.name);
 
   return (
-    <div className="relative mt-8 overflow-hidden rounded-lg border border-border bg-secondary" aria-label="Map of ReFormd locations across Singapore">
+    <div className="locations-map relative mt-8 overflow-hidden rounded-lg border border-border bg-secondary" aria-label="Map of ReFormd locations across Singapore">
       <svg viewBox={`0 0 ${MAP_W} ${MAP_H}`} className="block h-auto w-full" role="img" aria-label="Singapore map with place names">
         <rect width={MAP_W} height={MAP_H} className="fill-secondary" />
         <path d={path(mainland)} className="fill-card stroke-border" strokeWidth={1.5} />
