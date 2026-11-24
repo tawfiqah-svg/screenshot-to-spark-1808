@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Plus } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
@@ -51,6 +51,29 @@ function Home() {
     preference.addEventListener("change", sync);
     return () => preference.removeEventListener("change", sync);
   }, []);
+  const videoRef = useRef<HTMLDivElement>(null);
+  // Fallback for browsers without CSS scroll timelines (Safari, Firefox).
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el || CSS.supports("animation-timeline: view()")) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const progress = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+      const focus = 1 - Math.min(1, Math.abs(progress - 0.5) / 0.45);
+      el.style.transform = `scale(${0.78 + 0.28 * focus})`;
+      el.style.borderRadius = `${1.5 - 1.25 * focus}rem`;
+      el.style.opacity = `${0.7 + 0.3 * focus}`;
+    };
+    const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
+  }, []);
   const videoSrc = `${brandVideoUrl}?autoplay=${autoplay ? 1 : 0}&mute=0&playsinline=1&controls=1&rel=0`;
   return (
     <>
@@ -96,7 +119,7 @@ function Home() {
       {/* 3. Video */}
       <section className="mx-auto max-w-7xl px-5 pb-24">
         <Reveal>
-          <div className="home-video aspect-video overflow-hidden rounded-lg border border-ember/30 bg-charcoal">
+          <div ref={videoRef} className="home-video aspect-video overflow-hidden rounded-lg border border-ember/30 bg-charcoal">
             <iframe className="h-full w-full" src={videoSrc} title="ReFormd brand video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy" />
           </div>
         </Reveal>
