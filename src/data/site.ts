@@ -8,6 +8,7 @@ import performance from "@/assets/performance.jpg";
 import peakPerformanceAsset from "@/assets/peak-performance-training.png.asset.json";
 import prenatal from "@/assets/prenatal.jpg";
 import prenatalPostpartumAsset from "@/assets/prenatal-postpartum-training.jpg.asset.json";
+import vitalityAsset from "@/assets/zubin-longevity-training.png.asset.json";
 import bftAsset from "@/assets/rf-group-bft.svg.asset.json";
 import laboratoryAsset from "@/assets/rf-group-laboratory.png.asset.json";
 import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
@@ -128,8 +129,8 @@ export const programs = [
   },
   {
     title: "Vitality & longevity",
-    image: studio,
-    crop: "",
+    image: vitalityAsset.url,
+    crop: "object-[50%_30%]",
     text: "Strength, mobility and energy that last. Training designed to keep you moving well for decades.",
   },
   {
