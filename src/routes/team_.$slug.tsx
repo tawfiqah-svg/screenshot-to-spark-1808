@@ -50,7 +50,7 @@ function TrainerPage() {
           <p className="mt-5 text-base text-muted-foreground sm:text-lg">{p.focus.join("  |  ")}</p>
         </header>
 
-        <img src={t.image} alt={t.name} className="mt-10 aspect-[3/4] w-full max-w-xs rounded-lg object-cover object-top" />
+        <img src={p.banner} alt={`${t.name} deadlifting`} className="mt-10 w-full rounded-lg" />
 
         <div className="mt-10 space-y-6 text-lg leading-relaxed">
           {p.bio.map((b) => <p key={b.slice(0, 20)}>{b}</p>)}
