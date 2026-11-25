@@ -50,7 +50,7 @@ function Locations() {
 
   return (
     <>
-      <PageHero eyebrow="Locations" title="Always a studio near you." text="15+ locations across Singapore: our dedicated studios and Anytime Fitness clubs, each a short walk from the MRT." image={images.studio} />
+      <PageHero eyebrow="Locations" title="Always a studio near you." text="15+ locations across Singapore: our dedicated studios and Anytime Fitness clubs, each a short walk from the MRT." image={images.locationsHero} />
       <section className="mx-auto max-w-7xl px-5 py-16">
         <p className="font-display text-xl uppercase tracking-wide sm:text-2xl">Key in your home or work address to find a training location near you.</p>
         <form onSubmit={search} className="mt-4 flex flex-col gap-3 md:flex-row">

@@ -35,7 +35,7 @@ import anytimeAsset from "@/assets/rf-group-anytime.png.asset.json";
 import forgedTestingAsset from "@/assets/forged-testing.webp.asset.json";
 import shelterRecoveryAsset from "@/assets/shelter-recovery.jpg.asset.json";
 
-export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal };
+export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal, locationsHero: rfBugis1Asset.url };
 
 export const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/reformd_training/?hl=en" },
@@ -235,7 +235,7 @@ const raw: Omit<Location, "image">[] = [
 const galleries: Record<string, string[]> = {
   "RF Sixth Avenue": [sixth1Asset.url, sixth2Asset.url],
   "RF 615": [rf6151Asset.url, rf6152Asset.url, rf6153Asset.url, rf6154Asset.url],
-  "RF Bugis": [rfBugis1Asset.url, rfBugis2Asset.url, rfBugis3Asset.url, rfBugis4Asset.url],
+  "RF Bugis": [rfBugis2Asset.url, rfBugis3Asset.url, rfBugis4Asset.url, rfBugis1Asset.url],
   "FORGED by ReFormd": [forgedTurfAsset.url, forgedRowersAsset.url, forgedTreadmillsAsset.url, forgedChamberAsset.url],
   "Anytime Fitness Bedok": [bedok1Asset.url, bedok2Asset.url, bedok3Asset.url],
   "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url, amkSouth3Asset.url],
