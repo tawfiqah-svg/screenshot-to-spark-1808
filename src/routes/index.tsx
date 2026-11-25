@@ -5,6 +5,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { CtaLink, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { LocationsCarousel } from "@/components/site/Carousels";
 import { TrustindexReviews } from "@/components/site/TrustindexReviews";
+import { TrainerName } from "@/components/site/TrainerName";
 import { brandVideoUrl, homeBenefits, images, locations, privateStudioCount, programs, team } from "@/data/site";
 
 export const Route = createFileRoute("/")({
@@ -209,12 +210,12 @@ function Home() {
         <div className="home-team mt-12 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {team.slice(0, 4).map((t) => (
             <Reveal key={t.name}>
-              <Link to="/team" className="group block">
+              <Link {...(t.profile ? { to: "/team/$slug" as const, params: { slug: t.slug } } : { to: "/team" as const })} className="group block">
                 <article>
                   <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                    <img src={t.image} alt={t.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={t.image} alt={t.name} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                   </div>
-                  <h3 className="mt-4 text-2xl font-black uppercase">{t.name}</h3>
+                  <h3 className="mt-4 text-2xl font-black uppercase"><TrainerName t={t} /></h3>
                   <p className="text-sm text-muted-foreground">{t.title}</p>
                 </article>
               </Link>

@@ -1,3 +1,5 @@
+import carmenHeadshotAsset from "@/assets/carmen-headshot.png.asset.json";
+import carmenBannerAsset from "@/assets/carmen-deadlift-banner.png.asset.json";
 import sixth1Asset from "@/assets/rf-sixth-avenue-1.png.asset.json";
 import sixth2Asset from "@/assets/rf-sixth-avenue-2.png.asset.json";
 import rf6151Asset from "@/assets/rf615-1.png.asset.json";
@@ -263,9 +265,9 @@ const galleries: Record<string, string[]> = {
   "Anytime Fitness Buona Vista": [buonaVista1Asset.url, buonaVista2Asset.url, buonaVista3Asset.url],
   "Anytime Fitness Cineleisure Orchard": [cineleisure1Asset.url, cineleisure2Asset.url],
   "Anytime Fitness City Square Mall": [citySquare1Asset.url, citySquare2Asset.url, citySquare3Asset.url, citySquare4Asset.url, citySquare5Asset.url],
-  "Anytime Fitness Havelock Outram": [havelock2Asset.url, havelock3Asset.url],
+  "Anytime Fitness Havelock Outram": [yishun1Asset.url, yishun2Asset.url],
   "Anytime Fitness Suntec City": [suntec1Asset.url, suntec2Asset.url],
-  "Anytime Fitness Yishun East": [yishun1Asset.url, yishun2Asset.url],
+  "Anytime Fitness Yishun East": [havelock2Asset.url, havelock3Asset.url],
   "Anytime Fitness Orchard": [orchard1Asset.url, orchard2Asset.url, orchard3Asset.url],
   "RF New Upper Thomson": [upperThomson1Asset.url, upperThomson2Asset.url],
   "Anytime Fitness New Queensway": [queensway3Asset.url, queensway4Asset.url],
@@ -328,15 +330,32 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-export const team = [
-  { name: "Name 1", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
-  { name: "Name 2", title: "Personal Trainer", image: prenatal, specialisations: ["Prenatal & postpartum", "Pilates-based strength"] },
-  { name: "Name 3", title: "Personal Trainer", image: performance, specialisations: ["Athletic performance", "Speed & power"] },
-  { name: "Name 4", title: "Personal Trainer", image: studio, specialisations: ["Weight loss", "Nutrition guidance"] },
-  { name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Longevity", "Mobility"] },
-  { name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Muscle gain", "Powerlifting"] },
-  { name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Injury rehab", "Posture"] },
-  { name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Postpartum recovery", "Core rehab"] },
+export type TrainerProfile = { banner: string; focus: string[]; bio: string[]; belief: string; qualifications: string[]; achievements: string[] };
+export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; specialisations: string[]; profile?: TrainerProfile };
+
+export const team: Trainer[] = [
+  {
+    slug: "carmen-ong", firstName: "Carmen", lastName: "Ong", name: "Carmen Ong", title: "ISSA Certified Personal Trainer", image: carmenHeadshotAsset.url, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: carmenBannerAsset.url,
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
+      bio: [
+        "Carmen believes that strength training is more than just lifting weights. To her, it is about building a mind and body that supports the life you want and empowers you outside the gym. With a strength training background, she loves teaching compound exercises because they build real, functional strength and help clients feel capable in their day-to-day lives.",
+        "Her passion for coaching comes from personal experience. As a former healthcare executive with six years in the government sector, Carmen witnessed how much proper guidance can change someone\u2019s physical and mental well-being. Previously working with a personal trainer herself showed her the value of patient, supportive coaching, and inspired her to help beginners build confidence and fall in love with strength training from the very start.",
+        "Carmen aims to create a safe, encouraging space where clients can grow consistently and challenge themselves in meaningful ways.",
+      ],
+      belief: "Growth happens in challenge.",
+      qualifications: ["ISSA Certified Personal Trainer", "Strength Training Specialist", "CPR & AED Certified", "Bachelor\u2019s Degree in Social Science (Psychology Major)"],
+      achievements: ["ReFormd Powerlifting Meet 2025 \u2013 U47 Women\u2019s Open, First Place"],
+    },
+  },
+  { slug: "name-2", firstName: "Name 2", lastName: "", name: "Name 2", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },
+  { slug: "name-3", firstName: "Name 3", lastName: "", name: "Name 3", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
+  { slug: "name-4", firstName: "Name 4", lastName: "", name: "Name 4", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
+  { slug: "name-5", firstName: "Name 5", lastName: "", name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
+  { slug: "name-6", firstName: "Name 6", lastName: "", name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
+  { slug: "name-7", firstName: "Name 7", lastName: "", name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
+  { slug: "name-8", firstName: "Name 8", lastName: "", name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },
 ];
 
 export const faqs: { q: string; a: string }[] = [

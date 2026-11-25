@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { TrainerName } from "@/components/site/TrainerName";
 import { CtaLink, PageHero, Reveal, seo } from "@/components/site/Layout";
 import { images, team } from "@/data/site";
 
@@ -15,11 +16,15 @@ function Team() {
         <div className="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((t) => (
             <Reveal key={t.name}>
-              <article>
+              <article className="group relative">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                  <img src={t.image} alt={t.name} loading="lazy" className="h-full w-full object-cover" />
+                  <img src={t.image} alt={t.name} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                 </div>
-                <h2 className="mt-4 text-2xl font-black uppercase">{t.name}</h2>
+                <h2 className="mt-4 text-2xl font-black uppercase">
+                  {t.profile ? (
+                    <Link to="/team/$slug" params={{ slug: t.slug }} className="after:absolute after:inset-0"><TrainerName t={t} /></Link>
+                  ) : <TrainerName t={t} />}
+                </h2>
                 <p className="text-sm text-muted-foreground">{t.title}</p>
                 <ul className="mt-3 flex flex-wrap gap-2">
                   {t.specialisations.map((s) => <li key={s} className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold">{s}</li>)}

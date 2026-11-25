@@ -18,6 +18,7 @@ import { Route as LocationsRouteImport } from './routes/locations'
 import { Route as ProgramsRouteImport } from './routes/programs'
 import { Route as TeamRouteImport } from './routes/team'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
+import { Route as TeamSlugRouteImport } from './routes/team_.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -64,6 +65,11 @@ const TestimonialsRoute = TestimonialsRouteImport.update({
   path: '/testimonials',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TeamSlugRoute = TeamSlugRouteImport.update({
+  id: '/team_/$slug',
+  path: '/team/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -75,6 +81,7 @@ export interface FileRoutesByFullPath {
   '/programs': typeof ProgramsRoute
   '/team': typeof TeamRoute
   '/testimonials': typeof TestimonialsRoute
+  '/team/$slug': typeof TeamSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -86,6 +93,7 @@ export interface FileRoutesByTo {
   '/programs': typeof ProgramsRoute
   '/team': typeof TeamRoute
   '/testimonials': typeof TestimonialsRoute
+  '/team/$slug': typeof TeamSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -98,6 +106,7 @@ export interface FileRoutesById {
   '/programs': typeof ProgramsRoute
   '/team': typeof TeamRoute
   '/testimonials': typeof TestimonialsRoute
+  '/team_/$slug': typeof TeamSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -111,6 +120,7 @@ export interface FileRouteTypes {
     | '/programs'
     | '/team'
     | '/testimonials'
+    | '/team/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -122,6 +132,7 @@ export interface FileRouteTypes {
     | '/programs'
     | '/team'
     | '/testimonials'
+    | '/team/$slug'
   id:
     | '__root__'
     | '/'
@@ -133,6 +144,7 @@ export interface FileRouteTypes {
     | '/programs'
     | '/team'
     | '/testimonials'
+    | '/team_/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -145,6 +157,7 @@ export interface RootRouteChildren {
   ProgramsRoute: typeof ProgramsRoute
   TeamRoute: typeof TeamRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  TeamSlugRoute: typeof TeamSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -212,6 +225,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TestimonialsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/team_/$slug': {
+      id: '/team_/$slug'
+      path: '/team/$slug'
+      fullPath: '/team/$slug'
+      preLoaderRoute: typeof TeamSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -225,6 +245,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProgramsRoute: ProgramsRoute,
   TeamRoute: TeamRoute,
   TestimonialsRoute: TestimonialsRoute,
+  TeamSlugRoute: TeamSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
