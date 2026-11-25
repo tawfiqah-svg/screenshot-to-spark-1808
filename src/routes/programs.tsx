@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
-import { groupSupport, images, programs } from "@/data/site";
+import { groupSupport, programs } from "@/data/site";
+import programsHeroAsset from "@/assets/rfpt-marketing.png.asset.json";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
@@ -13,7 +14,7 @@ export const Route = createFileRoute("/programs")({
 function Programs() {
   return (
     <>
-      <PageHero eyebrow="Programs" title="Programs to support you at every age and stage" image={images.performance} />
+      <PageHero eyebrow="Programs" title="Programs to support you at every age and stage" image={programsHeroAsset.url} imagePosition="center 35%" />
       <div className="mx-auto max-w-7xl space-y-24 px-5 py-24">
         {programs.map((p, i) => (
           <Reveal key={p.title}>
