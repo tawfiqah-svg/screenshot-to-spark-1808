@@ -1,3 +1,5 @@
+import sixth1Asset from "@/assets/rf-sixth-avenue-1.png.asset.json";
+import sixth2Asset from "@/assets/rf-sixth-avenue-2.png.asset.json";
 import rf6151Asset from "@/assets/rf615-1.png.asset.json";
 import rf6152Asset from "@/assets/rf615-2.png.asset.json";
 import rf6153Asset from "@/assets/rf615-3.png.asset.json";
@@ -202,7 +204,7 @@ const imgs = [studio, hero, performance];
 const raw: Omit<Location, "image">[] = [
   // Own ReFormd studios
   { name: "RF 615", address: "615 Bukit Timah Rd", mrt: "Tan Kah Kee", type: "studio", lat: 1.3307, lng: 103.7970 },
-  { name: "RF Sixth Avenue", address: "Sixth Avenue, Bukit Timah", mrt: "Sixth Avenue", type: "studio", lat: 1.3290, lng: 103.7975 },
+  { name: "RF Sixth Avenue", address: "805 Bukit Timah Rd, #01-01 Sixth Avenue Centre", mrt: "Sixth Avenue", type: "studio", lat: 1.3290, lng: 103.7975 },
   { name: "RF Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
   { name: "FORGED by ReFormd", address: "1 Raffles Link", mrt: "City Hall / Esplanade", type: "studio", lat: 1.2918, lng: 103.8547 },
   // Anytime Fitness clubs — PT delivered inside AF to AF members
@@ -223,6 +225,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
 ];
 const galleries: Record<string, string[]> = {
+  "RF Sixth Avenue": [sixth1Asset.url, sixth2Asset.url],
   "RF 615": [rf6151Asset.url, rf6152Asset.url, rf6153Asset.url, rf6154Asset.url],
   "Anytime Fitness Bedok": [bedok1Asset.url, bedok2Asset.url, bedok3Asset.url],
   "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url, amkSouth3Asset.url],

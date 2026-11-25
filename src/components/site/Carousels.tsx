@@ -1,5 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { MapPin, TrainFront } from "lucide-react";
+import { Lock, MapPin, TrainFront } from "lucide-react";
 import type { Location } from "@/data/site";
 import { reviews } from "@/data/site";
 import { Stars } from "./Layout";
@@ -61,7 +61,7 @@ export function LocationCard({ loc }: { loc: Location }) {
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <h3 className="text-xl font-black uppercase">{loc.name}</h3>
           {loc.type === "studio" && (
-            <span className="border border-cta/40 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-cta">Private studio</span>
+            <span className="inline-flex items-center gap-1.5 bg-cta px-2.5 py-1 font-display text-sm leading-none tracking-[0.12em] text-cta-foreground shadow-sm"><Lock className="size-3" aria-hidden />Private studio</span>
           )}
         </div>
         <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="size-4" />{loc.address}</p>
