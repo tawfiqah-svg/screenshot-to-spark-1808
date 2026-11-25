@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CtaLink, PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { groupSupport, programs } from "@/data/site";
-import programsHeroAsset from "@/assets/rfpt-marketing.png.asset.json";
+const programsHeroAsset = { url: "/images/rfpt-marketing.png" };
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";

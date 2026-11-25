@@ -19,7 +19,7 @@ import {
 import { nav, socialLinks, subBrands } from "@/data/site";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import logoAsset from "@/assets/reformd-logo.png.asset.json";
+const logoAsset = { url: "/images/reformd-logo.png" };
 
 export function Logo({ className, inverse }: { className?: string; inverse?: boolean }) {
   return (
