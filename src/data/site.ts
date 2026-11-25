@@ -165,7 +165,7 @@ export const groupSupport = [
 ];
 
 export const reviewWidget = {
-  scriptUrl: "https://cdn.trustindex.io/loader.js?043773c8599d84678e662f3939a",
+  scriptUrl: "https://cdn.trustindex.io/loader.js?9b54626860ef5251a7563ad8e0c",
 };
 
 export const reviews = [
