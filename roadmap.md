@@ -41,5 +41,6 @@
 - [x] Enlarge the phone header: taller bar, bigger logo, bigger "Book now" and menu button.
 - [x] Use the studio row photo for the Prenatal & postpartum program.
 - [x] Use the new trainer photo for the Vitality & longevity program.
-- [ ] Replace the SimplyBook embed on Contact with the supplied Setmore service link and verify booking works.
-- [ ] Refresh the Setmore embed after the user's update and confirm the new details show.
+- [x] Replace the SimplyBook embed on Contact with the supplied Setmore service link and verify booking works.
+- [x] Refresh the Setmore embed after the user's update and confirm the new details show.
+- [ ] Decide whether the booking calendar gets a full-width row so dates and times show together (waiting on user's answer).
