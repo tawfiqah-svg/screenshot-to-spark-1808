@@ -279,47 +279,43 @@ export const team = [
 export const faqs: { q: string; a: string }[] = [
   {
     q: "Do I need a gym membership to train at an RF-Operated Gym?",
-    a: "Training inside our RF-Operated Gyms is for gym members. Speak with us about membership and access at your preferred gym before booking. You can also ask about training at a private ReFormd studio.",
+    a: "Yes. Training inside our RF-Operated Gyms is for gym members. Talk to us about membership and access at your preferred gym before you book, or ask about training at one of our private studios instead.",
   },
   {
-    q: "Can I train at multiple gyms or only restricted to one?",
-    a: "Speak with your trainer about the locations that fit your schedule. Sessions at different gyms depend on your membership access and trainer availability, so confirm the arrangements before you travel.",
+    q: "Can I train at multiple gyms, or am I restricted to one?",
+    a: "You can train at more than one location. Talk to your trainer about the gyms that fit your schedule. It comes down to your membership access and trainer availability, so it's best to confirm the arrangements before you travel.",
   },
   {
     q: "I'm new to the gym. Can I start personal training?",
-    a: "Yes. ReFormd works with beginners as well as experienced gym users. Your trainer looks at your goals and how you move, then helps you learn the exercises at a pace that suits you.",
+    a: "Yes. We work with complete beginners as well as experienced gym users. Your trainer looks at your goals and how you move, then teaches you the exercises at a pace that suits you.",
   },
   {
     q: "What happens during a personal training trial?",
-    a: "ReFormd's trial includes a one-to-one session with a certified personal trainer, a lifestyle and goals discussion, movement screening, form analysis and training recommendations. The website also lists a Visbody 3D body composition scan. Confirm scan availability at your chosen location when booking.",
+    a: "Your trial includes a one-to-one session with a certified personal trainer, a chat about your lifestyle and goals, movement screening, form analysis and training recommendations. We also offer a Visbody 3D body composition scan at selected locations, so do check it's available at your chosen spot when you book.",
   },
   {
     q: "Where can I do the Kickstart trial?",
-    a: "Choose a private ReFormd studio or an RF-Operated Gym, whichever is more convenient. Contact us to confirm your preferred location, gym access and available session times.",
+    a: "Wherever suits you: one of our private studios or an RF-Operated Gym. Contact us to confirm your preferred location, gym access and available session times.",
   },
   {
     q: "Can you help me lose weight and build muscle?",
-    a: "Yes. ReFormd offers training for weight management, strength and muscle building. Your trainer puts together a plan based on your goals, current fitness and assessment findings.",
+    a: "Yes. We coach weight management, strength and muscle building. Your trainer puts together a plan around your goals, your current fitness and what your assessment shows.",
   },
   {
     q: "How do you measure my progress?",
-    a: "Your trainer tracks your training and uses assessments to help review your progress. ReFormd uses Visbody 3D scans at selected locations to look at body composition, posture, muscle distribution and body fat percentage.",
+    a: "Your trainer tracks your sessions and uses assessments to review how you're doing. We use Visbody 3D scans at selected locations to look at body composition, posture, muscle distribution and body fat percentage.",
   },
   {
     q: "Can I train to stay strong as I get older?",
-    a: "Yes. ReFormd's longevity approach includes strength training, movement screening and mobility work. Sessions are adapted to your ability and goals so you can keep working on everyday strength and movement.",
+    a: "Yes. Our longevity approach covers strength training, movement screening and mobility work. We adapt every session to your ability and goals so you can keep building everyday strength and movement.",
   },
   {
     q: "Do you help with nutrition, sleep and recovery?",
-    a: "Your trainer can offer practical guidance on eating habits, sleep, stress and recovery alongside your training. Tell them about your routine so the advice fits your day-to-day life.",
-  },
-  {
-    q: "What recovery options are available?",
-    a: "ReFormd's website lists Shelter by ReFormd and a dedicated recovery area at ReFormd Sixth Avenue. Ask your trainer which facilities are available and whether there are additional charges.",
+    a: "Yes. Your trainer can give practical guidance on eating habits, sleep, stress and recovery alongside your training. Tell them about your routine so the advice fits your day-to-day life.",
   },
   {
     q: "How do I get started and find out the price?",
-    a: "Book a consultation or contact the team with your goals and preferred location. ReFormd advertises first-time trial pricing on its website; the team can confirm the current offer and suitable training options before you book.",
+    a: "Book a consultation or send us your goals and preferred location. We publish first-time trial pricing on our website, and our team can confirm the current offer and the options that suit you before you book.",
   },
 ];
 
