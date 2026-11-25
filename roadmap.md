@@ -18,7 +18,7 @@
 - [x] Expand About us with the RF Group story and verified events.
 - [x] Add an About us link and photo thumbnails to the hover dropdown.
 - [x] Verify the About page and dropdown on desktop and phone.
-- [ ] Embed Calendly bookings on Contact (waiting for the public booking link).
+- [x] Embed SimplyBook bookings on Contact and update the consultation to 1 hour.
 - [x] Add a subtle moving home-page benefit strip with animated line accents.
 - [x] Add red section-heading accents and smooth in-page scrolling, retaining the layout.
 - [x] Verify the visual changes on desktop, mobile and with reduced motion.

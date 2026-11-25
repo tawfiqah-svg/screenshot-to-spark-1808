@@ -10,7 +10,7 @@ import { SectionHeader, seo } from "@/components/site/Layout";
 import { faqs } from "@/data/site";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seo("Contact & FAQ", "Book a free 30-minute online consultation, send us your details, or read answers to common questions about training at ReFormd."),
+  head: () => seo("Contact & FAQ", "Book a free 1-hour online consultation, send us your details, or read answers to common questions about training at ReFormd."),
   component: Contact,
 });
 
@@ -25,11 +25,13 @@ function Contact() {
             <CalendarDays className="size-8 text-cta" />
             <p className="mt-6 text-xs font-bold uppercase tracking-widest opacity-60">Option 1</p>
             <h2 className="mt-1 text-3xl font-black uppercase">Book an online consultation</h2>
-            <p className="mt-3 opacity-80">A 30-minute video call about our programs.</p>
-            {/* Placeholder: replace with your Calendly / booking embed */}
-            <div className="mt-6 grid aspect-[4/3] place-items-center rounded-md border border-dashed border-ink-foreground/30 text-sm opacity-60">
-              Booking calendar embed
-            </div>
+            <p className="mt-3 opacity-80">A 1-hour video call about our programs.</p>
+            <iframe
+              src="https://reformdpersonaltraining.simplybook.asia/v2/#book"
+              title="Book an online consultation with ReFormd"
+              className="mt-6 h-[620px] w-full rounded-md border border-ink-foreground/20 bg-white"
+              loading="lazy"
+            />
           </div>
           <div className="rounded-lg border border-border bg-card p-8">
             <MessageCircle className="size-8 text-cta" />
