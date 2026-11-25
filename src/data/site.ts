@@ -8,6 +8,10 @@ import bedok1Asset from "@/assets/bedok-85-1.png.asset.json";
 import bedok2Asset from "@/assets/bedok-85-2.png.asset.json";
 import bedok3Asset from "@/assets/bedok-85-3.png.asset.json";
 import amkSouth3Asset from "@/assets/ang-mo-kio-south-3.png.asset.json";
+import rfBugis1Asset from "@/assets/rf-bugis-1.png.asset.json";
+import rfBugis2Asset from "@/assets/rf-bugis-2.png.asset.json";
+import rfBugis3Asset from "@/assets/rf-bugis-3.png.asset.json";
+import rfBugis4Asset from "@/assets/rf-bugis-4.png.asset.json";
 import amkSouth1Asset from "@/assets/ang-mo-kio-south-1.png.asset.json";
 import amkSouth2Asset from "@/assets/ang-mo-kio-south-2.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
@@ -227,6 +231,7 @@ const raw: Omit<Location, "image">[] = [
 const galleries: Record<string, string[]> = {
   "RF Sixth Avenue": [sixth1Asset.url, sixth2Asset.url],
   "RF 615": [rf6151Asset.url, rf6152Asset.url, rf6153Asset.url, rf6154Asset.url],
+  "RF Bugis": [rfBugis1Asset.url, rfBugis2Asset.url, rfBugis3Asset.url, rfBugis4Asset.url],
   "Anytime Fitness Bedok": [bedok1Asset.url, bedok2Asset.url, bedok3Asset.url],
   "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url, amkSouth3Asset.url],
 };
