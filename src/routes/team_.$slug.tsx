@@ -28,13 +28,6 @@ function TrainerPage() {
 
   return (
     <>
-      {/* Banner photo only: no gradient, no text on top */}
-      <img
-        src={p.banner}
-        alt={`${t.name} training`}
-        className="block h-[46vh] max-h-[520px] min-h-[280px] w-full object-cover object-center sm:h-[56vh] lg:h-[62vh]"
-      />
-
       {/* Everything else reads top to bottom in one column */}
       <article className="mx-auto w-full max-w-3xl px-5 py-14 sm:py-20">
         <Link to="/team" className="font-display text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground hover:text-cta">
