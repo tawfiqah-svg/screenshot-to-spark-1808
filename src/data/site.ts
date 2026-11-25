@@ -1,3 +1,4 @@
+import amkSouth3Asset from "@/assets/ang-mo-kio-south-3.png.asset.json";
 import amkSouth1Asset from "@/assets/ang-mo-kio-south-1.png.asset.json";
 import amkSouth2Asset from "@/assets/ang-mo-kio-south-2.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
@@ -204,7 +205,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness City Square Mall", address: "180 Kitchener Road, City Square Mall", mrt: "Farrer Park", type: "gym", lat: 1.3115, lng: 103.8567 },
   { name: "Anytime Fitness Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "gym", lat: 1.2995, lng: 103.8545 },
   { name: "Anytime Fitness Bedok", address: "Bedok, Singapore", mrt: "Bedok", type: "gym", lat: 1.3240, lng: 103.9300 },
-  { name: "Anytime Fitness Ang Mo Kio South", address: "Ang Mo Kio, Singapore", mrt: "Ang Mo Kio", type: "gym", lat: 1.3690, lng: 103.8454 },
+  { name: "Anytime Fitness Ang Mo Kio South", address: "340 Ang Mo Kio Ave 1, #01-1681, Singapore 560340", mrt: "Ang Mo Kio", type: "gym", lat: 1.3690, lng: 103.8454 },
   { name: "Anytime Fitness Buona Vista", address: "Buona Vista, Singapore", mrt: "Buona Vista", type: "gym", lat: 1.3068, lng: 103.7900 },
   { name: "Anytime Fitness Bukit Timah Central", address: "Bukit Timah Central", mrt: "Beauty World", type: "gym", lat: 1.3390, lng: 103.7760 },
   { name: "Anytime Fitness Geylang Bahru", address: "Geylang Bahru, Singapore", mrt: "Geylang Bahru", type: "gym", lat: 1.3200, lng: 103.8715 },
@@ -215,7 +216,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
 ];
 const galleries: Record<string, string[]> = {
-  "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url],
+  "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url, amkSouth3Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
   const gallery = galleries[l.name];
