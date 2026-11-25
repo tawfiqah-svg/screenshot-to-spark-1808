@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { CtaLink, PageHero, Reveal, SectionHeader, seo } from "@/components/site/Layout";
 import { ReviewCard } from "@/components/site/Carousels";
+import { TrustindexReviews } from "@/components/site/TrustindexReviews";
 import { brandVideoUrl, images, reviews } from "@/data/site";
 
 export const Route = createFileRoute("/testimonials")({
@@ -31,6 +32,9 @@ function Testimonials() {
         <SectionHeader title="Google reviews" />
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r) => <Reveal key={r.name}><ReviewCard {...r} /></Reveal>)}
+        </div>
+        <div className="mt-12">
+          <TrustindexReviews />
         </div>
       </section>
       <section className="bg-secondary py-24">
