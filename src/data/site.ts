@@ -43,6 +43,7 @@ import havelock2Asset from "@/assets/af-havelock-2.png.asset.json";
 import havelock3Asset from "@/assets/af-havelock-3.png.asset.json";
 import queensway3Asset from "@/assets/af-queensway-3.webp.asset.json";
 import queensway4Asset from "@/assets/af-queensway-4.png.asset.json";
+import rochester1Asset from "@/assets/af-rochester-1.jpg.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
 import hero from "@/assets/hero.jpg";
 import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
@@ -252,7 +253,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness Havelock Outram", address: "405 Havelock Rd, #02-02, Singapore 169633", mrt: "Havelock", type: "gym", lat: 1.2875, lng: 103.8350 },
   { name: "RF New Upper Thomson", address: "246S Upper Thomson Rd, Singapore 574370", mrt: "Upper Thomson", type: "studio", lat: 1.3600, lng: 103.8340 },
   { name: "Anytime Fitness New Queensway", address: "#03-52, Queensway Shopping Centre", mrt: "Queenstown", type: "gym", lat: 1.3200, lng: 103.8020 },
-  { name: "Anytime Fitness Rochester", address: "Rochester Drive", mrt: "Buona Vista", type: "gym", lat: 1.3050, lng: 103.7878 },
+  { name: "Anytime Fitness Rochester", address: "41 Rochester Dr, Singapore 138582", mrt: "Rochester", type: "gym", lat: 1.3062, lng: 103.7885 },
   { name: "Anytime Fitness Yishun East", address: "Blk 461 Yishun Ave 6, #01-02", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
 ];
 const galleries: Record<string, string[]> = {
@@ -271,6 +272,7 @@ const galleries: Record<string, string[]> = {
   "Anytime Fitness Orchard": [orchard1Asset.url, orchard2Asset.url, orchard3Asset.url],
   "RF New Upper Thomson": [upperThomson1Asset.url, upperThomson2Asset.url],
   "Anytime Fitness New Queensway": [queensway3Asset.url, queensway4Asset.url],
+  "Anytime Fitness Rochester": [rochester1Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
   const gallery = galleries[l.name];
