@@ -1,5 +1,7 @@
 import carmenHeadshotAsset from "@/assets/carmen-headshot.png.asset.json";
 import carmenBannerAsset from "@/assets/carmen-deadlift-banner.png.asset.json";
+import cherylHeadshotAsset from "@/assets/cheryl-headshot.png.asset.json";
+import cherylBannerAsset from "@/assets/cheryl-banner.png.asset.json";
 import sixth1Asset from "@/assets/rf-sixth-avenue-1.png.asset.json";
 import sixth2Asset from "@/assets/rf-sixth-avenue-2.png.asset.json";
 import rf6151Asset from "@/assets/rf615-1.png.asset.json";
@@ -351,7 +353,22 @@ export const team: Trainer[] = [
       achievements: ["ReFormd Powerlifting Meet 2025 \u2013 U47 Women\u2019s Open, First Place"],
     },
   },
-  { slug: "name-2", firstName: "Name 2", lastName: "", name: "Name 2", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "cheryl-chee", firstName: "Cheryl", lastName: "Chee", name: "Cheryl Chee", title: "RF Academy Certified Personal Trainer", image: cherylHeadshotAsset.url, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: cherylBannerAsset.url,
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
+      bio: [
+        "Cheryl approaches fitness like a long-term strategy: built on strong fundamentals, clear structure, and measurable progress. With a background in Marketing and International Business, she understands the fast-paced, high-stress environments many of her clients navigate daily. She uses strength training not just to sculpt bodies, but to build mental resilience, discipline, and energy that spills over into every area of life.",
+        "Rather than chasing quick fixes, Cheryl focuses on teaching effective compound movements that deliver real-world strength and functional movement.",
+        "Whether you are stepping into a weight room for the very first time or aiming to push past a plateau, her coaching style is analytical yet deeply encouraging where she meets you exactly where you are and giving you the tools to succeed independently.",
+        "Having achieved top podium placement through her own training discipline, Cheryl knows firsthand what it takes to push boundaries safely, build endurance, and stay consistent. She is dedicated to creating an empowering space where work ethic meets results.",
+      ],
+      belief: "Discipline gets you started, consistency takes you to the finish line.",
+      qualifications: ["RF Academy Certified Personal Trainer", "Bachelor\u2019s Degree in Marketing & International Business", "CPR & AED Certified"],
+      achievements: ["2nd Runner-Up \u2013 Batu Kawan Penang Half Marathon (Women\u2019s Open)"],
+    },
+  },
   { slug: "name-3", firstName: "Name 3", lastName: "", name: "Name 3", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-4", firstName: "Name 4", lastName: "", name: "Name 4", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-5", firstName: "Name 5", lastName: "", name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
