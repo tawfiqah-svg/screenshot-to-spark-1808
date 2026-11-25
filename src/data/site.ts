@@ -46,6 +46,7 @@ const havelock3Asset = { url: "/images/af-havelock-3.png" };
 const queensway3Asset = { url: "/images/af-queensway-3.png" };
 const queensway4Asset = { url: "/images/af-queensway-4.png" };
 const rochester1Asset = { url: "/images/af-rochester-1.png" };
+const geylangBahru1Asset = { url: "/images/af-geylang-bahru-1.png" };
 // All editable site content lives here. Swap images by replacing the imports below.
 const hero = "/images/hero.png";
 const homeHeroAsset = { url: "/images/carmen-deadlift.png" };
@@ -251,7 +252,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness Bedok", address: "Blk 88 Bedok North Street 4, #01-163", mrt: "Bedok", type: "gym", lat: 1.3240, lng: 103.9300 },
   { name: "Anytime Fitness Ang Mo Kio South", address: "340 Ang Mo Kio Ave 1, #01-1681, Singapore 560340", mrt: "Ang Mo Kio", type: "gym", lat: 1.3690, lng: 103.8454 },
   { name: "Anytime Fitness Buona Vista", address: "11 Biopolis Way, #01-04/05/06/07 Helios, Singapore 138667", mrt: "Buona Vista", type: "gym", lat: 1.3068, lng: 103.7900 },
-  { name: "Anytime Fitness Geylang Bahru", address: "Geylang Bahru, Singapore", mrt: "Geylang Bahru", type: "gym", lat: 1.3200, lng: 103.8715 },
+  { name: "Anytime Fitness Geylang Bahru", address: "1 Geylang Bahru Ln, #01-03 Kolam Ayer Community Club, Singapore 339631", mrt: "Geylang Bahru", type: "gym", lat: 1.3213, lng: 103.8703 },
   { name: "Anytime Fitness Havelock Outram", address: "405 Havelock Rd, #02-02, Singapore 169633", mrt: "Havelock", type: "gym", lat: 1.2875, lng: 103.8350 },
   { name: "RF New Upper Thomson", address: "246S Upper Thomson Rd, Singapore 574370", mrt: "Upper Thomson", type: "studio", lat: 1.3600, lng: 103.8340 },
   { name: "Anytime Fitness New Queensway", address: "#03-52, Queensway Shopping Centre", mrt: "Queenstown", type: "gym", lat: 1.3200, lng: 103.8020 },
@@ -275,6 +276,7 @@ const galleries: Record<string, string[]> = {
   "RF New Upper Thomson": [upperThomson1Asset.url, upperThomson2Asset.url],
   "Anytime Fitness New Queensway": [queensway3Asset.url, queensway4Asset.url],
   "Anytime Fitness Rochester": [rochester1Asset.url],
+  "Anytime Fitness Geylang Bahru": [geylangBahru1Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
   const gallery = galleries[l.name];
