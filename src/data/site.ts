@@ -12,6 +12,10 @@ import rfBugis1Asset from "@/assets/rf-bugis-1.png.asset.json";
 import rfBugis2Asset from "@/assets/rf-bugis-2.png.asset.json";
 import rfBugis3Asset from "@/assets/rf-bugis-3.png.asset.json";
 import rfBugis4Asset from "@/assets/rf-bugis-4.png.asset.json";
+import forgedTurfAsset from "@/assets/forged-facility-turf.png.asset.json";
+import forgedRowersAsset from "@/assets/forged-facility-rowers.webp.asset.json";
+import forgedTreadmillsAsset from "@/assets/forged-facility-treadmills.webp.asset.json";
+import forgedChamberAsset from "@/assets/forged-facility-testing-chamber.webp.asset.json";
 import amkSouth1Asset from "@/assets/ang-mo-kio-south-1.png.asset.json";
 import amkSouth2Asset from "@/assets/ang-mo-kio-south-2.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
@@ -209,8 +213,8 @@ const raw: Omit<Location, "image">[] = [
   // Own ReFormd studios
   { name: "RF 615", address: "615 Bukit Timah Rd", mrt: "Tan Kah Kee", type: "studio", lat: 1.3307, lng: 103.7970 },
   { name: "RF Sixth Avenue", address: "805 Bukit Timah Rd, #01-01 Sixth Avenue Centre", mrt: "Sixth Avenue", type: "studio", lat: 1.3290, lng: 103.7975 },
-  { name: "RF Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
-  { name: "FORGED by ReFormd", address: "1 Raffles Link", mrt: "City Hall / Esplanade", type: "studio", lat: 1.2918, lng: 103.8547 },
+  { name: "RF Bugis", address: "51 Middle Rd, #05-01, Singapore 188959", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
+  { name: "FORGED by ReFormd", address: "1 Raffles Link, B1-23 Citylink Mall", mrt: "City Hall / Esplanade", type: "studio", lat: 1.2918, lng: 103.8547 },
   // Anytime Fitness clubs — PT delivered inside AF to AF members
   { name: "Anytime Fitness Orchard", address: "Orchard Road", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
   { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Cineleisure", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
@@ -232,6 +236,7 @@ const galleries: Record<string, string[]> = {
   "RF Sixth Avenue": [sixth1Asset.url, sixth2Asset.url],
   "RF 615": [rf6151Asset.url, rf6152Asset.url, rf6153Asset.url, rf6154Asset.url],
   "RF Bugis": [rfBugis1Asset.url, rfBugis2Asset.url, rfBugis3Asset.url, rfBugis4Asset.url],
+  "FORGED by ReFormd": [forgedTurfAsset.url, forgedRowersAsset.url, forgedTreadmillsAsset.url, forgedChamberAsset.url],
   "Anytime Fitness Bedok": [bedok1Asset.url, bedok2Asset.url, bedok3Asset.url],
   "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url, amkSouth3Asset.url],
 };
