@@ -32,6 +32,8 @@ import havelock1Asset from "@/assets/havelock-outram-1.png.asset.json";
 import orchard1Asset from "@/assets/af-orchard-1.png.asset.json";
 import orchard2Asset from "@/assets/af-orchard-2.png.asset.json";
 import orchard3Asset from "@/assets/af-orchard-3.png.asset.json";
+import upperThomson1Asset from "@/assets/rf-upper-thomson-1.jpg.asset.json";
+import upperThomson2Asset from "@/assets/rf-upper-thomson-2.jpg.asset.json";
 import queensway1Asset from "@/assets/new-queensway-1.png.asset.json";
 import queensway2Asset from "@/assets/new-queensway-2.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
@@ -243,7 +245,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness Bukit Timah Central", address: "Bukit Timah Central", mrt: "Beauty World", type: "gym", lat: 1.3390, lng: 103.7760 },
   { name: "Anytime Fitness Geylang Bahru", address: "Geylang Bahru, Singapore", mrt: "Geylang Bahru", type: "gym", lat: 1.3200, lng: 103.8715 },
   { name: "Anytime Fitness Havelock Outram", address: "405 Havelock Rd, #02-02, Singapore 169633", mrt: "Havelock", type: "gym", lat: 1.2875, lng: 103.8350 },
-  { name: "Anytime Fitness New Upper Thomson", address: "Upper Thomson Road", mrt: "Upper Thomson", type: "gym", lat: 1.3600, lng: 103.8340 },
+  { name: "RF New Upper Thomson", address: "246S Upper Thomson Rd, Singapore 574370", mrt: "Upper Thomson", type: "studio", lat: 1.3600, lng: 103.8340 },
   { name: "Anytime Fitness New Queensway", address: "#03-52, Queensway Shopping Centre", mrt: "Queenstown", type: "gym", lat: 1.3200, lng: 103.8020 },
   { name: "Anytime Fitness Rochester", address: "Rochester Drive", mrt: "Buona Vista", type: "gym", lat: 1.3050, lng: 103.7878 },
   { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
@@ -260,6 +262,7 @@ const galleries: Record<string, string[]> = {
   "Anytime Fitness City Square Mall": [citySquare1Asset.url, citySquare2Asset.url, citySquare3Asset.url, citySquare4Asset.url, citySquare5Asset.url],
   "Anytime Fitness Havelock Outram": [havelock1Asset.url],
   "Anytime Fitness Orchard": [orchard1Asset.url, orchard2Asset.url, orchard3Asset.url],
+  "RF New Upper Thomson": [upperThomson1Asset.url, upperThomson2Asset.url],
   "Anytime Fitness New Queensway": [queensway1Asset.url, queensway2Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
