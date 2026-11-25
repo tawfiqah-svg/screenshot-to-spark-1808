@@ -29,6 +29,9 @@ import citySquare3Asset from "@/assets/city-square-3.png.asset.json";
 import citySquare4Asset from "@/assets/city-square-4.png.asset.json";
 import citySquare5Asset from "@/assets/city-square-5.png.asset.json";
 import havelock1Asset from "@/assets/havelock-outram-1.png.asset.json";
+import orchard1Asset from "@/assets/af-orchard-1.png.asset.json";
+import orchard2Asset from "@/assets/af-orchard-2.png.asset.json";
+import orchard3Asset from "@/assets/af-orchard-3.png.asset.json";
 import queensway1Asset from "@/assets/new-queensway-1.png.asset.json";
 import queensway2Asset from "@/assets/new-queensway-2.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
@@ -229,7 +232,7 @@ const raw: Omit<Location, "image">[] = [
   { name: "RF Bugis", address: "51 Middle Rd, #05-01, Singapore 188959", mrt: "Bugis", type: "studio", lat: 1.3008, lng: 103.8555 },
   { name: "FORGED by ReFormd", address: "1 Raffles Link, B1-23 Citylink Mall", mrt: "City Hall / Esplanade", type: "studio", lat: 1.2918, lng: 103.8547 },
   // Anytime Fitness clubs — PT delivered inside AF to AF members
-  { name: "Anytime Fitness Orchard", address: "Orchard Road", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
+  { name: "Anytime Fitness Orchard", address: "277 Orchard Rd, #04-01 Orchard, Singapore 238858", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
   { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Singapore 239695", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
   { name: "Anytime Fitness Suntec City", address: "3 Temasek Boulevard, Suntec City", mrt: "Promenade", type: "gym", lat: 1.2952, lng: 103.8580 },
   { name: "Anytime Fitness City Square Mall", address: "180 Kitchener Road, #06-04 City Square Mall, Singapore 208539", mrt: "Farrer Park", type: "gym", lat: 1.3115, lng: 103.8567 },
@@ -256,6 +259,7 @@ const galleries: Record<string, string[]> = {
   "Anytime Fitness Cineleisure Orchard": [cineleisure1Asset.url, cineleisure2Asset.url],
   "Anytime Fitness City Square Mall": [citySquare1Asset.url, citySquare2Asset.url, citySquare3Asset.url, citySquare4Asset.url, citySquare5Asset.url],
   "Anytime Fitness Havelock Outram": [havelock1Asset.url],
+  "Anytime Fitness Orchard": [orchard1Asset.url, orchard2Asset.url, orchard3Asset.url],
   "Anytime Fitness New Queensway": [queensway1Asset.url, queensway2Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
