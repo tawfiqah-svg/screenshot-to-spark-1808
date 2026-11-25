@@ -1,3 +1,5 @@
+import amkSouth1Asset from "@/assets/ang-mo-kio-south-1.png.asset.json";
+import amkSouth2Asset from "@/assets/ang-mo-kio-south-2.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
 import hero from "@/assets/hero.jpg";
 import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
@@ -185,6 +187,7 @@ export type Location = {
   lat: number;
   lng: number;
   image: string;
+  gallery?: string[];
 };
 
 const imgs = [studio, hero, performance];
@@ -211,7 +214,14 @@ const raw: Omit<Location, "image">[] = [
   { name: "Anytime Fitness Rochester", address: "Rochester Drive", mrt: "Buona Vista", type: "gym", lat: 1.3050, lng: 103.7878 },
   { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
 ];
-export const locations: Location[] = raw.map((l, i) => ({ ...l, image: imgs[i % imgs.length] as string }));
+const galleries: Record<string, string[]> = {
+  "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url],
+};
+export const locations: Location[] = raw.map((l, i) => {
+  const gallery = galleries[l.name];
+  const image = gallery?.[0] ?? (imgs[i % imgs.length] as string);
+  return gallery ? { ...l, image, gallery } : { ...l, image };
+});
 
 /** Approximate centre point for Singapore postal sectors (first 2 digits). */
 const postalSectors: [number, number, number, number][] = [

@@ -38,9 +38,25 @@ export function ReviewsCarousel() {
 export function LocationCard({ loc }: { loc: Location }) {
   return (
     <article className="group overflow-hidden rounded-lg bg-card">
-      <div className="aspect-[4/3] overflow-hidden">
-        <img src={loc.image} alt={`ReFormd ${loc.name}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
-      </div>
+      {loc.gallery && loc.gallery.length > 1 ? (
+        <Carousel className="relative">
+          <CarouselContent className="ml-0">
+            {loc.gallery.map((src, i) => (
+              <CarouselItem key={src} className="pl-0">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img src={src} alt={`ReFormd ${loc.name}, photo ${i + 1}`} loading="lazy" className="h-full w-full object-cover" />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2 size-8" />
+          <CarouselNext className="right-2 size-8" />
+        </Carousel>
+      ) : (
+        <div className="aspect-[4/3] overflow-hidden">
+          <img src={loc.image} alt={`ReFormd ${loc.name}`} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+        </div>
+      )}
       <div className="p-5">
         <h3 className="text-xl font-black uppercase">{loc.name}</h3>
         <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="size-4" />{loc.address}</p>
