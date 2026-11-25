@@ -27,7 +27,7 @@ function Contact() {
             <h2 className="mt-1 text-3xl font-black uppercase">Book an online consultation</h2>
             <p className="mt-3 opacity-80">A 1-hour video call about our programs.</p>
             <iframe
-              src="https://reformdpersonaltraining.simplybook.asia/v2/#book"
+              src="https://reformdpersonaltraining.setmore.com/services/a2ef6d57-e4a2-4c37-bba1-5be2095e9eeb?inline=true"
               title="Book an online consultation with ReFormd"
               className="mt-6 h-[620px] w-full rounded-md border border-ink-foreground/20 bg-white"
               loading="lazy"
