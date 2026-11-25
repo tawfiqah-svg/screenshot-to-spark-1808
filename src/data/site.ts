@@ -28,14 +28,19 @@ import citySquare2Asset from "@/assets/city-square-2.png.asset.json";
 import citySquare3Asset from "@/assets/city-square-3.png.asset.json";
 import citySquare4Asset from "@/assets/city-square-4.png.asset.json";
 import citySquare5Asset from "@/assets/city-square-5.png.asset.json";
-import havelock1Asset from "@/assets/havelock-outram-1.png.asset.json";
 import orchard1Asset from "@/assets/af-orchard-1.png.asset.json";
 import orchard2Asset from "@/assets/af-orchard-2.png.asset.json";
 import orchard3Asset from "@/assets/af-orchard-3.png.asset.json";
 import upperThomson1Asset from "@/assets/rf-upper-thomson-1.jpg.asset.json";
 import upperThomson2Asset from "@/assets/rf-upper-thomson-2.jpg.asset.json";
-import queensway1Asset from "@/assets/new-queensway-1.png.asset.json";
-import queensway2Asset from "@/assets/new-queensway-2.png.asset.json";
+import yishun1Asset from "@/assets/af-yishun-east-1.webp.asset.json";
+import yishun2Asset from "@/assets/af-yishun-east-2.webp.asset.json";
+import suntec1Asset from "@/assets/af-suntec-1.png.asset.json";
+import suntec2Asset from "@/assets/af-suntec-2.png.asset.json";
+import havelock2Asset from "@/assets/af-havelock-2.png.asset.json";
+import havelock3Asset from "@/assets/af-havelock-3.png.asset.json";
+import queensway3Asset from "@/assets/af-queensway-3.webp.asset.json";
+import queensway4Asset from "@/assets/af-queensway-4.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
 import hero from "@/assets/hero.jpg";
 import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
@@ -236,19 +241,17 @@ const raw: Omit<Location, "image">[] = [
   // Anytime Fitness clubs — PT delivered inside AF to AF members
   { name: "Anytime Fitness Orchard", address: "277 Orchard Rd, #04-01 Orchard, Singapore 238858", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
   { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Singapore 239695", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
-  { name: "Anytime Fitness Suntec City", address: "3 Temasek Boulevard, Suntec City", mrt: "Promenade", type: "gym", lat: 1.2952, lng: 103.8580 },
+  { name: "Anytime Fitness Suntec City", address: "3 Temasek Boulevard, #03-310/311/312 Tower 2, Suntec City Mall, Singapore 038983", mrt: "Promenade", type: "gym", lat: 1.2952, lng: 103.8580 },
   { name: "Anytime Fitness City Square Mall", address: "180 Kitchener Road, #06-04 City Square Mall, Singapore 208539", mrt: "Farrer Park", type: "gym", lat: 1.3115, lng: 103.8567 },
-  { name: "Anytime Fitness Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "gym", lat: 1.2995, lng: 103.8545 },
   { name: "Anytime Fitness Bedok", address: "Blk 88 Bedok North Street 4, #01-163", mrt: "Bedok", type: "gym", lat: 1.3240, lng: 103.9300 },
   { name: "Anytime Fitness Ang Mo Kio South", address: "340 Ang Mo Kio Ave 1, #01-1681, Singapore 560340", mrt: "Ang Mo Kio", type: "gym", lat: 1.3690, lng: 103.8454 },
   { name: "Anytime Fitness Buona Vista", address: "11 Biopolis Way, #01-04/05/06/07 Helios, Singapore 138667", mrt: "Buona Vista", type: "gym", lat: 1.3068, lng: 103.7900 },
-  { name: "Anytime Fitness Bukit Timah Central", address: "Bukit Timah Central", mrt: "Beauty World", type: "gym", lat: 1.3390, lng: 103.7760 },
   { name: "Anytime Fitness Geylang Bahru", address: "Geylang Bahru, Singapore", mrt: "Geylang Bahru", type: "gym", lat: 1.3200, lng: 103.8715 },
   { name: "Anytime Fitness Havelock Outram", address: "405 Havelock Rd, #02-02, Singapore 169633", mrt: "Havelock", type: "gym", lat: 1.2875, lng: 103.8350 },
   { name: "RF New Upper Thomson", address: "246S Upper Thomson Rd, Singapore 574370", mrt: "Upper Thomson", type: "studio", lat: 1.3600, lng: 103.8340 },
   { name: "Anytime Fitness New Queensway", address: "#03-52, Queensway Shopping Centre", mrt: "Queenstown", type: "gym", lat: 1.3200, lng: 103.8020 },
   { name: "Anytime Fitness Rochester", address: "Rochester Drive", mrt: "Buona Vista", type: "gym", lat: 1.3050, lng: 103.7878 },
-  { name: "Anytime Fitness Yishun East", address: "Yishun, Singapore", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
+  { name: "Anytime Fitness Yishun East", address: "Blk 461 Yishun Ave 6, #01-02", mrt: "Yishun", type: "gym", lat: 1.4295, lng: 103.8350 },
 ];
 const galleries: Record<string, string[]> = {
   "RF Sixth Avenue": [sixth1Asset.url, sixth2Asset.url],
@@ -260,10 +263,12 @@ const galleries: Record<string, string[]> = {
   "Anytime Fitness Buona Vista": [buonaVista1Asset.url, buonaVista2Asset.url, buonaVista3Asset.url],
   "Anytime Fitness Cineleisure Orchard": [cineleisure1Asset.url, cineleisure2Asset.url],
   "Anytime Fitness City Square Mall": [citySquare1Asset.url, citySquare2Asset.url, citySquare3Asset.url, citySquare4Asset.url, citySquare5Asset.url],
-  "Anytime Fitness Havelock Outram": [havelock1Asset.url],
+  "Anytime Fitness Havelock Outram": [havelock2Asset.url, havelock3Asset.url],
+  "Anytime Fitness Suntec City": [suntec1Asset.url, suntec2Asset.url],
+  "Anytime Fitness Yishun East": [yishun1Asset.url, yishun2Asset.url],
   "Anytime Fitness Orchard": [orchard1Asset.url, orchard2Asset.url, orchard3Asset.url],
   "RF New Upper Thomson": [upperThomson1Asset.url, upperThomson2Asset.url],
-  "Anytime Fitness New Queensway": [queensway1Asset.url, queensway2Asset.url],
+  "Anytime Fitness New Queensway": [queensway3Asset.url, queensway4Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
   const gallery = galleries[l.name];
