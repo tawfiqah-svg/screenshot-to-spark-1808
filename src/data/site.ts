@@ -18,6 +18,16 @@ import forgedTreadmillsAsset from "@/assets/forged-facility-treadmills.webp.asse
 import forgedChamberAsset from "@/assets/forged-facility-testing-chamber.webp.asset.json";
 import amkSouth1Asset from "@/assets/ang-mo-kio-south-1.png.asset.json";
 import amkSouth2Asset from "@/assets/ang-mo-kio-south-2.png.asset.json";
+import buonaVista1Asset from "@/assets/buona-vista-1.png.asset.json";
+import buonaVista2Asset from "@/assets/buona-vista-2.png.asset.json";
+import buonaVista3Asset from "@/assets/buona-vista-3.png.asset.json";
+import cineleisure1Asset from "@/assets/cineleisure-1.png.asset.json";
+import cineleisure2Asset from "@/assets/cineleisure-2.png.asset.json";
+import citySquare1Asset from "@/assets/city-square-1.png.asset.json";
+import citySquare2Asset from "@/assets/city-square-2.png.asset.json";
+import citySquare3Asset from "@/assets/city-square-3.png.asset.json";
+import citySquare4Asset from "@/assets/city-square-4.png.asset.json";
+import citySquare5Asset from "@/assets/city-square-5.png.asset.json";
 // All editable site content lives here. Swap images by replacing the imports below.
 import hero from "@/assets/hero.jpg";
 import homeHeroAsset from "@/assets/carmen-deadlift.jpg.asset.json";
@@ -217,13 +227,13 @@ const raw: Omit<Location, "image">[] = [
   { name: "FORGED by ReFormd", address: "1 Raffles Link, B1-23 Citylink Mall", mrt: "City Hall / Esplanade", type: "studio", lat: 1.2918, lng: 103.8547 },
   // Anytime Fitness clubs — PT delivered inside AF to AF members
   { name: "Anytime Fitness Orchard", address: "Orchard Road", mrt: "Orchard", type: "gym", lat: 1.3020, lng: 103.8360 },
-  { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Cineleisure", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
+  { name: "Anytime Fitness Cineleisure Orchard", address: "8 Grange Road, Singapore 239695", mrt: "Somerset", type: "gym", lat: 1.3015, lng: 103.8362 },
   { name: "Anytime Fitness Suntec City", address: "3 Temasek Boulevard, Suntec City", mrt: "Promenade", type: "gym", lat: 1.2952, lng: 103.8580 },
-  { name: "Anytime Fitness City Square Mall", address: "180 Kitchener Road, City Square Mall", mrt: "Farrer Park", type: "gym", lat: 1.3115, lng: 103.8567 },
+  { name: "Anytime Fitness City Square Mall", address: "180 Kitchener Road, #06-04 City Square Mall, Singapore 208539", mrt: "Farrer Park", type: "gym", lat: 1.3115, lng: 103.8567 },
   { name: "Anytime Fitness Bugis", address: "Bugis, Singapore", mrt: "Bugis", type: "gym", lat: 1.2995, lng: 103.8545 },
   { name: "Anytime Fitness Bedok", address: "Blk 88 Bedok North Street 4, #01-163", mrt: "Bedok", type: "gym", lat: 1.3240, lng: 103.9300 },
   { name: "Anytime Fitness Ang Mo Kio South", address: "340 Ang Mo Kio Ave 1, #01-1681, Singapore 560340", mrt: "Ang Mo Kio", type: "gym", lat: 1.3690, lng: 103.8454 },
-  { name: "Anytime Fitness Buona Vista", address: "Buona Vista, Singapore", mrt: "Buona Vista", type: "gym", lat: 1.3068, lng: 103.7900 },
+  { name: "Anytime Fitness Buona Vista", address: "11 Biopolis Way, #01-04/05/06/07 Helios, Singapore 138667", mrt: "Buona Vista", type: "gym", lat: 1.3068, lng: 103.7900 },
   { name: "Anytime Fitness Bukit Timah Central", address: "Bukit Timah Central", mrt: "Beauty World", type: "gym", lat: 1.3390, lng: 103.7760 },
   { name: "Anytime Fitness Geylang Bahru", address: "Geylang Bahru, Singapore", mrt: "Geylang Bahru", type: "gym", lat: 1.3200, lng: 103.8715 },
   { name: "Anytime Fitness Havelock Outram", address: "Havelock Road", mrt: "Havelock", type: "gym", lat: 1.2875, lng: 103.8350 },
@@ -239,6 +249,9 @@ const galleries: Record<string, string[]> = {
   "FORGED by ReFormd": [forgedTurfAsset.url, forgedRowersAsset.url, forgedTreadmillsAsset.url, forgedChamberAsset.url],
   "Anytime Fitness Bedok": [bedok1Asset.url, bedok2Asset.url, bedok3Asset.url],
   "Anytime Fitness Ang Mo Kio South": [amkSouth1Asset.url, amkSouth2Asset.url, amkSouth3Asset.url],
+  "Anytime Fitness Buona Vista": [buonaVista1Asset.url, buonaVista2Asset.url, buonaVista3Asset.url],
+  "Anytime Fitness Cineleisure Orchard": [cineleisure1Asset.url, cineleisure2Asset.url],
+  "Anytime Fitness City Square Mall": [citySquare1Asset.url, citySquare2Asset.url, citySquare3Asset.url, citySquare4Asset.url, citySquare5Asset.url],
 };
 export const locations: Location[] = raw.map((l, i) => {
   const gallery = galleries[l.name];
