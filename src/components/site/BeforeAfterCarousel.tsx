@@ -24,10 +24,13 @@ function BeforeAfter({ before, after, caption }: { before: string; after: string
 }
 
 export function BeforeAfterCarousel() {
+  const pairs = transformations ?? [];
+  if (pairs.length === 0) return null;
+
   return (
     <Carousel opts={{ align: "start" }} aria-label="Client physique transformations">
       <CarouselContent>
-        {transformations.map((t) => (
+        {pairs.map((t) => (
           <CarouselItem key={t.caption} className="basis-[90%] sm:basis-1/2">
             <BeforeAfter {...t} />
           </CarouselItem>

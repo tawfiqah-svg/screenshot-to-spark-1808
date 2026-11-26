@@ -1,6 +1,6 @@
 # Requested site updates
 - [x] Restore the before/after swipe-through section and add Zubin's Instagram video testimonial with a shorter caption.
-- [ ] Replace labelled before/after sample images with real comparison photos (waiting for the user's uploads).
+- [x] Replace labelled before/after sample images with the supplied real comparison photos.
 - [x] Redesign Programs support as FORGED testing and Shelter recovery with photos, expandable details and website links.
 - [x] Remove LinkedIn and YouTube footer links.
 - [x] Simplify trial copy and clarify five private studios versus convenient RF-Operated Gyms.

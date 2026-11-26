@@ -18,10 +18,13 @@ export function ReviewCard({ name, rating, text }: { name: string; rating: numbe
 }
 
 export function ReviewsCarousel() {
+  const entries = reviews ?? [];
+  if (entries.length === 0) return null;
+
   return (
     <Carousel opts={{ align: "start", loop: true }} className="mx-auto w-full">
       <CarouselContent>
-        {reviews.map((r) => (
+        {entries.map((r) => (
           <CarouselItem key={r.name} className="basis-[88%] sm:basis-1/2 lg:basis-1/3">
             <ReviewCard {...r} />
           </CarouselItem>
