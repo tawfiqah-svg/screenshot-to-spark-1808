@@ -479,7 +479,21 @@ export const team: Trainer[] = [
       achievements: ["SUSS Representative at World University Cup Powerlifting 2025, U93kg", "2XU Compression Run Half Marathon 2024 Finisher", "HYROX Open Asian Championships Team Relay Finisher"],
     },
   },
-  { slug: "name-6", firstName: "Name 6", lastName: "", name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "syakir-malek", firstName: "Syakir", lastName: "Malek", name: "Syakir Malek", title: "ACE Certified Personal Trainer", image: "/images/syakir-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 4%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/syakir-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Syakir has always known that personal training was his dream career. He gives his full effort to every client, and their progress brings as much joy to him as it does to them. His coaching philosophy centres on proper form, solid technique, and perfect execution. To Syakir, every movement is a skill, and leg day is an art form. He trains intensely, but only after ensuring that the foundations are correct, because even something as simple as head position can completely change how a lift feels and performs.",
+        "As a coach, Syakir is detail-oriented, encouraging, and committed to helping clients move with confidence. He guides them through purposeful, structured training that builds strength safely and effectively. Syakir became a personal trainer to help others discover what they are capable of when form, consistency, and effort come together.",
+      ],
+      belief: "Don\u2019t worry about the person who has been doing it longer than you. Focus on being better than who you were yesterday.",
+      beliefLabel: "His training belief",
+      qualifications: ["ACE Certified Personal Trainer", "Body Fit Training Certified Coach", "CPR & AED Certified"],
+      achievements: ["FM Physique War Classic Physique 2023, 5th Place"],
+    },
+  },
   { slug: "name-7", firstName: "Name 7", lastName: "", name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-8", firstName: "Name 8", lastName: "", name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },
 ];
