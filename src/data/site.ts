@@ -6,6 +6,8 @@ const chenYueHeadshotAsset = { url: "/images/chen-yue-headshot.png" };
 const chenYueBannerAsset = { url: "/images/chen-yue-banner.png" };
 const cameyHeadshotAsset = { url: "/images/camey-headshot.png" };
 const cameyBannerAsset = { url: "/images/camey-banner.png" };
+const dominickHeadshotAsset = { url: "/images/dominick-headshot.png" };
+const dominickBannerAsset = { url: "/images/dominick-banner.png" };
 const sixth1Asset = { url: "/images/rf-sixth-avenue-1.png" };
 const sixth2Asset = { url: "/images/rf-sixth-avenue-2.png" };
 const rf6151Asset = { url: "/images/rf615-1.png" };
@@ -444,6 +446,21 @@ export const team: Trainer[] = [
       belief: "Strength training rebuilds confidence from the inside out.",
       qualifications: ["NCSF Certified Personal Trainer", "CPF & AED Certified", "BFT Kettlebell Basics Course", "BFT Barbell Basics Course"],
       achievements: ["Competed in HYROX Singapore 2025 Open Doubles"],
+    },
+  },
+  {
+    slug: "dominick-goh", firstName: "Dominick", lastName: "Goh", name: "Dominick Goh", title: "NASM Certified Personal Trainer", image: dominickHeadshotAsset.url, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: dominickBannerAsset.url,
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance", "Functional Movement"],
+      bio: [
+        "Dominick believes that understanding how to move properly is far more important than choosing the so-called best exercise. With a naturally mobile body and a lifetime of high-impact sports such as inline skating, soccer, rugby, acrobatics, and even circus arts like fire spinning and juggling, he experienced frequent injuries growing up. Strength training became the place where he learned to rebuild himself safely and at his own pace.",
+        "Because he often felt lost when learning new activities, especially when he first stepped into the gym, Dominick is passionate about guiding others who feel the same. He teaches clients how to build a stronger, more resilient body through proper movement, clear guidance, and patience. He also hopes to show people that the gym can be a safe, empowering space, no matter their starting point or fitness level.",
+      ],
+      belief: "What comes easy is achieved by many. What is hard to attain is achieved by few.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer", "Diploma in Electrical Engineering", "CPR & AED Certified"],
+      achievements: ["Performed in various productions presenting Circus Arts", "National Selections for Commonwealth Youth Games 2015 \u2013 Rugby"],
     },
   },
   { slug: "name-5", firstName: "Name 5", lastName: "", name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },

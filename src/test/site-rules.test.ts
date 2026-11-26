@@ -135,6 +135,53 @@ describe("Camey Lim trainer profile", () => {
   });
 });
 
+describe("Dominick Goh trainer profile", () => {
+  const t = team.find((x) => x.slug === "dominick-goh");
+
+  it("underlines only his first name", () => {
+    expect(t?.firstName).toBe("Dominick");
+    expect(t?.lastName).toBe("Goh");
+    expect(t?.underlineFullName).toBeUndefined();
+  });
+
+  it("lists his NASM title and seven focus areas", () => {
+    expect(t?.title).toBe("NASM Certified Personal Trainer");
+    expect(t?.profile?.focus).toEqual([
+      "Strength & Conditioning",
+      "Hypertrophy",
+      "Mobility",
+      "Weight Management",
+      "Sustainable Training",
+      "Sports Performance",
+      "Functional Movement",
+    ]);
+  });
+
+  it("keeps his two bio paragraphs, belief, qualifications and achievements", () => {
+    expect(t?.profile?.bio).toHaveLength(2);
+    expect(t?.profile?.belief).toBe("What comes easy is achieved by many. What is hard to attain is achieved by few.");
+    expect(t?.profile?.beliefLabel).toBe("His training belief");
+    expect(t?.profile?.qualifications).toEqual([
+      "NCSF Certified Personal Trainer",
+      "Diploma in Electrical Engineering",
+      "CPR & AED Certified",
+    ]);
+    expect(t?.profile?.achievements).toEqual([
+      "Performed in various productions presenting Circus Arts",
+      "National Selections for Commonwealth Youth Games 2015 \u2013 Rugby",
+    ]);
+  });
+
+  it("stores his headshot and profile photo as real PNGs inside the project", () => {
+    for (const url of [t?.image, t?.profile?.banner]) {
+      expect(url).toMatch(/^\/images\/[\w.-]+\.png$/);
+      const file = resolve(process.cwd(), "public", (url ?? "").replace(/^\//, ""));
+      expect(existsSync(file), url).toBe(true);
+      expect(readFileSync(file).subarray(1, 4).toString()).toBe("PNG");
+    }
+  });
+});
+
 describe("physique transformations", () => {
   it("shows the two client pairs with their phase captions", () => {
     expect(transformations.map((t) => t.caption)).toEqual([
