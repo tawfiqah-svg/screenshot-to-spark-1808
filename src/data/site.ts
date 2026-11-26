@@ -99,10 +99,10 @@ export const nav = [
   {
     label: "About us",
     children: [
-      { to: "/about", label: "About us", image: studio, description: "Our approach, trainers & standards" },
-      { to: "/testimonials", label: "Testimonials", image: homeHeroAsset.url, description: "Our clients' success stories" },
-      { to: "/team", label: "Team", image: hero, description: "Meet our personal trainers" },
-      { to: "/careers", label: "Careers", image: performance, description: "RF Academy & opportunities" },
+      { to: "/about", label: "About us", image: trialBackgroundAsset.url, description: "Our approach, trainers & standards" },
+      { to: "/testimonials", label: "Testimonials", image: weightLossAsset.url, description: "Our clients' success stories" },
+      { to: "/team", label: "Team", image: teamBanner, description: "Meet our personal trainers" },
+      { to: "/careers", label: "Careers", image: "/images/wilger-banner.png", description: "RF Academy & opportunities" },
     ],
   },
   { to: "/contact", label: "Contact" },
@@ -510,7 +510,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "ng-chek-yong", firstName: "Ng", lastName: "Chek Yong", name: "Ng Chek Yong", underlineWord: "Chek", title: "ACE Certified Personal Trainer", image: "/images/chek-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "ng-chek-yong", firstName: "Ng", lastName: "Chek Yong", name: "Ng Chek Yong", underlineWord: "Chek", title: "ACE Certified Personal Trainer", image: "/images/chek-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/chek-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Rehabilitation", "Return to Sport", "Sports Massage"],
@@ -531,7 +531,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/rachel-banner.png",
       focus: ["Strength and Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Women\u2019s Strength Training", "Beginner Friendly Coaching"],
@@ -553,7 +553,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/genevieve-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -569,7 +569,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "haikal-saheed", firstName: "Haikal", lastName: "Saheed", name: "Haikal Saheed", title: "RF Academy Certified Personal Trainer", image: "/images/haikal-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "haikal-saheed", firstName: "Haikal", lastName: "Saheed", name: "Haikal Saheed", title: "RF Academy Certified Personal Trainer", image: "/images/haikal-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/haikal-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -593,7 +593,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "gabriel-tay", firstName: "Gabriel", lastName: "Tay", name: "Gabriel Tay", title: "NCSF Certified Personal Trainer", image: "/images/gabriel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
+    slug: "gabriel-tay", firstName: "Gabriel", lastName: "Tay", name: "Gabriel Tay", title: "NCSF Certified Personal Trainer", image: "/images/gabriel-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Hypertrophy"],
     profile: {
       banner: "/images/gabriel-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
@@ -609,7 +609,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "mika-firdaus", firstName: "Mika", lastName: "Firdaus", name: "Mika Firdaus", title: "NASM Certified Personal Trainer", image: "/images/mika-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Weight management"],
+    slug: "mika-firdaus", firstName: "Mika", lastName: "Firdaus", name: "Mika Firdaus", title: "NASM Certified Personal Trainer", image: "/images/mika-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Weight management"],
     profile: {
       banner: "/images/mika-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -625,7 +625,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "tsz-fung", firstName: "Tsz", lastName: "Fung", name: "Tsz Fung", underlineFullName: true, title: "ACE Certified Personal Trainer", image: "/images/tszfung-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
+    slug: "tsz-fung", firstName: "Tsz", lastName: "Fung", name: "Tsz Fung", underlineFullName: true, title: "ACE Certified Personal Trainer", image: "/images/tszfung-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Hypertrophy"],
     profile: {
       banner: "/images/tszfung-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
@@ -645,7 +645,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "ryan-de-mello", firstName: "Ryan", lastName: "De Mello", name: "Ryan De Mello", title: "NCSF Certified Personal Trainer", image: "/images/ryan-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Sports performance"],
+    slug: "ryan-de-mello", firstName: "Ryan", lastName: "De Mello", name: "Ryan De Mello", title: "NCSF Certified Personal Trainer", image: "/images/ryan-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Sports performance"],
     profile: {
       banner: "/images/ryan-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
@@ -661,7 +661,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "engku-sulaiman", firstName: "Engku", lastName: "Sulaiman", name: "Engku Sulaiman", underlineLastName: true, title: "NCSF Certified Personal Trainer", image: "/images/sulaiman-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Hypertrophy", "Body recomposition"],
+    slug: "engku-sulaiman", firstName: "Engku", lastName: "Sulaiman", name: "Engku Sulaiman", underlineLastName: true, title: "NCSF Certified Personal Trainer", image: "/images/sulaiman-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Hypertrophy", "Body recomposition"],
     profile: {
       banner: "/images/sulaiman-banner.png",
       focus: ["Hypertrophy", "Strength Training", "Body Transformations", "Nutrition", "Functional Fitness"],
@@ -682,7 +682,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "sumit-sahoo", firstName: "Sumit", lastName: "Sahoo", name: "Sumit Sahoo", title: "NCSF Certified Personal Trainer", image: "/images/sumit-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Movement quality"],
+    slug: "sumit-sahoo", firstName: "Sumit", lastName: "Sahoo", name: "Sumit Sahoo", title: "NCSF Certified Personal Trainer", image: "/images/sumit-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Movement quality"],
     profile: {
       banner: "/images/sumit-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -698,7 +698,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "wilger-loo", firstName: "Wilger", lastName: "Loo", name: "Wilger Loo", title: "RF Academy Certified Personal Trainer", image: "/images/wilger-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
+    slug: "wilger-loo", firstName: "Wilger", lastName: "Loo", name: "Wilger Loo", title: "RF Academy Certified Personal Trainer", image: "/images/wilger-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Hypertrophy"],
     profile: {
       banner: "/images/wilger-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],

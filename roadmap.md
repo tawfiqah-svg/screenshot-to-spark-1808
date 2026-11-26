@@ -48,3 +48,5 @@
 - [x] Keep the booking calendar in the two-column layout beside the form (user's choice).
 - [x] Refocus About us on ReFormd Personal Training, client goals, trainer standards and two-monthly workshops.
 - [x] Guard temporarily missing About content and audit shared content displays across all pages.
+- [x] Team banner + head alignment
+- [x] About Us menu: real photos only

@@ -281,14 +281,14 @@ export function SectionHeader({ eyebrow, title, text, center }: { eyebrow?: stri
   );
 }
 
-export function PageHero({ eyebrow, title, text, image, imagePosition, ratio }: { eyebrow: string; title: string; text?: string; image: string; imagePosition?: string; ratio?: string }) {
+export function PageHero({ eyebrow, title, text, image, imagePosition, ratio, lightOverlay }: { lightOverlay?: boolean; eyebrow: string; title: string; text?: string; image: string; imagePosition?: string; ratio?: string }) {
   return (
     <section
       className={cn("relative flex items-end overflow-hidden bg-ink text-ink-foreground", ratio ? "min-h-fit" : "min-h-[55vh]")}
       style={ratio ? { aspectRatio: ratio } : undefined}
     >
       <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" style={imagePosition ? { objectPosition: imagePosition } : undefined} />
-      <div className="absolute inset-0 bg-overlay" />
+      <div className={cn("absolute inset-0", lightOverlay ? "bg-overlay-light" : "bg-overlay")} />
       <div className={cn("relative mx-auto w-full max-w-7xl px-5", ratio ? "pb-6 pt-24 sm:pb-10 sm:pt-28" : "pb-14 pt-32")}>
         <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{eyebrow}</p>
         <h1 className="max-w-4xl text-4xl font-black uppercase leading-[1.05] sm:text-5xl md:text-6xl lg:text-7xl">{title}</h1>
