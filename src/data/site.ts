@@ -530,6 +530,28 @@ export const team: Trainer[] = [
       ],
     },
   },
+  {
+    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 100%", objectPosition: "50% 0%", translate: "0 6%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/rachel-banner.png",
+      focus: ["Strength and Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Women\u2019s Strength Training", "Beginner Friendly Coaching"],
+      bio: [
+        "Rachel believes that training should be simple, understandable, and approachable, especially for clients who are new to the gym or have struggled with consistency in the past. Her philosophy focuses on using cues that relate to everyday movements so clients can easily understand the exercises, build strong mind-muscle connection, and progress into more complex movements with confidence.",
+        "Her personality is warm, encouraging, and energetic. Rachel loves making training enjoyable while still challenging, always motivating clients to go for one more rep and break boundaries they never thought possible.",
+        "She primarily works with young to middle-aged clients, helping them achieve weight loss and strength goals through personalised workouts, progressive overload, and nutritional guidance when needed. Rachel encourages open communication, welcomes questions, and debunks fitness myths to help clients train with clarity. She firmly believes that there is no one-size-fits-all approach and that transparency between coach and client is key to long-term progress.",
+      ],
+      belief: "Progress through clarity, confidence, and consistency.",
+      beliefLabel: "Her training belief",
+      qualifications: ["RF Academy Certified Personal Trainer", "Bachelor of Science in Data Science & Business Analytics (Honours)", "CPR & AED Certified"],
+      achievements: [
+        "IPF Worlds Powerlifting Championship 2025, National Representative",
+        "Singapore National Championship 2026, U63kg Open, 3rd Place",
+        "Singapore National Championship 2025, U63kg Open, 4th Place",
+        "Ark Bloc Powerlifting Open 2024, U63kg Open, 3rd Place",
+        "Reformd 2.0 Powerlifting Meet 2023, U63kg Junior, 2nd Place",
+      ],
+    },
+  },
 ];
 
 export const faqs: { q: string; a: string }[] = [
