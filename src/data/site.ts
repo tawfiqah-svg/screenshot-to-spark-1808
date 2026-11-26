@@ -449,7 +449,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "dominick-goh", firstName: "Dominick", lastName: "Goh", name: "Dominick Goh", title: "NASM Certified Personal Trainer", image: dominickHeadshotAsset.url, imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 4%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "dominick-goh", firstName: "Dominick", lastName: "Goh", name: "Dominick Goh", title: "NASM Certified Personal Trainer", image: dominickHeadshotAsset.url, imageStyle: { transform: "scale(1.14)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 7%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: dominickBannerAsset.url,
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance", "Functional Movement"],
