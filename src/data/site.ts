@@ -531,7 +531,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 100%", objectPosition: "50% 0%", translate: "0 6%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/rachel-banner.png",
       focus: ["Strength and Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Women\u2019s Strength Training", "Beginner Friendly Coaching"],
