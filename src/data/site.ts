@@ -383,7 +383,7 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
 }
 
 export type TrainerProfile = { banner: string; focus: string[]; bio: string[]; belief: string; beliefLabel?: string; qualifications: string[]; achievements: string[] };
-export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; specialisations: string[]; underlineFullName?: boolean; profile?: TrainerProfile };
+export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; imageStyle?: Record<string, string>; specialisations: string[]; underlineFullName?: boolean; profile?: TrainerProfile };
 
 export const team: Trainer[] = [
   {
