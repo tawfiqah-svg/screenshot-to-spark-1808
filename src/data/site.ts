@@ -494,7 +494,21 @@ export const team: Trainer[] = [
       achievements: ["FM Physique War Classic Physique 2023, 5th Place"],
     },
   },
-  { slug: "name-7", firstName: "Name 7", lastName: "", name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "joash-kok", firstName: "Joash", lastName: "Kok", name: "Joash Kok", title: "NCSF Certified Personal Trainer", image: "/images/joash-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 4%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/joash-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Joash\u2019s fitness journey began at a young age, starting with track and field before progressing into calisthenics and eventually competitive powerlifting, where he competed in several meets. Through each discipline, he learnt that lasting progress comes from discipline, patience, and building a healthy relationship with exercise.",
+        "Having experienced the positive impact that training has had on his own life, Joash became a personal trainer to help others discover that same sense of confidence and growth. His clients can expect individualised programming tailored to their goals and lifestyle, helping them stay consistent, build strength, and safely push beyond their comfort zones.",
+      ],
+      belief: "Train with purpose, stay consistent, and enjoy the process. Because the strongest results are the ones you can sustain.",
+      beliefLabel: "His training philosophy",
+      qualifications: ["NCSF Certified Trainer", "CPR & AED Certified", "Bachelor\u2019s Degree in Business, Major in Marketing"],
+      achievements: ["ReFormd Powerlifting Classic 3.0 2025, 3rd Place", "ArkBloc Bench Only 2026, 1st place"],
+    },
+  },
   { slug: "name-8", firstName: "Name 8", lastName: "", name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },
 ];
 
