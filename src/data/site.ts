@@ -552,6 +552,22 @@ export const team: Trainer[] = [
       ],
     },
   },
+  {
+    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 100%", objectPosition: "50% 0%", translate: "0 2%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/genevieve-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Genevieve believes that your only real competition is yourself. She teaches clients that progress begins the moment they take action, and while growth can feel uncomfortable, staying the same is far more limiting. Her coaching is personalised, structured, and science based, with every session designed to match each client\u2019s goals, lifestyle, and physical needs.",
+        "She specialises in helping females and seniors build strength safely, move confidently, and create sustainable habits that support long term health. Her goal is to make training clear and achievable so clients always understand the purpose behind every movement and how it brings them closer to their goals.",
+        "Genevieve became a trainer to help people transform their health and confidence through evidence based programming. She enjoys breaking down training science into simple, effective steps that work for everyday clients. Seeing people get stronger and realise they will never look back is what drives her.",
+      ],
+      belief: "If you always do what you always did, you will always get what you always got.",
+      beliefLabel: "Her training belief",
+      qualifications: ["RF Academy Certified Personal Trainer", "Bachelor of Science (Honours) Business Management Undergraduate", "ISSA Senior Fitness Coaching", "CPR & AED Certified"],
+      achievements: ["Singapore BJJ Open, 3rd", "Former Muay Thai and Brazilian Jiujitsu Athlete"],
+    },
+  },
 ];
 
 export const faqs: { q: string; a: string }[] = [
