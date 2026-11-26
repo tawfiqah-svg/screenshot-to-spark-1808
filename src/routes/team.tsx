@@ -11,7 +11,7 @@ export const Route = createFileRoute("/team")({
 function Team() {
   return (
     <>
-      <PageHero eyebrow="Team" title="Meet your personal trainers" text="Our dedicated trainers each have their own specialisation and experience. Our team helps match you to a trainer that fits your goals." image={images.studio} />
+      <PageHero eyebrow="Team" title="Meet your personal trainers" text="Our dedicated trainers each have their own specialisation and experience. Our team helps match you to a trainer that fits your goals." image={images.teamBanner} />
       <section className="mx-auto max-w-7xl px-5 py-24">
         <div className="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           {(team ?? []).map((t) => (
