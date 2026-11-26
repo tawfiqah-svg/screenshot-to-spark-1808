@@ -229,9 +229,9 @@ function Home() {
         <img src={images.trialBackground} alt="" loading="lazy" className="absolute inset-x-0 top-0 h-auto w-full object-cover object-top opacity-40 sm:h-full" />
         <div className="relative mx-auto max-w-4xl px-5 pb-16 pt-64 text-center sm:pt-96">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
-          <h2 className="text-4xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 3 sessions to be sure.</h2>
+          <h2 className="text-4xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 4 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">
-            Try our 3-Session Kickstarter Trial with a personal trainer at our private studio or an RF-Operated Gym, whichever is more convenient for you.
+            Try our 4-session Starter Bundle with a personal trainer at our private studio or an RF-Operated Gym to see if you&apos;d like to commit.
           </p>
           <div className="mt-8"><CtaLink>Book an online consultation</CtaLink></div>
         </div>
