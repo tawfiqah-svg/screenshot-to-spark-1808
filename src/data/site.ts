@@ -49,6 +49,7 @@ const rochester1Asset = { url: "/images/af-rochester-1.png" };
 const geylangBahru1Asset = { url: "/images/af-geylang-bahru-1.png" };
 // All editable site content lives here. Swap images by replacing the imports below.
 const hero = "/images/hero.png";
+const testimonialsBanner = "/images/testimonials-banner.png";
 const homeHeroAsset = { url: "/images/carmen-deadlift.png" };
 const trialBackgroundAsset = { url: "/images/reformd-studio-reception.png" };
 const weightLossAsset = { url: "/images/sherrine-luther-training.png" };
@@ -64,7 +65,7 @@ const anytimeAsset = { url: "/images/rf-group-anytime.png" };
 const forgedTestingAsset = { url: "/images/forged-testing.png" };
 const shelterRecoveryAsset = { url: "/images/shelter-recovery.png" };
 
-export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal, locationsHero: rfBugis1Asset.url };
+export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal, locationsHero: rfBugis1Asset.url, testimonialsBanner };
 
 export const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/reformd_training/?hl=en" },
