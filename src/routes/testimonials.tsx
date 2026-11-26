@@ -15,7 +15,10 @@ function Testimonials() {
     <>
       <PageHero eyebrow="Testimonials" title="Real transformations from people like you" image={images.hero} />
       <section className="mx-auto max-w-7xl px-5 py-24">
-        <TrustindexReviews />
+        <SectionHeader title="WHAT PEOPLE ARE SAYING" />
+        <div className="mt-10">
+          <TrustindexReviews />
+        </div>
       </section>
       <section className="bg-secondary py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5">
