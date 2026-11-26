@@ -656,7 +656,7 @@ export const team: Trainer[] = [
       ],
       belief: "Performance isn\u2019t a phase. It\u2019s a standard you keep raising.",
       beliefLabel: "His training belief",
-      qualifications: ["NCSF Certified Personal Trainer & Health Coach", "CPR & AED Certified", "Bachelor of Business Administration (Hons), Finance"],
+      qualifications: ["NCSF Certified Personal Trainer & Health Coach", "CPR & AED Certified", "Bachelor of Business Administration (Hons), Finance", "Certified HYROX Performance Coach"],
       achievements: ["Competed in HYROX Singapore 2025 Open Doubles"],
     },
   },
@@ -679,6 +679,38 @@ export const team: Trainer[] = [
         "2026 FIF World Imperial Cup \u2013 Men\u2019s Classic SG Opens, 1st Place",
         "2026 FIF World Imperial Cup \u2013 Men\u2019s Classic Junior, 1st Place",
       ],
+    },
+  },
+  {
+    slug: "sumit-sahoo", firstName: "Sumit", lastName: "Sahoo", name: "Sumit Sahoo", title: "NCSF Certified Personal Trainer", image: "/images/sumit-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Movement quality"],
+    profile: {
+      banner: "/images/sumit-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Sumit believes fitness should be an empowering part of everyday life. With a background in engineering and over a decade of coaching people from all walks of life, he brings a sharp eye for movement quality and safe lifting to every session.",
+        "A competitive sportsperson since 2005 in field hockey, football, and cricket, Sumit knows what it takes to stay strong, resilient, and pain-free. He believes lasting progress comes from solid habits, not extreme routines.",
+        "His coaching style is warm, patient, and encouraging. He meets you where you are, explains each movement clearly, and creates a space where you feel supported. Whether you\u2019re stepping into a gym for the first time or building strength to move with confidence, Sumit will be with you at every step.",
+      ],
+      belief: "Strength isn\u2019t built overnight. It\u2019s built one steady, confident step at a time.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer", "CPR & AED Certified", "MSc in Smart Manufacturing & B.Eng. in Mechanical Engineering, NTU"],
+      achievements: ["20+ Years Multisport Athlete (Field Hockey, Football, Cricket & Table Tennis)", "Former School & University Field Hockey Representative"],
+    },
+  },
+  {
+    slug: "wilger-loo", firstName: "Wilger", lastName: "Loo", name: "Wilger Loo", title: "RF Academy Certified Personal Trainer", image: "/images/wilger-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
+    profile: {
+      banner: "/images/wilger-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Wilger believes that strength begins with quality movement and a mindset that welcomes growth. His philosophy is simple: train with purpose, move with intention, and stay curious about what your body can achieve. He blends evidence-based training with personalised coaching to help clients build strength, confidence, and habits that last a lifetime.",
+        "Every session with Wilger is an opportunity to learn and progress. He aims for clients to leave not only stronger, but armed with knowledge they can carry long after the session ends. Most of all, he wants training to be enjoyable, supportive, and meaningful.",
+        "Wilger has been active since young, competing in fencing while balancing tennis, badminton and swimming through secondary school. After losing his fitness post graduation, reclaiming his health reignited his passion for movement and inspired him to help others do the same. He is currently preparing for a future bodybuilding show as he continues to challenge himself and grow.",
+      ],
+      belief: "If it doesn\u2019t challenge you, it won\u2019t change you.",
+      beliefLabel: "His training belief",
+      qualifications: ["RF Academy Certified Personal Trainer", "CPR & AED Certified"],
+      achievements: ["Y-Sparks Men\u2019s Foil, 3rd Place", "SYOF Men\u2019s Foil, 5th Place", "SG Asian Cadet Circuit Top 16", "Represented SG Men\u2019s Foil in Wuxi Asian Cadet Circuit"],
     },
   },
 ];
