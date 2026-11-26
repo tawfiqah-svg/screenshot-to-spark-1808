@@ -57,7 +57,7 @@ function Contact() {
         <div className="mx-auto max-w-3xl px-5 py-20">
           <SectionHeader eyebrow="FAQ" title="Frequently asked questions" text="Can't find your answer? Send it through the form above and we'll reply on WhatsApp." />
           <Accordion type="single" collapsible className="mt-12">
-            {faqs.map((f) => (
+            {(faqs ?? []).map((f) => (
               <AccordionItem key={f.q} value={f.q}>
                 <AccordionTrigger className="text-left font-display text-lg font-bold">{f.q}</AccordionTrigger>
                 <AccordionContent className="text-base text-muted-foreground">{f.a}</AccordionContent>

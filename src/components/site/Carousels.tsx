@@ -78,7 +78,7 @@ export function LocationsCarousel({ items }: { items: Location[] }) {
   return (
     <Carousel opts={{ align: "start" }}>
       <CarouselContent>
-        {items.map((l) => (
+        {(items ?? []).map((l) => (
           <CarouselItem key={l.name} className="basis-[80%] sm:basis-1/2 lg:basis-1/4">
             <LocationCard loc={l} />
           </CarouselItem>

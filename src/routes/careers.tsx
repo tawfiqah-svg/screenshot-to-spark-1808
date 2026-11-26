@@ -52,7 +52,7 @@ function Careers() {
         <div className="mx-auto max-w-7xl px-5">
           <SectionHeader title="Free educational resources hub" text="Articles and guides from our personal trainers." />
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {resources.map((r) => (
+            {(resources ?? []).map((r) => (
               <a key={r.title} href="#" className="group flex flex-col justify-between rounded-lg bg-card p-7 transition-transform hover:-translate-y-1">
                 <span className="text-xs font-bold uppercase tracking-widest text-cta">{r.tag}</span>
                 <h3 className="mt-8 text-2xl font-black uppercase leading-tight">{r.title}</h3>

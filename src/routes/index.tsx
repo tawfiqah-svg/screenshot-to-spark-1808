@@ -96,7 +96,7 @@ function Home() {
         <div className="benefit-track">
           {[0, 1].map((copy) => (
             <ul key={copy} className="benefit-group" aria-hidden={copy === 1 ? true : undefined}>
-              {homeBenefits.map((benefit) => (
+              {(homeBenefits ?? []).map((benefit) => (
                 <li key={benefit} className="flex h-8 shrink-0 items-center gap-10 whitespace-nowrap font-display text-lg uppercase text-ink-foreground sm:gap-14 sm:text-xl">
                   <Plus className="size-4 shrink-0 text-ember" strokeWidth={1.5} aria-hidden="true" />
                   <span className="benefit-label">{benefit}</span>
@@ -170,7 +170,7 @@ function Home() {
             <CtaLink to="/programs" className="min-h-[4.5rem] px-8 py-5 text-lg sm:px-12 sm:text-xl">Explore our programs</CtaLink>
           </div>
           <Reveal className="home-stagger mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {programs.map((p) => (
+            {(programs ?? []).map((p) => (
               <Link key={p.title} to="/programs" className="group relative aspect-[3/4] overflow-hidden rounded-lg">
                 <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-overlay" />
@@ -208,7 +208,7 @@ function Home() {
           <CtaLink to="/team">Meet them all</CtaLink>
         </div>
         <div className="home-team mt-12 grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {team.slice(0, 4).map((t) => (
+          {(team ?? []).slice(0, 4).map((t) => (
             <Reveal key={t.name}>
               <Link {...(t.profile ? { to: "/team/$slug" as const, params: { slug: t.slug } } : { to: "/team" as const })} className="group block">
                 <article>

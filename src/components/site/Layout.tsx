@@ -59,20 +59,20 @@ export function SiteHeader() {
           <Logo className="h-7 sm:h-8" />
         </Link>
         <nav aria-label="Main" className="hidden items-center gap-2 overflow-x-auto sm:gap-5 md:flex">
-          {nav.map((n) =>
+          {(nav ?? []).map((n) =>
             "children" in n ? (
               <div key={n.label} onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
                 <DropdownMenu open={openDropdown === n.label} onOpenChange={(o) => setOpenDropdown(o ? n.label : null)} modal={false}>
                   <DropdownMenuTrigger
                     className={cn(
                       "flex shrink-0 items-center gap-1 whitespace-nowrap font-display text-xs tracking-normal transition-colors hover:text-foreground sm:text-base",
-                      n.children.some((c) => c.to === pathname) ? "text-foreground" : "text-muted-foreground",
+                      (n.children ?? []).some((c) => c.to === pathname) ? "text-foreground" : "text-muted-foreground",
                     )}
                   >
                     {n.label} <ChevronDown className={cn("size-3 transition-transform", openDropdown === n.label && "rotate-180")} />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="start" sideOffset={12} className="w-80 max-w-[calc(100vw-24px)] rounded-none p-2" onMouseEnter={() => openMenu(n.label)} onMouseLeave={scheduleClose}>
-                    {n.children.map((c) => (
+                    {(n.children ?? []).map((c) => (
                       <DropdownMenuItem key={c.to} asChild className="group cursor-pointer gap-4 rounded-none p-2 focus:bg-muted">
                         <Link to={c.to} onClick={() => setOpenDropdown(null)}>
                           <img src={c.image} alt="" className="h-16 w-20 shrink-0 object-cover" />
@@ -120,14 +120,14 @@ export function SiteHeader() {
               </SheetHeader>
               <nav aria-label="Mobile" className="flex-1 overflow-y-auto px-5 py-3">
                 <ul className="space-y-1">
-                  {nav.map((n) =>
+                  {(nav ?? []).map((n) =>
                     "children" in n ? (
                       <li key={n.label}>
                         <p className="px-1 pt-4 pb-1 font-display text-xs uppercase tracking-[0.22em] text-muted-foreground">
                           {n.label}
                         </p>
                         <ul>
-                          {n.children.map((c) => (
+                          {(n.children ?? []).map((c) => (
                             <li key={c.to}>
                               <SheetClose asChild>
                                 <Link
@@ -184,7 +184,7 @@ export function SocialSidebar() {
   return (
     <TooltipProvider delayDuration={200}>
       <nav aria-label="Social media" className="fixed right-0 top-1/2 z-40 flex w-11 -translate-y-1/2 flex-col bg-cta text-cta-foreground">
-        {socialLinks.map(({ label, href }) => {
+        {(socialLinks ?? []).map(({ label, href }) => {
           const Icon = label === "Instagram" ? Instagram : Facebook;
           return (
             <Tooltip key={label}>
@@ -212,7 +212,7 @@ export function SiteFooter() {
           <Logo inverse className="h-8" />
           <p className="mt-3 max-w-xs text-sm opacity-70">Progress all ways, always.</p>
           <div className="mt-6 flex gap-4">
-            {socialLinks.map(({ label, href }) => {
+            {(socialLinks ?? []).map(({ label, href }) => {
               const Icon = label === "Instagram" ? Instagram : Facebook;
               return (
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="opacity-70 hover:opacity-100">
@@ -223,9 +223,9 @@ export function SiteFooter() {
           </div>
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-2 text-sm">
-          {nav.map((n) =>
+          {(nav ?? []).map((n) =>
             "children" in n ? (
-              n.children.map((c) => (
+              (n.children ?? []).map((c) => (
                 <Link key={c.to} to={c.to} className="opacity-70 hover:opacity-100">
                   {c.label}
                 </Link>
@@ -241,7 +241,7 @@ export function SiteFooter() {
         <div>
           <p className="font-display text-sm font-bold uppercase tracking-widest opacity-60">The ReFormd Group</p>
           <ul className="mt-3 space-y-2 text-sm">
-            {subBrands.map((b) => (
+            {(subBrands ?? []).map((b) => (
               <li key={b}>{b}</li>
             ))}
           </ul>

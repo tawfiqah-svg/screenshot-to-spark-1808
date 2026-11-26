@@ -19,4 +19,4 @@
 - Store every photo the user supplies as a real PNG file under public/images and reference it by path; never externalize app photos to CDN asset pointers, so the repository stays self-contained for external hosts.
 - Keep before/after comparison controls in a dedicated carousel component; clearly label sample imagery until real client photo pairs are supplied to avoid representing placeholders as results.
 - Retry failed route-module downloads with a full page reload, not only router invalidation, because the browser may retain a rejected import from an older deployment.
-- Guard testimonial collection exports before rendering carousels; a temporarily unavailable export must not crash the containing page.
+- Guard shared content collections and nested lists in every page and shared display; temporarily unavailable exports during updates must not blank the website.

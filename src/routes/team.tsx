@@ -14,7 +14,7 @@ function Team() {
       <PageHero eyebrow="Team" title="Meet your personal trainers" text="Our dedicated trainers each have their own specialisation and experience. Our team helps match you to a trainer that fits your goals." image={images.studio} />
       <section className="mx-auto max-w-7xl px-5 py-24">
         <div className="grid gap-x-5 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
-          {team.map((t) => (
+          {(team ?? []).map((t) => (
             <Reveal key={t.name}>
               <article className="group relative">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
@@ -27,7 +27,7 @@ function Team() {
                 </h2>
                 <p className="text-sm text-muted-foreground">{t.title}</p>
                 <ul className="mt-3 flex flex-wrap gap-2">
-                  {t.specialisations.map((s) => <li key={s} className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold">{s}</li>)}
+                  {(t.specialisations ?? []).map((s) => <li key={s} className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold">{s}</li>)}
                 </ul>
               </article>
             </Reveal>

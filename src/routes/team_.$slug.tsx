@@ -4,14 +4,14 @@ import { team } from "@/data/site";
 
 export const Route = createFileRoute("/team_/$slug")({
   loader: ({ params }) => {
-    const trainer = team.find((t) => t.slug === params.slug && t.profile);
+    const trainer = (team ?? []).find((t) => t.slug === params.slug && t.profile);
     if (!trainer) throw notFound();
     return { slug: trainer.slug };
   },
   head: ({ loaderData }) => {
-    const t = team.find((x) => x.slug === loaderData?.slug);
+    const t = (team ?? []).find((x) => x.slug === loaderData?.slug);
     const title = t ? `${t.name}, ${t.title} | ReFormd` : "Trainer | ReFormd";
-    const desc = t?.profile?.bio[0]?.slice(0, 155) ?? "Meet a ReFormd personal trainer in Singapore.";
+    const desc = t?.profile?.bio?.[0]?.slice(0, 155) ?? "Meet a ReFormd personal trainer in Singapore.";
     return { meta: [
       { title }, { name: "description", content: desc },
       { property: "og:title", content: title }, { property: "og:description", content: desc },
@@ -23,8 +23,9 @@ export const Route = createFileRoute("/team_/$slug")({
 
 function TrainerPage() {
   const { slug } = Route.useLoaderData();
-  const t = team.find((x) => x.slug === slug)!;
-  const p = t.profile!;
+  const t = (team ?? []).find((x) => x.slug === slug);
+  if (!t?.profile) return <div className="mx-auto max-w-3xl px-5 py-14"><Link to="/team">All trainers</Link></div>;
+  const p = t.profile;
 
   return (
     <>
@@ -40,13 +41,13 @@ function TrainerPage() {
             <span className="underline decoration-cta decoration-4 underline-offset-[10px]">{t.firstName}</span>{" "}
             {t.lastName}
           </h1>
-          <p className="mt-5 text-base text-muted-foreground sm:text-lg">{p.focus.join("  |  ")}</p>
+          <p className="mt-5 text-base text-muted-foreground sm:text-lg">{(p.focus ?? []).join("  |  ")}</p>
         </header>
 
         <img src={p.banner} alt={t.name} className="mt-10 w-full rounded-lg" />
 
         <div className="mt-10 space-y-6 text-lg leading-relaxed">
-          {p.bio.map((b) => <p key={b.slice(0, 20)}>{b}</p>)}
+          {(p.bio ?? []).map((b) => <p key={b.slice(0, 20)}>{b}</p>)}
         </div>
 
         <section className="mt-14 border-t border-border pt-10">
@@ -57,14 +58,14 @@ function TrainerPage() {
         <section className="mt-14 border-t border-border pt-10">
           <h2 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">Qualifications</h2>
           <ul className="mt-5 space-y-3 text-lg">
-            {p.qualifications.map((q) => <li key={q} className="flex gap-3"><span className="mt-3 h-px w-6 shrink-0 bg-cta" />{q}</li>)}
+            {(p.qualifications ?? []).map((q) => <li key={q} className="flex gap-3"><span className="mt-3 h-px w-6 shrink-0 bg-cta" />{q}</li>)}
           </ul>
         </section>
 
         <section className="mt-14 border-t border-border pt-10">
           <h2 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">Sporting achievements</h2>
           <ul className="mt-5 space-y-3 text-lg">
-            {p.achievements.map((q) => <li key={q} className="flex gap-3"><span className="mt-3 h-px w-6 shrink-0 bg-cta" />{q}</li>)}
+            {(p.achievements ?? []).map((q) => <li key={q} className="flex gap-3"><span className="mt-3 h-px w-6 shrink-0 bg-cta" />{q}</li>)}
           </ul>
         </section>
 

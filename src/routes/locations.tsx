@@ -21,12 +21,12 @@ function Locations() {
   const [message, setMessage] = useState("");
 
   const list = useMemo(() => {
-    const l = locations.filter((x) => filter === "all" || x.type === filter);
+    const l = (locations ?? []).filter((x) => filter === "all" || x.type === filter);
     if (!origin) return l;
     return [...l].sort((a, b) => distanceKm(origin, a) - distanceKm(origin, b));
   }, [filter, origin]);
   const closest = useMemo(
-    () => (origin ? nearestLocations(origin, locations.filter((x) => filter === "all" || x.type === filter)).map((l) => l.name) : []),
+    () => (origin ? nearestLocations(origin, (locations ?? []).filter((x) => filter === "all" || x.type === filter)).map((l) => l.name) : []),
     [filter, origin],
   );
 
@@ -71,7 +71,7 @@ function Locations() {
           ))}
         </div>
 
-        <LocationsMap locations={locations.filter((x) => filter === "all" || x.type === filter)} origin={origin} closest={closest} />
+        <LocationsMap locations={(locations ?? []).filter((x) => filter === "all" || x.type === filter)} origin={origin} closest={closest} />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((l) => {

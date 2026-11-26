@@ -7,6 +7,7 @@ export function TrustindexReviews() {
   const [document, setDocument] = useState<string>();
 
   useEffect(() => {
+    if (!reviewWidget?.scriptUrl) return;
     const receiveHeight = (event: MessageEvent) => {
       if (event.source !== frame.current?.contentWindow) return;
       if (event.data?.type !== "reformd-review-height") return;
