@@ -7,14 +7,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/programs")({
-  head: () => seo("Programs", "Personal training for weight loss and muscle building, performance, longevity, and pregnancy, with FORGED testing and Shelter recovery options."),
+  head: () => seo("Programmes", "Personal training for weight loss and muscle building, performance, longevity, and pregnancy, with FORGED testing and Shelter recovery options."),
   component: Programs,
 });
 
 function Programs() {
   return (
     <>
-      <PageHero eyebrow="Programs" title="Programs to support you at every age and stage" image={programsHeroAsset.url} imagePosition="center 35%" />
+      <PageHero eyebrow="Programmes" title="Programmes to support you at every age and stage" image={programsHeroAsset.url} imagePosition="center 35%" />
       <div className="mx-auto max-w-7xl space-y-24 px-5 py-24">
         {(programs ?? []).map((p, i) => (
           <Reveal key={p.title}>

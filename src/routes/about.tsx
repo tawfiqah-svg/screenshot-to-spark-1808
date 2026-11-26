@@ -10,10 +10,10 @@ export const Route = createFileRoute("/about")({
 });
 
 function About() {
-  if (!aboutContent) return <PageHero eyebrow="About us" title="About ReFormd Personal Training" image={images.studio} />;
+  if (!aboutContent) return <PageHero eyebrow="About us" title="About ReFormd Personal Training" image="/images/reformd-team-about.png" />;
   return (
     <>
-      <PageHero eyebrow="About ReFormd Personal Training" title={aboutContent.title} text={aboutContent.mission} image={images.studio} />
+      <PageHero eyebrow="About ReFormd Personal Training" title={aboutContent.title} text={aboutContent.mission} image="/images/reformd-team-about.png" />
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:py-24">
         <SectionHeader eyebrow="Who we are" title={aboutContent.introHeading} text={aboutContent.intro} />

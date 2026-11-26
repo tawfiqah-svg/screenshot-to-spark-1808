@@ -94,7 +94,7 @@ export const socialLinks = [
 
 export const nav = [
   { to: "/", label: "Home" },
-  { to: "/programs", label: "Programs" },
+  { to: "/programs", label: "Programmes" },
   { to: "/locations", label: "Locations" },
   {
     label: "About us",
@@ -441,7 +441,7 @@ export const team: Trainer[] = [
       bio: [
         "Camey struggled with body image as a teenager, and strength training became the turning point that helped her rebuild her confidence from the inside out. Through her journey, she built strong fundamentals and learned the science behind achieving sustainable results.",
         "With three years of experience coaching group fitness classes and a background in sports including floorball and Muay Thai, Camey brings a strong understanding of training principles to each session.",
-        "Whether you\u2019re a complete beginner or already have some training experience, Camey creates a personalised program that is both enjoyable yet challenging. Clients can expect close guidance on habits outside the gym too, from nutrition and recovery to all that supports you in being your strongest, most capable self.",
+        "Whether you\u2019re a complete beginner or already have some training experience, Camey creates a personalised programme that is both enjoyable yet challenging. Clients can expect close guidance on habits outside the gym too, from nutrition and recovery to all that supports you in being your strongest, most capable self.",
       ],
       belief: "Strength training rebuilds confidence from the inside out.",
       qualifications: ["NCSF Certified Personal Trainer", "CPF & AED Certified", "BFT Kettlebell Basics Course", "BFT Barbell Basics Course"],
@@ -470,8 +470,8 @@ export const team: Trainer[] = [
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
       bio: [
         "Shaddiqin believes in training to be strong, move well, and stay healthy for life. To him, strength and health are long-term investments, and every session should help clients feel better, more capable, and more confident, not just today but years down the road. He treats fitness as a lifestyle that shapes your future self.",
-        "As a coach, he is highly client-centric. He takes time to understand each person\u2019s training history, preferences, lifestyle, and goals. He does not believe in one-size-fits-all programs; everything he designs is personalised so clients can enjoy the process, stay consistent, and progress safely. His sessions are known to include a bit of \u201cfree therapy\u201d too, because he genuinely wants clients to leave feeling happier and lighter than when they arrived.",
-        "Having once been on the other side of the journey himself, Shaddiqin now uses that experience to guide others with clarity instead of guesswork. Seeing clients grow stronger, more confident, and more fulfilled is what drives his passion for coaching.",
+        "As a coach, he is highly client-centric. He takes time to understand each person\u2019s training history, preferences, lifestyle, and goals. He does not believe in one-size-fits-all programmes; everything he designs is personalised so clients can enjoy the process, stay consistent, and progress safely. His sessions are known to include a bit of \u201cfree therapy\u201d too, because he genuinely wants clients to leave feeling happier and lighter than when they arrived.",
+        "Having once been on the other side of the journey himself, Shadiqqin now uses that experience to guide others with clarity instead of guesswork. Seeing clients grow stronger, more confident, and more fulfilled is what drives his passion for coaching.",
       ],
       belief: "Move your body, shape your future.",
       beliefLabel: "His training belief",
@@ -510,7 +510,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "ng-chek-yong", firstName: "Ng", lastName: "Chek Yong", name: "Ng Chek Yong", underlineWord: "Chek", title: "ACE Certified Personal Trainer", image: "/images/chek-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "ng-chek-yong", firstName: "Ng", lastName: "Chek Yong", name: "Ng Chek Yong", underlineWord: "Chek", title: "ACE Certified Personal Trainer", image: "/images/chek-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/chek-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Rehabilitation", "Return to Sport", "Sports Massage"],
@@ -531,7 +531,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "rachel-tan", firstName: "Rachel", lastName: "Tan", name: "Rachel Tan", title: "RF Academy Certified Personal Trainer", image: "/images/rachel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/rachel-banner.png",
       focus: ["Strength and Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Women\u2019s Strength Training", "Beginner Friendly Coaching"],
@@ -553,7 +553,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/genevieve-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -569,7 +569,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "haikal-saheed", firstName: "Haikal", lastName: "Saheed", name: "Haikal Saheed", title: "RF Academy Certified Personal Trainer", image: "/images/haikal-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "haikal-saheed", firstName: "Haikal", lastName: "Saheed", name: "Haikal Saheed", title: "RF Academy Certified Personal Trainer", image: "/images/haikal-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/haikal-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -593,7 +593,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "gabriel-tay", firstName: "Gabriel", lastName: "Tay", name: "Gabriel Tay", title: "NCSF Certified Personal Trainer", image: "/images/gabriel-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Hypertrophy"],
+    slug: "gabriel-tay", firstName: "Gabriel", lastName: "Tay", name: "Gabriel Tay", title: "NCSF Certified Personal Trainer", image: "/images/gabriel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
     profile: {
       banner: "/images/gabriel-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
@@ -609,7 +609,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "mika-firdaus", firstName: "Mika", lastName: "Firdaus", name: "Mika Firdaus", title: "NASM Certified Personal Trainer", image: "/images/mika-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Weight management"],
+    slug: "mika-firdaus", firstName: "Mika", lastName: "Firdaus", name: "Mika Firdaus", title: "NASM Certified Personal Trainer", image: "/images/mika-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Weight management"],
     profile: {
       banner: "/images/mika-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -625,7 +625,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "tsz-fung", firstName: "Tsz", lastName: "Fung", name: "Tsz Fung", underlineFullName: true, title: "ACE Certified Personal Trainer", image: "/images/tszfung-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Hypertrophy"],
+    slug: "tsz-fung", firstName: "Tsz", lastName: "Fung", name: "Tsz Fung", underlineFullName: true, title: "ACE Certified Personal Trainer", image: "/images/tszfung-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
     profile: {
       banner: "/images/tszfung-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
@@ -645,7 +645,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "ryan-de-mello", firstName: "Ryan", lastName: "De Mello", name: "Ryan De Mello", title: "NCSF Certified Personal Trainer", image: "/images/ryan-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Sports performance"],
+    slug: "ryan-de-mello", firstName: "Ryan", lastName: "De Mello", name: "Ryan De Mello", title: "NCSF Certified Personal Trainer", image: "/images/ryan-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Sports performance"],
     profile: {
       banner: "/images/ryan-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
@@ -661,7 +661,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "engku-sulaiman", firstName: "Engku", lastName: "Sulaiman", name: "Engku Sulaiman", underlineLastName: true, title: "NCSF Certified Personal Trainer", image: "/images/sulaiman-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Hypertrophy", "Body recomposition"],
+    slug: "engku-sulaiman", firstName: "Engku", lastName: "Sulaiman", name: "Engku Sulaiman", underlineLastName: true, title: "NCSF Certified Personal Trainer", image: "/images/sulaiman-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Hypertrophy", "Body recomposition"],
     profile: {
       banner: "/images/sulaiman-banner.png",
       focus: ["Hypertrophy", "Strength Training", "Body Transformations", "Nutrition", "Functional Fitness"],
@@ -682,7 +682,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "sumit-sahoo", firstName: "Sumit", lastName: "Sahoo", name: "Sumit Sahoo", title: "NCSF Certified Personal Trainer", image: "/images/sumit-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Movement quality"],
+    slug: "sumit-sahoo", firstName: "Sumit", lastName: "Sahoo", name: "Sumit Sahoo", title: "NCSF Certified Personal Trainer", image: "/images/sumit-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Movement quality"],
     profile: {
       banner: "/images/sumit-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -698,7 +698,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "wilger-loo", firstName: "Wilger", lastName: "Loo", name: "Wilger Loo", title: "RF Academy Certified Personal Trainer", image: "/images/wilger-headshot.png", imageStyle: { transform: "translateY(-9%) scale(1.32)", transformOrigin: "50% 0%", objectPosition: "50% 0%" }, specialisations: ["Strength", "Hypertrophy"],
+    slug: "wilger-loo", firstName: "Wilger", lastName: "Loo", name: "Wilger Loo", title: "RF Academy Certified Personal Trainer", image: "/images/wilger-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
     profile: {
       banner: "/images/wilger-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],

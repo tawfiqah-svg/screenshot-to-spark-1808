@@ -28,7 +28,7 @@ const why = [
     summary: "Your progress is measured, not guessed.",
     details: [
       "We start with a full assessment of your movement, strength, body composition and lifestyle, so we know exactly where you're starting from.",
-      "Your program is built around that data and re-tested on a regular cycle, so you can see exactly what's improving.",
+      "Your programme is built around that data and re-tested on a regular cycle, so you can see exactly what's improving.",
       "Your trainer records your sessions and adjusts your plan as your strength and fitness improve.",
     ],
   },
@@ -37,7 +37,7 @@ const why = [
     summary: "Nutrition, sleep and stress are part of the plan.",
     details: [
       "Your trainer helps you build eating habits that fit your schedule and preferences.",
-      "We factor sleep, stress and recovery into your program, so hard weeks at work don't derail your progress.",
+      "We factor sleep, stress and recovery into your programme, so hard weeks at work don't derail your progress.",
       "You get practical guidance between sessions, so the support continues after you leave the studio.",
     ],
   },
@@ -166,8 +166,8 @@ function Home() {
       <section className="bg-ink py-24 text-ink-foreground">
         <div className="mx-auto max-w-7xl px-5">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <Reveal><SectionHeader title="Programs to support you at every age and stage" /></Reveal>
-            <CtaLink to="/programs" className="min-h-[4.5rem] px-8 py-5 text-lg sm:px-12 sm:text-xl">Explore our programs</CtaLink>
+            <Reveal><SectionHeader title="Programmes to support you at every age and stage" /></Reveal>
+            <CtaLink to="/programs" className="min-h-[4.5rem] px-8 py-5 text-lg sm:px-12 sm:text-xl">Explore our programmes</CtaLink>
           </div>
           <Reveal className="home-stagger mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {(programs ?? []).map((p) => (

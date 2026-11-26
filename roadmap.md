@@ -50,3 +50,5 @@
 - [x] Guard temporarily missing About content and audit shared content displays across all pages.
 - [x] Team banner + head alignment
 - [x] About Us menu: real photos only
+- [x] Undo third-row zoom
+- [x] Careers banner = Programmes banner

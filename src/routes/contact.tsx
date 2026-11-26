@@ -25,7 +25,7 @@ function Contact() {
             <CalendarDays className="size-8 text-cta" />
             <p className="mt-6 text-xs font-bold uppercase tracking-widest opacity-60">Option 1</p>
             <h2 className="mt-1 text-3xl font-black uppercase">Book an online consultation</h2>
-            <p className="mt-3 opacity-80">A 1-hour video call about our programs.</p>
+            <p className="mt-3 opacity-80">A 1-hour video call about our programmes.</p>
             <iframe
               src="https://reformdpersonaltraining.setmore.com/services/a2ef6d57-e4a2-4c37-bba1-5be2095e9eeb?inline=true"
               title="Book an online consultation with ReFormd"
