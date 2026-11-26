@@ -553,7 +553,7 @@ export const team: Trainer[] = [
     },
   },
   {
-    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 100%", objectPosition: "50% 0%", translate: "0 2%" }, specialisations: ["Strength", "Body recomposition"],
+    slug: "genevieve-nagulendran", firstName: "Genevieve", lastName: "Nagulendran", name: "Genevieve Nagulendran", title: "RF Academy Certified Personal Trainer", image: "/images/genevieve-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
     profile: {
       banner: "/images/genevieve-banner.png",
       focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
@@ -566,6 +566,30 @@ export const team: Trainer[] = [
       beliefLabel: "Her training belief",
       qualifications: ["RF Academy Certified Personal Trainer", "Bachelor of Science (Honours) Business Management Undergraduate", "ISSA Senior Fitness Coaching", "CPR & AED Certified"],
       achievements: ["Singapore BJJ Open, 3rd", "Former Muay Thai and Brazilian Jiujitsu Athlete"],
+    },
+  },
+  {
+    slug: "haikal-saheed", firstName: "Haikal", lastName: "Saheed", name: "Haikal Saheed", title: "RF Academy Certified Personal Trainer", image: "/images/haikal-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/haikal-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Haikal believes that everyone can achieve their goals through consistency and perseverance. His approach to training focuses on guiding clients with steady support, helping them stay committed and confident throughout their fitness journey. Every programme begins with assessing mobility, flexibility, and movement quality to identify and address any limitations early. Haikal prioritises building strength, improving physique, and developing the confidence to carry that progress beyond the gym.",
+        "A competitive bodybuilder since 2024, Haikal has earned multiple podium finishes, including the 2025 IFBB NPC Men\u2019s Physique Junior Overall Champion title. His experience on stage fuels his passion for helping others push their limits and discover what they are truly capable of. For Haikal, seeing clients transform from their first session to their strongest selves is the most rewarding part of his work.",
+      ],
+      belief: "Walk the walk without the talk. Let your results do the talking.",
+      beliefLabel: "His training belief",
+      qualifications: ["RF Academy Certified Personal Trainer", "Work Study Diploma in Lifestyle & Recreation Management", "CPR & AED Certified"],
+      achievements: [
+        "2026 Fitness Aesthetic Men Physique \u2013 Open Class B, 1st Place",
+        "2026 WNBF Men Physique \u2013 Open Below 173cm, 2nd Place",
+        "2026 Dream Aesthetics Nationals \u2013 Junior, 1st Place",
+        "2026 Dream Aesthetics National \u2013 Open Class B, 4th Place",
+        "2025 IFBB NPC Men Physique \u2013 Junior Overall Champion",
+        "2025 IFBB NPC Men Physique \u2013 Open Class C, 2nd Place",
+        "2024 INBA Men Physique Pro-Qualifier, 4th Place",
+        "2024 Fitness Aesthetic Men Physique \u2013 Junior, 1st Place",
+      ],
     },
   },
 ];
