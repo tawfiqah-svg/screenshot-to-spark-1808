@@ -94,6 +94,47 @@ describe("Chen Yue trainer profile", () => {
   });
 });
 
+describe("Camey Lim trainer profile", () => {
+  const t = team.find((x) => x.slug === "camey-lim");
+
+  it("underlines only her first name, unlike Chen Yue's whole name", () => {
+    expect(t?.firstName).toBe("Camey");
+    expect(t?.lastName).toBe("Lim");
+    expect(t?.underlineFullName).toBeUndefined();
+  });
+
+  it("lists her NCSF title and five focus areas", () => {
+    expect(t?.title).toBe("NCSF Certified Personal Trainer");
+    expect(t?.profile?.focus).toEqual([
+      "Strength & Conditioning",
+      "Hypertrophy",
+      "Mobility",
+      "Weight Management",
+      "Sustainable Training",
+    ]);
+  });
+
+  it("keeps her three bio paragraphs, qualifications and achievement", () => {
+    expect(t?.profile?.bio).toHaveLength(3);
+    expect(t?.profile?.qualifications).toEqual([
+      "NCSF Certified Personal Trainer",
+      "CPF & AED Certified",
+      "BFT Kettlebell Basics Course",
+      "BFT Barbell Basics Course",
+    ]);
+    expect(t?.profile?.achievements).toEqual(["Competed in HYROX Singapore 2025 Open Doubles"]);
+  });
+
+  it("stores her headshot and profile photo as real PNGs inside the project", () => {
+    for (const url of [t?.image, t?.profile?.banner]) {
+      expect(url).toMatch(/^\/images\/[\w.-]+\.png$/);
+      const file = resolve(process.cwd(), "public", (url ?? "").replace(/^\//, ""));
+      expect(existsSync(file), url).toBe(true);
+      expect(readFileSync(file).subarray(1, 4).toString()).toBe("PNG");
+    }
+  });
+});
+
 describe("physique transformations", () => {
   it("shows the two client pairs with their phase captions", () => {
     expect(transformations.map((t) => t.caption)).toEqual([

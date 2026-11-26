@@ -4,6 +4,8 @@ const cherylHeadshotAsset = { url: "/images/cheryl-headshot.png" };
 const cherylBannerAsset = { url: "/images/cheryl-banner.png" };
 const chenYueHeadshotAsset = { url: "/images/chen-yue-headshot.png" };
 const chenYueBannerAsset = { url: "/images/chen-yue-banner.png" };
+const cameyHeadshotAsset = { url: "/images/camey-headshot.png" };
+const cameyBannerAsset = { url: "/images/camey-banner.png" };
 const sixth1Asset = { url: "/images/rf-sixth-avenue-1.png" };
 const sixth2Asset = { url: "/images/rf-sixth-avenue-2.png" };
 const rf6151Asset = { url: "/images/rf615-1.png" };
@@ -429,7 +431,21 @@ export const team: Trainer[] = [
       achievements: ["Competitive Kickboxing & MMA Experience", "Member of the SASS Rugby Team (2012\u20132014)"],
     },
   },
-  { slug: "name-4", firstName: "Name 4", lastName: "", name: "Name 4", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "camey-lim", firstName: "Camey", lastName: "Lim", name: "Camey Lim", title: "NCSF Certified Personal Trainer", image: cameyHeadshotAsset.url, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: cameyBannerAsset.url,
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
+      bio: [
+        "Camey struggled with body image as a teenager, and strength training became the turning point that helped her rebuild her confidence from the inside out. Through her journey, she built strong fundamentals and learned the science behind achieving sustainable results.",
+        "With three years of experience coaching group fitness classes and a background in sports including floorball and Muay Thai, Camey brings a strong understanding of training principles to each session.",
+        "Whether you\u2019re a complete beginner or already have some training experience, Camey creates a personalised program that is both enjoyable yet challenging. Clients can expect close guidance on habits outside the gym too, from nutrition and recovery to all that supports you in being your strongest, most capable self.",
+      ],
+      belief: "Strength training rebuilds confidence from the inside out.",
+      qualifications: ["NCSF Certified Personal Trainer", "CPF & AED Certified", "BFT Kettlebell Basics Course", "BFT Barbell Basics Course"],
+      achievements: ["Competed in HYROX Singapore 2025 Open Doubles"],
+    },
+  },
   { slug: "name-5", firstName: "Name 5", lastName: "", name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-6", firstName: "Name 6", lastName: "", name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-7", firstName: "Name 7", lastName: "", name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
