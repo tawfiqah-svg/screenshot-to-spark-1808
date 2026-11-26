@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { TrainerName } from "@/components/site/TrainerName";
 import { CtaLink, PageHero, Reveal, seo } from "@/components/site/Layout";
@@ -18,7 +19,7 @@ function Team() {
             <Reveal key={t.name}>
               <article className="group relative">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-lg">
-                  <img src={t.image} alt={t.name} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
+                  <div className="h-full w-full transition-transform duration-700 group-hover:scale-105"><img src={t.image} alt={t.name} loading="lazy" style={"imageStyle" in t ? (t.imageStyle as CSSProperties) : undefined} className="h-full w-full object-cover object-top" /></div>
                 </div>
                 <h2 className="mt-4 text-2xl font-black uppercase">
                   {t.profile ? (
