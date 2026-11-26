@@ -26,7 +26,7 @@ function Testimonials() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16 sm:py-24">
-        <SectionHeader title="Video Testimonial" />
+        <SectionHeader title="LEARN ABOUT THEIR STORIES" />
         <figure className="mx-auto mt-10 max-w-lg">
           <iframe
             src={videoTestimonial.embedUrl}
