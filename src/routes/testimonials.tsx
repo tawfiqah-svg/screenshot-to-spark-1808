@@ -27,7 +27,7 @@ function Testimonials() {
       </section>
       <section className="mx-auto max-w-7xl px-5 py-16 sm:py-24">
         <SectionHeader title="LEARN ABOUT THEIR STORIES" />
-        <div className="mx-auto mt-10 grid max-w-5xl gap-12 lg:grid-cols-2">
+        <div className="mx-auto mt-10 flex max-w-6xl flex-wrap justify-center gap-12">
           {videoTestimonials.map((video) => (
             <figure key={video.url} className="mx-auto w-full max-w-lg">
               <iframe

@@ -460,4 +460,10 @@ export const videoTestimonials = [
     name: "Hyekel, 33",
     caption: "Cut 10 minutes off his HYROX timing and added 2kg of muscle in less than a year.",
   },
+  {
+    url: "https://www.instagram.com/reel/DdJMJCkzJbW/",
+    embedUrl: "https://www.instagram.com/reel/DdJMJCkzJbW/embed/",
+    name: "Jin, 28",
+    caption: "From 40kg with rough form to 5 reps at 65kg. Stronger and more confident in a bikini on holiday.",
+  },
 ];
