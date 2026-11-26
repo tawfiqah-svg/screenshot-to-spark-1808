@@ -383,7 +383,7 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
 }
 
 export type TrainerProfile = { banner: string; focus: string[]; bio: string[]; belief: string; beliefLabel?: string; qualifications: string[]; achievements: string[] };
-export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; imageStyle?: Record<string, string>; specialisations: string[]; underlineFullName?: boolean; profile?: TrainerProfile };
+export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; imageStyle?: Record<string, string>; specialisations: string[]; underlineFullName?: boolean; underlineLastName?: boolean; profile?: TrainerProfile };
 
 export const team: Trainer[] = [
   {
@@ -463,7 +463,22 @@ export const team: Trainer[] = [
       achievements: ["Performed in various productions presenting Circus Arts", "National Selections for Commonwealth Youth Games 2015 \u2013 Rugby"],
     },
   },
-  { slug: "name-5", firstName: "Name 5", lastName: "", name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "muhammad-shadiqqin", firstName: "Muhammad", lastName: "Shadiqqin", name: "Muhammad Shadiqqin", underlineLastName: true, title: "ACE Certified Personal Trainer", image: "/images/shadiqqin-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 4%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/shadiqqin-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Shaddiqin believes in training to be strong, move well, and stay healthy for life. To him, strength and health are long-term investments, and every session should help clients feel better, more capable, and more confident, not just today but years down the road. He treats fitness as a lifestyle that shapes your future self.",
+        "As a coach, he is highly client-centric. He takes time to understand each person\u2019s training history, preferences, lifestyle, and goals. He does not believe in one-size-fits-all programs; everything he designs is personalised so clients can enjoy the process, stay consistent, and progress safely. His sessions are known to include a bit of \u201cfree therapy\u201d too, because he genuinely wants clients to leave feeling happier and lighter than when they arrived.",
+        "Having once been on the other side of the journey himself, Shaddiqin now uses that experience to guide others with clarity instead of guesswork. Seeing clients grow stronger, more confident, and more fulfilled is what drives his passion for coaching.",
+      ],
+      belief: "Move your body, shape your future.",
+      beliefLabel: "His training belief",
+      qualifications: ["ACE Certified Personal Trainer", "Strength Training Specialist", "Bachelor\u2019s in Marketing Undergraduate", "CPR & AED Certified"],
+      achievements: ["SUSS Representative at World University Cup Powerlifting 2025, U93kg", "2XU Compression Run Half Marathon 2024 Finisher", "HYROX Open Asian Championships Team Relay Finisher"],
+    },
+  },
   { slug: "name-6", firstName: "Name 6", lastName: "", name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-7", firstName: "Name 7", lastName: "", name: "Name 7", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-8", firstName: "Name 8", lastName: "", name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },

@@ -38,7 +38,12 @@ function TrainerPage() {
         <header className="mt-8 border-b border-border pb-8">
           <p className="font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{t.title}</p>
           <h1 className="mt-3 text-5xl font-black uppercase leading-[1.02] sm:text-6xl">
-            {t.underlineFullName ? (
+            {t.underlineLastName ? (
+              <>
+                {t.firstName}{" "}
+                <span className="underline decoration-cta decoration-4 underline-offset-[10px]">{t.lastName}</span>
+              </>
+            ) : t.underlineFullName ? (
               <span className="underline decoration-cta decoration-4 underline-offset-[10px]">{t.name}</span>
             ) : (
               <>
