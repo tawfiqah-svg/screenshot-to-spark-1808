@@ -1,11 +1,24 @@
 import { describe, expect, it } from "vitest";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { images, privateStudioCount, transformations } from "@/data/site";
+import { aboutContent, images, privateStudioCount, transformations } from "@/data/site";
 
 describe("ReFormd training network", () => {
   it("has five private studios", () => {
     expect(privateStudioCount).toBe(5);
+  });
+});
+
+describe("About ReFormd Personal Training", () => {
+  it("sets trainer workshops to every two months", () => {
+    expect(aboutContent.workshops.cadence).toBe("Every 2 months");
+    expect(aboutContent.workshops.text).toContain("every two months");
+  });
+
+  it("sets one training standard across trainers and locations", () => {
+    expect(aboutContent.teamStory).toContain("senior trainers");
+    expect(aboutContent.teamStory).toContain("same standard of training");
+    expect(aboutContent.teamStory).toContain("every private studio and RF-Operated Gym");
   });
 });
 import { nearestLocations as _nearest, locations as _locs, postalToCoords as _p2c } from "@/data/site";

@@ -92,7 +92,7 @@ export const nav = [
   {
     label: "About us",
     children: [
-      { to: "/about", label: "About us", image: studio, description: "The RF Group & our events" },
+      { to: "/about", label: "About us", image: studio, description: "Our approach, trainers & standards" },
       { to: "/testimonials", label: "Testimonials", image: homeHeroAsset.url, description: "Our clients' success stories" },
       { to: "/team", label: "Team", image: hero, description: "Meet our personal trainers" },
       { to: "/careers", label: "Careers", image: performance, description: "RF Academy & opportunities" },
@@ -113,17 +113,42 @@ export const homeBenefits = [
 ];
 
 export const aboutContent = {
-  title: "The ReFormd Group",
-  intro: "Born in Singapore, ReFormd brings personal training, performance testing, recovery and fitness education together. Whether you're starting out or training for competition, we want you to have access to the people and facilities that help you progress.",
-  story: "Good training should fit into your life. We focus on convenient locations, well-equipped facilities and personal service, with a team that listens to what you need. Across the RF Group, our aim is simple: help you keep moving forward.",
+  title: "Personal training built around you",
+  introHeading: "Your goals shape the way we train",
+  intro: "ReFormd Personal Training is built on individual attention, thoughtful coaching and progress that fits your life. We take time to understand where you are starting, what you want to achieve and what will help you stay consistent.",
+  story: "Our clients come to us with different goals, levels of experience and demands outside the gym. Whatever brings you to ReFormd, your training is personal to you and supported by a team that wants to see you move forward with confidence.",
   mission: "Progress all ways, always.",
-  groupHeading: "A full ecosystem for training, testing, recovery and lifestyle",
   values: [
-    { title: "Easy to get to", text: "Our private studios and RF-Operated Gyms give you more choice about where to train, close to home, work or your daily commute." },
-    { title: "Quality and value", text: "We invest in equipment and facilities that support your training, while keeping quality service and value at the centre of what we do." },
-    { title: "People come first", text: "We listen to our clients and support our team. Respect, fairness and trust guide how we work with one another." },
+    { title: "Personal from day one", text: "Your trainer builds your sessions around your goals, experience and routine, then adjusts your plan as you progress." },
+    { title: "Progress you can sustain", text: "We focus on training and habits that you can carry into everyday life, not short-term fixes that are difficult to maintain." },
+    { title: "Support at every step", text: "You have a dedicated trainer in your corner, with clear guidance, honest feedback and encouragement throughout your journey." },
   ],
-  eventsIntro: "Our commitment to progress extends beyond the studio. ReFormd brings people together through competitions, workshops and events that give participants a chance to challenge themselves and connect with the wider fitness community.",
+  goalsHeading: "Different goals. The same commitment.",
+  goalsIntro: "There is no single reason to start personal training. We meet each client where they are and shape the work around what matters to them.",
+  goals: [
+    { title: "Build strength & muscle", text: "Develop strength, improve your technique and follow a structured approach to hypertrophy." },
+    { title: "Manage your weight", text: "Build a training routine and sustainable habits that support your body composition goals." },
+    { title: "Move well for longer", text: "Improve mobility, confidence and everyday fitness so you can keep doing the things you enjoy." },
+    { title: "Raise your performance", text: "Prepare for a sport, event or personal challenge with training that supports your ambition." },
+  ],
+  teamHeading: "Different specialists. One shared standard.",
+  teamIntro: "Our diverse team of trainers brings together different backgrounds and areas of expertise, including hypertrophy, strength, mobility and weight management. This helps us match you with a trainer who understands your goals.",
+  teamStory: "Our team includes senior trainers and trainers with a range of experience. The same standard of training is expected from every trainer, at every private studio and RF-Operated Gym.",
+  standards: [
+    { title: "The right expertise for you", text: "We consider your goals, needs and preferences when helping you choose a trainer." },
+    { title: "Consistent coaching", text: "Every trainer is expected to prepare thoughtfully, coach with care and take your progress seriously." },
+    { title: "One standard everywhere", text: "You receive the same commitment to quality whether you train at a private studio or an RF-Operated Gym." },
+  ],
+  workshops: {
+    eyebrow: "Continual development",
+    heading: "Our trainers keep learning",
+    cadence: "Every 2 months",
+    text: "We hold trainer workshops every two months to keep our team learning, sharing knowledge and improving the way we coach.",
+    detail: "These sessions help our trainers stay current with the latest training knowledge and bring practical, up to date guidance back to our clients.",
+    points: ["Learn and review current training knowledge", "Share practical coaching experience across the team", "Raise the standard of every client session"],
+  },
+  ctaHeading: "Find the right trainer for your goals",
+  ctaText: "Tell us what you would like to work towards. We will help you take the next step with a trainer and location that suit you.",
 };
 
 export const rfGroupBrands = [
