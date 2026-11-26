@@ -14,7 +14,7 @@ export const Route = createFileRoute("/programs")({
 function Programs() {
   return (
     <>
-      <PageHero eyebrow="Programmes" title="Programmes to support you at every age and stage" image={programsHeroAsset.url} imagePosition="center 35%" />
+      <PageHero eyebrow="Programmes" title="Programmes to support you at every age and stage" image={programsHeroAsset.url} imagePosition="center 15%" />
       <div className="mx-auto max-w-7xl space-y-24 px-5 py-24">
         {(programs ?? []).map((p, i) => (
           <Reveal key={p.title}>
