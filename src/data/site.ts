@@ -660,6 +660,27 @@ export const team: Trainer[] = [
       achievements: ["Competed in HYROX Singapore 2025 Open Doubles"],
     },
   },
+  {
+    slug: "engku-sulaiman", firstName: "Engku", lastName: "Sulaiman", name: "Engku Sulaiman", underlineLastName: true, title: "NCSF Certified Personal Trainer", image: "/images/sulaiman-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Hypertrophy", "Body recomposition"],
+    profile: {
+      banner: "/images/sulaiman-banner.png",
+      focus: ["Hypertrophy", "Strength Training", "Body Transformations", "Nutrition", "Functional Fitness"],
+      bio: [
+        "Engku Sulaiman started training from a young age with a strong interest in bodybuilding. He focused on learning proper training techniques, nutrition, and overall health from the beginning, and built discipline and consistency by applying these principles to his own fitness journey. Training himself gave him firsthand experience of the challenges and dedication required to reach fitness goals.",
+        "He is passionate about helping others overcome obstacles and reach their individual fitness goals through evidence-based training, nutrition, and ongoing support.",
+        "He has a strong foundation in hypertrophy, strength training, body transformations, and nutrition, and specialises in building lean muscle, losing body fat, and improving functional fitness. His programmes are personalised and structured around each client\u2019s needs, with an emphasis on consistency, discipline, and sustainable habits to help clients achieve long-term results.",
+      ],
+      belief: "Consistency, discipline, and sustainable habits create long-term results.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer", "CPR & AED Certified"],
+      achievements: [
+        "2026 Dream Aesthetics Olympia Classic Physique Opens \u2013 4th Place",
+        "2026 FIF World Imperial Cup \u2013 Overall Pro Champion",
+        "2026 FIF World Imperial Cup \u2013 Men\u2019s Classic SG Opens, 1st Place",
+        "2026 FIF World Imperial Cup \u2013 Men\u2019s Classic Junior, 1st Place",
+      ],
+    },
+  },
 ];
 
 export const faqs: { q: string; a: string }[] = [
