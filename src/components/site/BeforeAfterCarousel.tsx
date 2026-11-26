@@ -1,31 +1,35 @@
-import { useState } from "react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { images } from "@/data/site";
+import { transformations } from "@/data/site";
 
-function BeforeAfter({ index }: { index: number }) {
-  const [position, setPosition] = useState(50);
+function BeforeAfter({ before, after, caption }: { before: string; after: string; caption: string }) {
   return (
-    <figure>
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
-        <img src={images.hero} alt="Sample comparison in colour" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
-        <img src={images.hero} alt="Sample comparison in black and white" loading="lazy" className="absolute inset-0 h-full w-full object-cover grayscale" style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }} />
-        <div className="absolute inset-y-0 w-0.5 bg-background" style={{ left: `${position}%` }} />
-        <span className="absolute left-3 top-3 bg-ink px-3 py-1 text-xs font-bold uppercase text-ink-foreground">Before</span>
-        <span className="absolute right-3 top-3 bg-cta px-3 py-1 text-xs font-bold uppercase text-cta-foreground">After</span>
-        <input type="range" min={0} max={100} value={position} onChange={(event) => setPosition(Number(event.target.value))} aria-label={`Compare before and after sample ${index}`} className="absolute inset-x-4 bottom-4 h-8 w-[calc(100%-2rem)] accent-cta" />
+    <figure className="flex h-full flex-col">
+      <div className="grid grow grid-cols-2 gap-1 overflow-hidden rounded-lg bg-ink">
+        <div className="relative">
+          <img src={before} alt={`Before, ${caption}`} loading="lazy" className="h-full w-full object-cover object-top" />
+          <span className="absolute left-2 top-2 bg-ink px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-ink-foreground">
+            Before
+          </span>
+        </div>
+        <div className="relative">
+          <img src={after} alt={`After, ${caption}`} loading="lazy" className="h-full w-full object-cover object-top" />
+          <span className="absolute right-2 top-2 bg-cta px-2 py-1 text-[11px] font-bold uppercase tracking-wide text-cta-foreground">
+            After
+          </span>
+        </div>
       </div>
-      <figcaption className="mt-3 text-sm text-muted-foreground">Sample images, not client results.</figcaption>
+      <figcaption className="mt-3 font-display text-2xl uppercase leading-tight">{caption}</figcaption>
     </figure>
   );
 }
 
 export function BeforeAfterCarousel() {
   return (
-    <Carousel opts={{ align: "start" }} aria-label="Before and after comparisons">
+    <Carousel opts={{ align: "start" }} aria-label="Client physique transformations">
       <CarouselContent>
-        {[1, 2].map((index) => (
-          <CarouselItem key={index} className="basis-[90%] sm:basis-1/2">
-            <BeforeAfter index={index} />
+        {transformations.map((t) => (
+          <CarouselItem key={t.caption} className="basis-[90%] sm:basis-1/2">
+            <BeforeAfter {...t} />
           </CarouselItem>
         ))}
       </CarouselContent>

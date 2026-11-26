@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { images, privateStudioCount } from "@/data/site";
+import { images, privateStudioCount, transformations } from "@/data/site";
 
 describe("ReFormd training network", () => {
   it("has five private studios", () => {
@@ -32,5 +32,20 @@ describe("site photos", () => {
     expect(bytes.subarray(1, 4).toString()).toBe("PNG");
     expect(bytes.readUInt32BE(16)).toBe(1920);
     expect(bytes.readUInt32BE(20)).toBe(1080);
+  });
+});
+
+describe("physique transformations", () => {
+  it("shows the two client pairs with their phase captions", () => {
+    expect(transformations.map((t) => t.caption)).toEqual([
+      "6-Month Muscle Growth Phase",
+      "5-Month Muscle Growth Phase",
+    ]);
+    for (const pair of transformations) {
+      for (const url of [pair.before, pair.after]) {
+        expect(url, url).toMatch(/^\/images\/[\w.-]+\.png$/);
+        expect(existsSync(resolve(process.cwd(), "public", url.replace(/^\//, ""))), url).toBe(true);
+      }
+    }
   });
 });

@@ -67,6 +67,19 @@ const shelterRecoveryAsset = { url: "/images/shelter-recovery.png" };
 
 export const images = { hero, homeHero: homeHeroAsset.url, trialBackground: trialBackgroundAsset.url, studio, performance, prenatal, locationsHero: rfBugis1Asset.url, testimonialsBanner };
 
+export const transformations = [
+  {
+    before: "/images/transformation-6month-before.png",
+    after: "/images/transformation-6month-after.png",
+    caption: "6-Month Muscle Growth Phase",
+  },
+  {
+    before: "/images/transformation-5month-before.png",
+    after: "/images/transformation-5month-after.png",
+    caption: "5-Month Muscle Growth Phase",
+  },
+];
+
 export const socialLinks = [
   { label: "Instagram", href: "https://www.instagram.com/reformd_training/?hl=en" },
   { label: "Facebook", href: "https://www.facebook.com/reformdtraining/" },
