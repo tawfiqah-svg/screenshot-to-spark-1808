@@ -446,3 +446,10 @@ export const blogPosts = [
 
 /** Placeholder YouTube embed — replace with the real video ID. */
 export const brandVideoUrl = "https://www.youtube.com/embed/YxXtNk3yuz8";
+
+export const videoTestimonial = {
+  url: "https://www.instagram.com/reel/De1Q_C-zjyX/",
+  embedUrl: "https://www.instagram.com/reel/De1Q_C-zjyX/embed/",
+  name: "Zubin, 59",
+  caption: "Managing diabetes and new to exercise, Zubin now moves better, has less back pain and enjoys life more freely.",
+};
