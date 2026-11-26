@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { aboutContent, images, privateStudioCount, transformations } from "@/data/site";
+import { aboutContent, images, privateStudioCount, team, transformations } from "@/data/site";
 
 describe("ReFormd training network", () => {
   it("has five private studios", () => {
@@ -45,6 +45,52 @@ describe("site photos", () => {
     expect(bytes.subarray(1, 4).toString()).toBe("PNG");
     expect(bytes.readUInt32BE(16)).toBe(1920);
     expect(bytes.readUInt32BE(20)).toBe(1080);
+  });
+});
+
+describe("Chen Yue trainer profile", () => {
+  const t = team.find((x) => x.slug === "chen-yue");
+
+  it("lists his NCSF title and full focus areas", () => {
+    expect(t?.title).toBe("NCSF Certified Personal Trainer");
+    expect(t?.profile?.focus).toEqual([
+      "Strength & Conditioning",
+      "Hypertrophy",
+      "Mobility",
+      "Weight Management",
+      "Sustainable Training",
+      "Sports Performance",
+    ]);
+  });
+
+  it("underlines his whole name, unlike first-name-only trainers", () => {
+    expect(t?.underlineFullName).toBe(true);
+    const carmen = team.find((x) => x.slug === "carmen-ong");
+    expect(carmen?.underlineFullName).toBeUndefined();
+  });
+
+  it("keeps his three bio paragraphs, qualifications and achievements", () => {
+    expect(t?.profile?.bio).toHaveLength(3);
+    expect(t?.profile?.beliefLabel).toBe("His training belief");
+    expect(t?.profile?.qualifications).toEqual([
+      "NCSF Certified Personal Trainer",
+      "Diploma in Hospitality & Tourism",
+      "CPR & AED Certified",
+    ]);
+    expect(t?.profile?.achievements).toEqual([
+      "Competitive Kickboxing & MMA Experience",
+      "Member of the SASS Rugby Team (2012\u20132014)",
+    ]);
+  });
+
+  it("stores his headshot and profile photo as real PNGs inside the project", () => {
+    for (const url of [t?.image, t?.profile?.banner]) {
+      expect(url).toMatch(/^\/images\/[\w.-]+\.png$/);
+      const file = resolve(process.cwd(), "public", (url ?? "").replace(/^\//, ""));
+      expect(existsSync(file), url).toBe(true);
+      const bytes = readFileSync(file);
+      expect(bytes.subarray(1, 4).toString()).toBe("PNG");
+    }
   });
 });
 

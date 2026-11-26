@@ -38,8 +38,14 @@ function TrainerPage() {
         <header className="mt-8 border-b border-border pb-8">
           <p className="font-display text-xs font-bold uppercase tracking-[0.25em] text-cta">{t.title}</p>
           <h1 className="mt-3 text-5xl font-black uppercase leading-[1.02] sm:text-6xl">
-            <span className="underline decoration-cta decoration-4 underline-offset-[10px]">{t.firstName}</span>{" "}
-            {t.lastName}
+            {t.underlineFullName ? (
+              <span className="underline decoration-cta decoration-4 underline-offset-[10px]">{t.name}</span>
+            ) : (
+              <>
+                <span className="underline decoration-cta decoration-4 underline-offset-[10px]">{t.firstName}</span>{" "}
+                {t.lastName}
+              </>
+            )}
           </h1>
           <p className="mt-5 text-base text-muted-foreground sm:text-lg">{(p.focus ?? []).join("  |  ")}</p>
         </header>
@@ -51,7 +57,7 @@ function TrainerPage() {
         </div>
 
         <section className="mt-14 border-t border-border pt-10">
-          <h2 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">Her training belief</h2>
+          <h2 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">{p.beliefLabel ?? "Her training belief"}</h2>
           <p className="mt-3 text-3xl font-black uppercase leading-tight sm:text-4xl">{p.belief}</p>
         </section>
 

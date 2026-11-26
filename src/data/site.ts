@@ -2,6 +2,8 @@ const carmenHeadshotAsset = { url: "/images/carmen-headshot.png" };
 const carmenBannerAsset = { url: "/images/carmen-deadlift-banner.png" };
 const cherylHeadshotAsset = { url: "/images/cheryl-headshot.png" };
 const cherylBannerAsset = { url: "/images/cheryl-banner.png" };
+const chenYueHeadshotAsset = { url: "/images/chen-yue-headshot.png" };
+const chenYueBannerAsset = { url: "/images/chen-yue-banner.png" };
 const sixth1Asset = { url: "/images/rf-sixth-avenue-1.png" };
 const sixth2Asset = { url: "/images/rf-sixth-avenue-2.png" };
 const rf6151Asset = { url: "/images/rf615-1.png" };
@@ -376,8 +378,8 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
   return 2 * R * Math.asin(Math.sqrt(h));
 }
 
-export type TrainerProfile = { banner: string; focus: string[]; bio: string[]; belief: string; qualifications: string[]; achievements: string[] };
-export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; specialisations: string[]; profile?: TrainerProfile };
+export type TrainerProfile = { banner: string; focus: string[]; bio: string[]; belief: string; beliefLabel?: string; qualifications: string[]; achievements: string[] };
+export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; specialisations: string[]; underlineFullName?: boolean; profile?: TrainerProfile };
 
 export const team: Trainer[] = [
   {
@@ -411,7 +413,22 @@ export const team: Trainer[] = [
       achievements: ["2nd Runner-Up \u2013 Batu Kawan Penang Half Marathon (Women\u2019s Open)"],
     },
   },
-  { slug: "name-3", firstName: "Name 3", lastName: "", name: "Name 3", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "chen-yue", firstName: "Chen", lastName: "Yue", name: "Chen Yue", title: "NCSF Certified Personal Trainer", image: chenYueHeadshotAsset.url, specialisations: ["Strength", "Body recomposition"], underlineFullName: true,
+    profile: {
+      banner: chenYueBannerAsset.url,
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Chen Yue believes that fitness is about more than physical transformation. His philosophy centres on building strength gradually with proper technique in an encouraging and supportive environment.",
+        "As a lifelong enthusiast in high impact sports such as MMA, kickboxing, and rugby, Chen Yue sustained recurring injuries growing up. Nonetheless, he was determined to regain control of his health and confidence, turning to strength training and bodybuilding.",
+        "His goal is to ensure everyone he works with is able to overcome challenges and help them become the best version of themselves, one step at a time.",
+      ],
+      belief: "Fitness is about more than physical transformation.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer", "Diploma in Hospitality & Tourism", "CPR & AED Certified"],
+      achievements: ["Competitive Kickboxing & MMA Experience", "Member of the SASS Rugby Team (2012\u20132014)"],
+    },
+  },
   { slug: "name-4", firstName: "Name 4", lastName: "", name: "Name 4", title: "Personal Trainer", image: studio, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-5", firstName: "Name 5", lastName: "", name: "Name 5", title: "Personal Trainer", image: performance, specialisations: ["Strength", "Body recomposition"] },
   { slug: "name-6", firstName: "Name 6", lastName: "", name: "Name 6", title: "Personal Trainer", image: hero, specialisations: ["Strength", "Body recomposition"] },
