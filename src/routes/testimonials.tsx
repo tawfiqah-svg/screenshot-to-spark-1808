@@ -19,7 +19,7 @@ function Testimonials() {
       </section>
       <section className="bg-secondary py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-5">
-          <SectionHeader title="Before / after" />
+          <SectionHeader title="PHYSIQUE TRANSFORMATIONS" />
           <div className="mt-10">
             <BeforeAfterCarousel />
           </div>
