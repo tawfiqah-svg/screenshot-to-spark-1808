@@ -79,12 +79,14 @@ function TrainerPage() {
           </ul>
         </section>
 
+        {(p.achievements ?? []).length > 0 && (
         <section className="mt-14 border-t border-border pt-10">
           <h2 className="font-display text-xs font-bold uppercase tracking-[0.25em] text-muted-foreground">Sporting achievements</h2>
           <ul className="mt-5 space-y-3 text-lg">
             {(p.achievements ?? []).map((q) => <li key={q} className="flex gap-3"><span className="mt-3 h-px w-6 shrink-0 bg-cta" />{q}</li>)}
           </ul>
         </section>
+        )}
 
         <div className="mt-14 border-t border-border pt-10">
           <CtaLink>Book a consultation</CtaLink>

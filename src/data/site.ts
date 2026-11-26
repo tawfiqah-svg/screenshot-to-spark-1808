@@ -592,6 +592,38 @@ export const team: Trainer[] = [
       ],
     },
   },
+  {
+    slug: "gabriel-tay", firstName: "Gabriel", lastName: "Tay", name: "Gabriel Tay", title: "NCSF Certified Personal Trainer", image: "/images/gabriel-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
+    profile: {
+      banner: "/images/gabriel-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
+      bio: [
+        "Gabriel was a corporate banker that had gone through a sedentary lifestyle in a high stress environment. Calisthenics and bodybuilding flipped his health, philosophy, and self worth around.",
+        "These days, he puts it simply: your body is the house you live in 24/7, so it\u2019s worth looking after.",
+        "Gabriel treats training as a riddle to solve. He identifies what\u2019s holding you back, then tracks your progress and adjusts your programme along the way. He keeps the environment open, because he believes feedback is essential to refining your training and seeing results.",
+      ],
+      belief: "Simplicity, consistency, and most importantly fun.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer", "CPR & AED Certified"],
+      achievements: [],
+    },
+  },
+  {
+    slug: "mika-firdaus", firstName: "Mika", lastName: "Firdaus", name: "Mika Firdaus", title: "NASM Certified Personal Trainer", image: "/images/mika-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Weight management"],
+    profile: {
+      banner: "/images/mika-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Sports Performance"],
+      bio: [
+        "Mika describes himself as an evidence-based lifter who understands that everybody is unique. He believes that what works for one person may not work for another, which is why he finds joy in designing personalised training plans that match each client\u2019s goals, body structure, energy levels, and lifestyle.",
+        "Having been morbidly obese for most of his life before he began training, Mika deeply understands the daily struggles plus-sized individuals face. His coaching philosophy is simple: make fitness enjoyable, safe, and accessible for everyone, no matter their starting point or background. He aims to create a judgment-free space where clients feel supported, capable, and proud of their progress.",
+        "Before becoming a trainer, Mika was a semi-professional football athlete, giving him a strong foundation in discipline, movement, and athletic performance. Today, he brings that same drive to help others work hard, get good, and keep getting better.",
+      ],
+      belief: "Work hard to get good, then work harder to get better.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer", "Certification in Fitness Training and Sports Management", "FAS Grassroots Coaching Certification Level 1", "CPR & AED Certified"],
+      achievements: ["Former semi-professional football athlete"],
+    },
+  },
 ];
 
 export const faqs: { q: string; a: string }[] = [
