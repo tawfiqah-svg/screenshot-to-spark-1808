@@ -624,6 +624,42 @@ export const team: Trainer[] = [
       achievements: ["Former semi-professional football athlete"],
     },
   },
+  {
+    slug: "tsz-fung", firstName: "Tsz", lastName: "Fung", name: "Tsz Fung", underlineFullName: true, title: "ACE Certified Personal Trainer", image: "/images/tszfung-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Hypertrophy"],
+    profile: {
+      banner: "/images/tszfung-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
+      bio: [
+        "Tsz Fung started with sprinting and rock climbing, which gave him a strong understanding of intentional movement and what the body is capable of. That grew into strength training, bodybuilding, and four years of coaching young athletes in strength and conditioning.",
+        "His approach is simple: train hard, train with purpose, and stay consistent. He believes real progress requires effort, but that effort should be directed intelligently.",
+        "He wants clients to understand what they are doing and why they are doing it. He believes in pushing yourself, working hard, and challenging what you are capable of without making training unnecessarily complicated.",
+      ],
+      belief: "Excellence is built through hard work, training with purpose, and staying consistent.",
+      beliefLabel: "His training belief",
+      qualifications: ["ACE Certified Personal Trainer", "CPR & AED Certified", "Degree in B Tech"],
+      achievements: [
+        "FIF Bodybuilding Cup 2026 \u2013 Under 170cm Category, 1st Place",
+        "FIF Bodybuilding Cup 2026 \u2013 Novice Category, 2nd Place",
+        "FIF Bodybuilding Cup 2026 \u2013 Opens Category, 3rd Place",
+      ],
+    },
+  },
+  {
+    slug: "ryan-de-mello", firstName: "Ryan", lastName: "De Mello", name: "Ryan De Mello", title: "NCSF Certified Personal Trainer", image: "/images/ryan-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Sports performance"],
+    profile: {
+      banner: "/images/ryan-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training"],
+      bio: [
+        "Ryan grew up with a passion for basketball, eventually representing Singapore\u2019s youth national team. That competitive background led him into strength training. While performance and function were his priority, strength and looks came as a byproduct.",
+        "For Ryan, progress is never stagnant. Every goal reached simply raises the bar. Consistency was his own early struggle, and it\u2019s what drew him to compete in several HYROX competitions, where through grueling training, he\u2019s constantly chasing the next personal best.",
+        "Now, Ryan brings that same relentless drive into coaching. He knows showing up is often the hardest part, so he helps clients push through on the days motivation runs low, guiding them with proper technique to get real results. More than training bodies, he builds the discipline and habits that last.",
+      ],
+      belief: "Performance isn\u2019t a phase. It\u2019s a standard you keep raising.",
+      beliefLabel: "His training belief",
+      qualifications: ["NCSF Certified Personal Trainer & Health Coach", "CPR & AED Certified", "Bachelor of Business Administration (Hons), Finance"],
+      achievements: ["Competed in HYROX Singapore 2025 Open Doubles"],
+    },
+  },
 ];
 
 export const faqs: { q: string; a: string }[] = [
