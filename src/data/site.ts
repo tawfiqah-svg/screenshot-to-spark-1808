@@ -383,7 +383,7 @@ export function distanceKm(a: { lat: number; lng: number }, b: { lat: number; ln
 }
 
 export type TrainerProfile = { banner: string; focus: string[]; bio: string[]; belief: string; beliefLabel?: string; qualifications: string[]; achievements: string[] };
-export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; imageStyle?: Record<string, string>; specialisations: string[]; underlineFullName?: boolean; underlineLastName?: boolean; profile?: TrainerProfile };
+export type Trainer = { slug: string; firstName: string; lastName: string; name: string; title: string; image: string; imageStyle?: Record<string, string>; specialisations: string[]; underlineFullName?: boolean; underlineLastName?: boolean; underlineWord?: string; profile?: TrainerProfile };
 
 export const team: Trainer[] = [
   {
@@ -509,7 +509,27 @@ export const team: Trainer[] = [
       achievements: ["ReFormd Powerlifting Classic 3.0 2025, 3rd Place", "ArkBloc Bench Only 2026, 1st place"],
     },
   },
-  { slug: "name-8", firstName: "Name 8", lastName: "", name: "Name 8", title: "Personal Trainer", image: prenatal, specialisations: ["Strength", "Body recomposition"] },
+  {
+    slug: "ng-chek-yong", firstName: "Ng", lastName: "Chek Yong", name: "Ng Chek Yong", underlineWord: "Chek", title: "ACE Certified Personal Trainer", image: "/images/chek-headshot.png", imageStyle: { transform: "scale(1.08)", transformOrigin: "50% 0%", objectPosition: "50% 0%", translate: "0 -3%" }, specialisations: ["Strength", "Body recomposition"],
+    profile: {
+      banner: "/images/chek-banner.png",
+      focus: ["Strength & Conditioning", "Hypertrophy", "Mobility", "Weight Management", "Sustainable Training", "Rehabilitation", "Return to Sport", "Sports Massage"],
+      bio: [
+        "Chek\u2019s journey in fitness began on the waters, rowing with his junior college dragon boat team. The demanding training sessions built not just strength but also discipline, consistency, and resilience. What started as a school sport grew into a lifelong passion for helping others move, perform, and live better.",
+        "For Chek, fitness is about freedom, such as the ability to move well, stay pain-free, and live fully. He brings a calm and structured approach to coaching, guiding clients through steady, sustainable progress based on smart programming and consistency.",
+        "Specialising in rehabilitation and return to sport training, Chek supports individuals recovering from injuries and athletes striving to optimise their performance. His goal is simple: help people move better, feel stronger, and stay ready for life.",
+      ],
+      belief: "Progress over perfection.",
+      beliefLabel: "His training belief",
+      qualifications: ["Bsc (Hons) Sport Science and Management", "ACE Certified Personal Trainer", "Standard First Aid with CPR", "Sports Massage Therapy EduFit", "IKSFA Kettlebell Training Fitness Specialist", "Clinical Orthopaedic Manual Therapy \u2013 Lower Extremity", "REHAB FitPro"],
+      achievements: [
+        "WKSF World Championship 2023, H\u00f3dmez\u0151v\u00e1s\u00e1rhely, Hungary, 24kg, 10min Two-Arm Long Cycle, 2nd Place",
+        "MEX-IKO \u201cOne Hour Long Cycle\u201d 2022, 16kg, 60min One Arm Long Cycle, 466 reps",
+        "IKSFA Singapore Kettlebell Championship 2022, 20kg, 5min Long Cycle, 1st place",
+        "IKSFA Singapore Kettlebell Championship 2022, 20kg, 10min Snatch, 1st place",
+      ],
+    },
+  },
 ];
 
 export const faqs: { q: string; a: string }[] = [
