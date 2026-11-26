@@ -56,7 +56,7 @@ const geylangBahru1Asset = { url: "/images/af-geylang-bahru-1.png" };
 // All editable site content lives here. Swap images by replacing the imports below.
 const hero = "/images/hero.png";
 const testimonialsBanner = "/images/testimonials-banner.png";
-const teamBanner = "/images/reformd-team-2026.png";
+const teamBanner = "/images/reformd-team-2026-v2.png";
 const homeHeroAsset = { url: "/images/carmen-deadlift.png" };
 const trialBackgroundAsset = { url: "/images/reformd-studio-reception.png" };
 const weightLossAsset = { url: "/images/sherrine-luther-training.png" };
