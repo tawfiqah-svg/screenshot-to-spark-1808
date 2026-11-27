@@ -1,4 +1,6 @@
 # Requested site updates
+- [x] Update Contact to the main Setmore booking page for in-person consultations at four Studios.
+- [x] Standardise branded Studio capitalisation and verify Contact on desktop and mobile.
 - [x] Restore the before/after swipe-through section and add Zubin's Instagram video testimonial with a shorter caption.
 - [x] Replace labelled before/after sample images with the supplied real comparison photos.
 - [x] Redesign Programs support as FORGED testing and Shelter recovery with photos, expandable details and website links.

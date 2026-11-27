@@ -110,9 +110,13 @@ export const nav = [
 
 export const subBrands = ["FORGED by ReFormd", "Shelter by ReFormd"];
 export const privateStudioCount = 5;
+export const consultationBooking = {
+  url: "https://reformdpersonaltraining.setmore.com",
+  studioCount: 4,
+};
 
 export const homeBenefits = [
-  `${privateStudioCount} private studios`,
+  `${privateStudioCount} private Studios`,
   "One-to-one personal training",
   "RF-Operated Gyms for your convenience",
   "Performance testing & tracking",
@@ -140,11 +144,11 @@ export const aboutContent = {
   ],
   teamHeading: "Different specialists. One shared standard.",
   teamIntro: "Our diverse team of trainers brings together different backgrounds and areas of expertise, including hypertrophy, strength, mobility and weight management. This helps us match you with a trainer who understands your goals.",
-  teamStory: "Our team includes senior trainers and trainers with a range of experience. The same standard of training is expected from every trainer, at every private studio and RF-Operated Gym.",
+  teamStory: "Our team includes senior trainers and trainers with a range of experience. The same standard of training is expected from every trainer, at every private Studio and RF-Operated Gym.",
   standards: [
     { title: "The right expertise for you", text: "We consider your goals, needs and preferences when helping you choose a trainer." },
     { title: "Consistent coaching", text: "Every trainer is expected to prepare thoughtfully, coach with care and take your progress seriously." },
-    { title: "One standard everywhere", text: "You receive the same commitment to quality whether you train at a private studio or an RF-Operated Gym." },
+    { title: "One standard everywhere", text: "You receive the same commitment to quality whether you train at a private Studio or an RF-Operated Gym." },
   ],
   workshops: {
     eyebrow: "Continual development",
@@ -164,7 +168,7 @@ export const rfGroupBrands = [
     image: homeHeroAsset.url,
     imageAlt: "Personal training at ReFormd",
     logo: false,
-    text: "One-to-one personal training built around your goals, experience and routine. Train with a dedicated personal trainer at our private studios or RF-Operated Gyms, wherever is convenient for you.",
+    text: "One-to-one personal training built around your goals, experience and routine. Train with a dedicated personal trainer at our private Studios or RF-Operated Gyms, wherever is convenient for you.",
   },
   {
     title: "FORGED by ReFormd",
@@ -265,7 +269,7 @@ export const reviewWidget = {
 
 export const reviews = [
   { name: "Sarah L.", rating: 5, text: "Lost 9kg in four months and I've never felt stronger. My trainer made it feel effortless to stay consistent." },
-  { name: "Daniel T.", rating: 5, text: "The private studio is a game changer. No waiting, no crowds, just focused training around my work schedule." },
+  { name: "Daniel T.", rating: 5, text: "The private Studio is a game changer. No waiting, no crowds, just focused training around my work schedule." },
   { name: "Priya K.", rating: 5, text: "Trained with ReFormd through my pregnancy and after. Supportive, knowledgeable and genuinely caring." },
   { name: "Marcus W.", rating: 5, text: "The testing and tracking keeps me honest. I can see every improvement in numbers, not just the mirror." },
   { name: "Jia Hui C.", rating: 5, text: "Better sleep, more energy and finally a deadlift I'm proud of. Worth every session." },
@@ -718,7 +722,7 @@ export const team: Trainer[] = [
 export const faqs: { q: string; a: string }[] = [
   {
     q: "Do I need a gym membership to train at an RF-Operated Gym?",
-    a: "Yes. Training inside our RF-Operated Gyms is for gym members. Talk to us about membership and access at your preferred gym before you book, or ask about training at one of our private studios instead.",
+    a: "Yes. Training inside our RF-Operated Gyms is for gym members. Talk to us about membership and access at your preferred gym before you book, or ask about training at one of our private Studios instead.",
   },
   {
     q: "Can I train at multiple gyms, or am I restricted to one?",
@@ -734,7 +738,7 @@ export const faqs: { q: string; a: string }[] = [
   },
   {
     q: "Where can I do the Kickstart trial?",
-    a: "Wherever suits you: one of our private studios or an RF-Operated Gym. Contact us to confirm your preferred location, gym access and available session times.",
+    a: "Wherever suits you: one of our private Studios or an RF-Operated Gym. Contact us to confirm your preferred location, gym access and available session times.",
   },
   {
     q: "Can you help me lose weight and build muscle?",

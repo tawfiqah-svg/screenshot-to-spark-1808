@@ -64,7 +64,7 @@ export function LocationCard({ loc }: { loc: Location }) {
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <h3 className="text-xl font-black uppercase">{loc.name}</h3>
           {loc.type === "studio" && (
-            <span className="inline-flex items-center bg-cta px-2.5 py-1 font-display text-sm leading-none tracking-[0.12em] text-cta-foreground shadow-sm">Private studio</span>
+            <span className="inline-flex items-center bg-cta px-2.5 py-1 font-display text-sm leading-none tracking-[0.12em] text-cta-foreground shadow-sm">Private Studio</span>
           )}
         </div>
         <p className="mt-2 flex items-center gap-2 text-sm text-muted-foreground"><MapPin className="size-4" />{loc.address}</p>

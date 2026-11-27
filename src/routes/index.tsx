@@ -9,16 +9,16 @@ import { TrainerName } from "@/components/site/TrainerName";
 import { brandVideoUrl, homeBenefits, images, locations, privateStudioCount, programs, team } from "@/data/site";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Feel strong, energised, & confident", "Personal training in Singapore with five private ReFormd studios, convenient RF-Operated Gyms and experienced personal trainers."),
+  head: () => seo("Feel strong, energised, & confident", "Personal training in Singapore with five private ReFormd Studios, convenient RF-Operated Gyms and experienced personal trainers."),
   component: Home,
 });
 
 const why = [
   {
-    title: "Five private studios. More places to train.",
-    summary: `${privateStudioCount} private studios, with RF-Operated Gyms for your convenience.`,
+    title: "Five private Studios. More places to train.",
+    summary: `${privateStudioCount} private Studios, with RF-Operated Gyms for your convenience.`,
     details: [
-      `Choose from our ${privateStudioCount} private ReFormd studios for focused, one-to-one personal training with no distractions.`,
+      `Choose from our ${privateStudioCount} private ReFormd Studios for focused, one-to-one personal training with no distractions.`,
       "Prefer somewhere closer to home or work? Your personal training session can also be conducted at our RF-Operated Gyms for your convenience with no additional gym membership access required.",
       "Your personal trainer helps you choose a location and session time that fit your routine.",
     ],
@@ -38,7 +38,7 @@ const why = [
     details: [
       "Your trainer helps you build eating habits that fit your schedule and preferences.",
       "We factor sleep, stress and recovery into your programme, so hard weeks at work don't derail your progress.",
-      "You get practical guidance between sessions, so the support continues after you leave the studio.",
+      "You get practical guidance between sessions, so the support continues after you leave the Studio.",
     ],
   },
 ];
@@ -80,7 +80,7 @@ function Home() {
     <>
       {/* 1. Hero */}
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={images.homeHero} alt="Client performing a barbell deadlift at a ReFormd studio" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover object-[50%_15%]" />
+        <img src={images.homeHero} alt="Client performing a barbell deadlift at a ReFormd Studio" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover object-[50%_15%]" />
         <div className="absolute inset-0 bg-overlay" />
         <div className="home-intro relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
@@ -112,7 +112,7 @@ function Home() {
         <Reveal><SectionHeader title="What makes us different?" center /></Reveal>
         <Reveal>
           <p className="mx-auto max-w-3xl text-center text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
-            Your training should fit your life. We build a plan around your goals, track your progress and help you get the exercises right. Train one-to-one with a personal trainer at a private ReFormd studio or choose an RF-Operated Gym closer to home or work.
+            Your training should fit your life. We build a plan around your goals, track your progress and help you get the exercises right. Train one-to-one with a personal trainer at a private ReFormd Studio or choose an RF-Operated Gym closer to home or work.
           </p>
         </Reveal>
       </section>
@@ -194,7 +194,7 @@ function Home() {
       <section className="bg-secondary py-24">
         <div className="mx-auto max-w-7xl px-5">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <Reveal><SectionHeader title="Always a studio near you." /></Reveal>
+            <Reveal><SectionHeader title="Always a Studio near you." /></Reveal>
             <CtaLink to="/locations">Browse 15+ locations</CtaLink>
           </div>
           <div className="mt-12"><LocationsCarousel items={locations} /></div>
@@ -230,9 +230,9 @@ function Home() {
         <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center">
           <h2 className="text-3xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 4 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">
-            Try our 4-session Starter Bundle with a personal trainer at our private studio or an RF-Operated Gym to see if you&apos;d like to commit.
+            Try our 4-session Starter Bundle with a personal trainer at our private Studio or an RF-Operated Gym to see if you&apos;d like to commit.
           </p>
-          <div className="mt-8"><CtaLink>Book an online consultation</CtaLink></div>
+          <div className="mt-8"><CtaLink>Book an in-person consultation</CtaLink></div>
         </div>
       </section>
     </>

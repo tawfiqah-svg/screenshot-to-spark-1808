@@ -10,7 +10,7 @@ import { distanceKm, images, locations, nearestLocations, postalToCoords, type L
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/locations")({
-  head: () => seo("Locations", "Train with ReFormd at our own studios or inside RF-Operated Gyms across Singapore. 15+ locations, each close to an MRT."),
+  head: () => seo("Locations", "Train with ReFormd at our own Studios or inside RF-Operated Gyms across Singapore. 15+ locations, each close to an MRT."),
   component: Locations,
 });
 
@@ -44,13 +44,13 @@ function Locations() {
 
   const tabs: { id: "all" | LocationType; label: string }[] = [
     { id: "all", label: "All" },
-    { id: "studio", label: "Private ReFormd studios" },
+    { id: "studio", label: "Private ReFormd Studios" },
     { id: "gym", label: "RF-Operated Gyms" },
   ];
 
   return (
     <>
-      <PageHero eyebrow="Locations" title="Always a studio near you." text="15+ locations across Singapore: our dedicated studios and RF-Operated Gyms, each a short walk from the MRT." image={images.locationsHero} imagePosition="center 35%" />
+      <PageHero eyebrow="Locations" title="Always a Studio near you." text="15+ locations across Singapore: our dedicated Studios and RF-Operated Gyms, each a short walk from the MRT." image={images.locationsHero} imagePosition="center 35%" />
       <section className="mx-auto max-w-7xl px-5 py-16">
         <p className="font-display text-xl uppercase tracking-wide sm:text-2xl">Key in your home or work address to find a training location near you.</p>
         <form onSubmit={search} className="mt-4 flex flex-col gap-3 md:flex-row">

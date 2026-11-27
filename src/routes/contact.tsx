@@ -7,10 +7,10 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { SectionHeader, seo } from "@/components/site/Layout";
-import { faqs } from "@/data/site";
+import { consultationBooking, faqs } from "@/data/site";
 
 export const Route = createFileRoute("/contact")({
-  head: () => seo("Contact & FAQ", "Book a free 1-hour online consultation, send us your details, or read answers to common questions about training at ReFormd."),
+  head: () => seo("Contact & FAQ", "Book a free in-person consultation at one of four ReFormd Studios, send us your details, or read answers to common questions about training with us."),
   component: Contact,
 });
 
@@ -23,13 +23,12 @@ function Contact() {
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           <div className="rounded-lg bg-ink p-8 text-ink-foreground">
             <CalendarDays className="size-8 text-cta" />
-            <p className="mt-6 text-xs font-bold uppercase tracking-widest opacity-60">Option 1</p>
-            <h2 className="mt-1 text-3xl font-black uppercase">Book an online consultation</h2>
-            <p className="mt-3 opacity-80">A 1-hour video call about our programmes.</p>
+            <h2 className="mt-6 text-3xl font-black uppercase">Book an IRL consultation</h2>
+            <p className="mt-3 opacity-80">Choose from {consultationBooking.studioCount} of our Studios for your free in-person consultation.</p>
             <iframe
-              src="https://reformdpersonaltraining.setmore.com/services/a2ef6d57-e4a2-4c37-bba1-5be2095e9eeb?inline=true"
-              title="Book an online consultation with ReFormd"
-              className="mt-6 h-[620px] w-full rounded-md border border-ink-foreground/20 bg-white"
+              src={consultationBooking.url}
+              title="Book an in-person consultation with ReFormd"
+              className="mt-6 h-[620px] w-full rounded-md border border-ink-foreground/20 bg-background"
               loading="lazy"
             />
           </div>

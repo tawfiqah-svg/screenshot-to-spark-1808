@@ -96,7 +96,7 @@ export function LocationsMap({ locations, origin, closest }: { locations: Locati
       )}
 
       <div className="absolute bottom-2 left-2 flex max-w-[calc(100%-1rem)] flex-wrap gap-x-3 gap-y-1 rounded-md bg-card/90 px-3 py-2 text-[11px] text-card-foreground shadow sm:text-xs">
-        <span className="flex items-center gap-1"><Pin className="h-4 w-3 text-cta" />Private studio</span>
+        <span className="flex items-center gap-1"><Pin className="h-4 w-3 text-cta" />Private Studio</span>
         <span className="flex items-center gap-1"><Pin className="h-4 w-3 text-gym" />RF-Operated Gym</span>
         {(closest ?? []).length > 0 && <span className="flex items-center gap-1"><span className="w-4 border-t-2 border-dashed border-cta" />4 nearest to your search</span>}
       </div>
