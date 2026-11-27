@@ -26,7 +26,7 @@ function Contact() {
             <h2 className="mt-6 text-3xl font-black uppercase">Book an IRL consultation</h2>
             <p className="mt-3 opacity-80">Choose from 4 of our Studios for a 1 hour in-person consultation.</p>
             <iframe
-              src={consultationBooking.url}
+              src={consultationBooking?.url ?? "https://reformdpersonaltraining.setmore.com"}
               title="Book an in-person consultation with ReFormd"
               className="mt-6 h-[620px] w-full rounded-md border border-ink-foreground/20 bg-background"
               loading="lazy"
