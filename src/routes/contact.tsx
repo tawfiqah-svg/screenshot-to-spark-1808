@@ -24,7 +24,7 @@ function Contact() {
           <div className="rounded-lg bg-ink p-8 text-ink-foreground">
             <CalendarDays className="size-8 text-cta" />
             <h2 className="mt-6 text-3xl font-black uppercase">Book an IRL consultation</h2>
-            <p className="mt-3 opacity-80">Choose from {consultationBooking.studioCount} of our Studios for your free in-person consultation.</p>
+            <p className="mt-3 opacity-80">Choose from 4 of our Studios for a 1 hour in-person consultation.</p>
             <iframe
               src={consultationBooking.url}
               title="Book an in-person consultation with ReFormd"
