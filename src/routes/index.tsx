@@ -80,7 +80,7 @@ function Home() {
     <>
       {/* 1. Hero */}
       <section className="relative flex min-h-[calc(100svh-4rem)] items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={images.homeHero} alt="Client performing a barbell deadlift at a ReFormd Studio" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover object-[50%_15%]" />
+        <img src={images?.homeHero} alt="Client performing a barbell deadlift at a ReFormd Studio" width={1920} height={1280} className="absolute inset-0 h-full w-full object-cover object-[50%_15%]" />
         <div className="absolute inset-0 bg-overlay" />
         <div className="home-intro relative mx-auto w-full max-w-7xl px-5 pb-16 md:pb-24">
           <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Welcome to ReFormd</p>
@@ -226,7 +226,7 @@ function Home() {
 
       {/* 9. Trial */}
       <section className="relative flex min-h-[36rem] items-center overflow-hidden bg-ink text-ink-foreground sm:min-h-[46rem]">
-        <img src={images.trialBackground} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top opacity-40" />
+        <img src={images?.trialBackground} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top opacity-40" />
         <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center">
           <h2 className="text-3xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 4 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">

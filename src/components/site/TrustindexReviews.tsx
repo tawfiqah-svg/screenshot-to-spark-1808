@@ -19,7 +19,7 @@ export function TrustindexReviews() {
     window.addEventListener("message", receiveHeight);
     // An isolated document keeps provider controls out of React's DOM and
     // destroys their listeners, timers and globals when the frame unmounts.
-    setDocument(`<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><base target="_blank"><style>html,body{margin:0;padding:0;width:100%;}body{display:flow-root;}</style></head><body><script defer async src="${reviewWidget.scriptUrl}"></script><script>
+    setDocument(`<!doctype html><html><head><meta name="viewport" content="width=device-width, initial-scale=1"><base target="_blank"><style>html,body{margin:0;padding:0;width:100%;}body{display:flow-root;}</style></head><body><script defer async src="${reviewWidget?.scriptUrl}"></script><script>
       const report = () => parent.postMessage({type:'reformd-review-height',height:Math.ceil(document.body.getBoundingClientRect().height)}, '*');
       new ResizeObserver(report).observe(document.body);
       window.addEventListener('load', report);

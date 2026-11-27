@@ -13,7 +13,7 @@ export const Route = createFileRoute("/testimonials")({
 function Testimonials() {
   return (
     <>
-      <PageHero eyebrow="Testimonials" title="Real transformations from people like you" image={images.testimonialsBanner} imagePosition="center 35%" />
+      <PageHero eyebrow="Testimonials" title="Real transformations from people like you" image={images?.testimonialsBanner} imagePosition="center 35%" />
       <section className="mx-auto max-w-7xl px-5 py-24">
         <SectionHeader title="WHAT PEOPLE ARE SAYING" />
         <div className="mt-10">
