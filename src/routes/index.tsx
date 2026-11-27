@@ -228,7 +228,6 @@ function Home() {
       <section className="relative flex min-h-[36rem] items-center overflow-hidden bg-ink text-ink-foreground sm:min-h-[46rem]">
         <img src={images.trialBackground} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover object-top opacity-40" />
         <div className="relative mx-auto w-full max-w-4xl px-5 py-20 text-center">
-          <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.3em] text-cta">Kickstart trial</p>
           <h2 className="text-3xl font-black uppercase leading-[1.05] sm:text-5xl md:text-7xl">Try 4 sessions to be sure.</h2>
           <p className="mx-auto mt-6 max-w-xl text-base opacity-85 sm:text-lg">
             Try our 4-session Starter Bundle with a personal trainer at our private studio or an RF-Operated Gym to see if you&apos;d like to commit.
